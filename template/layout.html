@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <title>Centro Espírita Ibirajara</title>
+    <meta charset="UTF-8">
+    
+    {LIBRARIES}
+</head>
+
+
+<body>
+<div id="tudo">
+    <!-- DIV CABEÇALHO -->
+    <div id="cabecalho">
+        <div id="logo">
+            <img src="{DIR}template/images/logo_cei.png" width="110">
+        </div>
+        
+        <!-- C. E. Ibirajara -->
+        <div id="cei">
+            <span class="cei">Centro Esp&iacute;rita Ibirajara</span>
+            <br>
+            <p class="endereco">
+                Rua Bar&atilde;o de S&atilde;o Francisco, 156 - Andara&iacute;
+                <br>
+                Rio de Janeiro - RJ
+                <br>
+                CEP 20560-030 - Tel: (21) 2238-3880
+                <br>
+                filiado ao 12&deg; CEU - CEERJ
+            </p>
+        </div>
+        
+        <!-- Lema Ibirajara -->
+        <div class="lema">
+            <span class="trab">"Trabalho mais trabalho, igual  trabalho"</span>
+            <br>
+            IBIRAJARA
+        </div>
+    </div>
+        
+    <!-- MENU -->
+    {MENU}
+    
+    <!-- clear -->
+    <div class="clear"></div>   
+    
+    
+    <!-- 2 columns (content + sidebar) -->
+    <div id="cols">
+        
+        <!-- Content -->
+        <div id="content">
+            <!-- EVENTOS -->
+            <div class="sessao-left">
+                {SESSAO}
+            </div>
+            &nbsp;
+            {CONTENT}
+        </div> <!-- /content -->
+        
+        
+        <!-- Sidebar -->
+        <div id="aside">
+            <!-- Sub-menu -->
+            <div class="sessao-right">
+                Menu
+            </div>
+            <!-- SESSOES -->
+            <div id="sub_caixa">
+                <span>
+                    <a href="#">Atendimento Espiritual</a>
+                </span>
+                <br>
+                <span>
+                    <a href="#">Biblioteca</a>
+                </span>
+                <br>
+                <span>
+                    <a href="{DIR}artigo/exibe/sessao/historico">Histórico</a>
+                </span>
+                <br>
+                <span>
+                    <a href="#">Boletim Esperança</a>
+                </span>
+                <br>
+                <span>
+                    <a href="#">Links Importantes</a>
+                </span>
+            </div>
+            
+            <!-- LIVROS -->
+            <div class="sessao">
+                Livro da Semana
+            </div>
+            <!-- SESSOES -->
+            <div id="sub_caixa">
+                <div style="text-align: center;">
+                    <img src="{DIR}template/images/Nosso_lar_min.jpg">
+                    <p>Nosso Lar <br>R$ 35,00</p>
+                </div>
+                
+            </div>
+            
+            <!-- AVISOS -->
+            <div class="sessao">
+                Avisos
+            </div>
+            <!-- SESSOES -->
+            <div id="sub_caixa">
+                <div id="aviso">
+                    Estamos captando Doações de: leite em pó para o G.E. Regeneração e para o C.E. Bezerra de Menezes do andaraí;
+                </div>
+                
+            </div>            
+        </div> <!-- /sidebar -->
+        
+    </div> <!-- /cols -->
+    
+    <!-- RODAPÉ -->
+    <div id="footer">
+        &nbsp;
+    </div>
+        
+    </div>
+    
+</div>
+</body>
+</html>
