@@ -116,12 +116,12 @@ a:hover {
 #cei {
     float: left;
     position: relative;
-    width: 500px;
+    width: 475px;
     text-align: center;
 }
 
 .cei {
-    font-size: 40px;
+    font-size: 38px;
     color: white;
     font-family: Arial, Lucida, sans-serif;
     font-weight: bold;
@@ -151,3 +151,19 @@ a:hover {
     color: grey;
     font-style: italic;
 }
+
+/*--------------
+    Layout Diversos
+----------------*/
+
+.boldit {font-weight: bold;color: #555;}
+.destaque {font-size: 22px;font-weight: bold;text-shadow: 2px 2px #00bfff;}
+
+#artigo {padding: 0 10px 10px;}
+
+    #artigo p {margin: 10px;}
+    #artigo ul {margin-left: 30px;}
+
+    .txt_artigo {margin-bottom: 10px;}
+    
+    .txt_artigo {margin-bottom: 10px;margin-top: 10px;}

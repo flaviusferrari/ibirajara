@@ -32,3 +32,11 @@ and open the template in the editor.
             text-align:center; padding-top:5px; background:#999}
 
 #aviso {font-family: Courier New, monospace;font-size: 14px;}
+
+/*** Boletim ***/
+#boletim {padding: 10px;}
+    .title_boletim {margin-bottom: 10px;font-weight: bold;}
+    .epistola {text-align: right !important;font-size: 12px;margin-bottom: 10px;}
+        .txt_evan {font-style: italic;}
+    .txt_boletim {text-indent:2em;margin-bottom: 15px;}    
+    

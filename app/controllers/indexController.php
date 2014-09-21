@@ -20,7 +20,8 @@ class Index extends Controller
                     'LIBRARIES' => $view->setLibraries($controller),
                     'SLIDESHOW' => $slideshow,
                     'MENU'      => $menu,
-                    'PROGRAMA'  => $view->getInclude('programa')
+                    'PROGRAMA'  => $view->getInclude('programa'),
+                    'BOLETIM'   => $view->getInclude('boletim')
                 );
         
         //faz a substituição

@@ -17,7 +17,7 @@ class Esde extends Controller
         require_once (BASEPATH . '/app/views/Esde_View.php'); 
         $this->VIEW = new Esde_View;
         
-        $this->VIEW->_sessao = 'ESDE';
+        $this->VIEW->_sessao = 'ESDE / EADE';
         
         // Inclui os models
         //require_once (BASEPATH . '/app/models/Clientes_Model.php');  
