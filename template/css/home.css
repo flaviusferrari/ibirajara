@@ -38,5 +38,5 @@ and open the template in the editor.
     .title_boletim {margin-bottom: 10px;font-weight: bold;}
     .epistola {text-align: right !important;font-size: 12px;margin-bottom: 10px;}
         .txt_evan {font-style: italic;}
-    .txt_boletim {text-indent:2em;margin-bottom: 15px;}    
+    .txt_boletim {text-indent:2em;margin-bottom: 15px;text-align: justify;}    
     

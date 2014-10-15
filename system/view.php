@@ -77,6 +77,34 @@ class View
         $this->_content = $content;
     }
     
+    /**
+     * Método setSessao()
+     *   Inclui o nome da Sessão
+     */
+    public function setSessao($sessao)
+    {
+        $this->_sessao = $sessao;
+    }
+
+        /**
+     * Método setMensagem()
+     *   exibe uma mensagem na tela
+     * 
+     * @param $mensagem = texto da mensagem
+     */
+    public function setMensagem($mensagem)
+    {
+        // lê o INI e retorna um array
+        $mess = parse_ini_file("app/language/pt_br/messages.ini");
+        
+        // Verifica se existe o código da mensagem
+        // se não existir apresenta a mensagem passada
+        $msn = isset($mess[$mensagem]) ? $mess[$mensagem] : $mensagem;  
+        
+        // retorna o resultado
+        return $msn;
+    }
+    
     
     /**
      * Método exibeLayout()
@@ -90,7 +118,7 @@ class View
         //define os parâmetros da classe
         $tags = array(
                     'DIR'       => DIR,
-                    'LIBRARIES' => $this->setLibraries($this->_controller),
+                    'LIBRARIES' => $this->setLibraries(CONTROLL),
                     'MENU'      => $this->_menu,
                     'SESSAO'    => $this->_sessao,
                     'CONTENT'   => $this->_content

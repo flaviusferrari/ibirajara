@@ -10,17 +10,11 @@ and open the template in the editor.
 
 * {margin:0; padding:0;}
 
-body {   
-    background-color: #00BFFF;  
-}
+body {background-color: #d8e4f1;}
 
-#tudo {
-    width: 800px;
-    margin: 0 auto;
-}
+    #tudo {width: 800px;margin: 0 auto;}
 
-#cabecalho {
-    border-left: 1px black solid;
+#cabecalho {border-left: 1px black solid;
     border-right: 1px black solid;
     background-color: #3366FF;
     width: 778px;
@@ -152,12 +146,25 @@ a:hover {
     font-style: italic;
 }
 
+/*****************************************************************************
+*************************  BOTÕES  *******************************************
+*****************************************************************************/
+.botao {display: inline-block;padding: 3px 5px;border: 2px solid blue;border-radius: 5px;font-size: 14px;color: white;
+        font-weight: bold;background-color: blue;cursor: pointer;}
+
+.botao:hover {background-color: #CFF;color: blue;text-decoration: none;}
+
+
 /*--------------
     Layout Diversos
 ----------------*/
 
 .boldit {font-weight: bold;color: #555;}
 .destaque {font-size: 22px;font-weight: bold;text-shadow: 2px 2px #00bfff;}
+
+
+/* Responsável pelo texto dos campos de formulários*/
+.txtCampos {font-size: 13px;color: #666666;font-family: Arial, Tahoma, Verdana;font-weight: bold;}
 
 #artigo {padding: 0 10px 10px;}
 
@@ -167,3 +174,5 @@ a:hover {
     .txt_artigo {margin-bottom: 10px;}
     
     .txt_artigo {margin-bottom: 10px;margin-top: 10px;}
+    
+    .destaq {color: blue;}

@@ -1,0 +1,57 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 30/09/2014, 15:35:59
+    Author     : flavius
+*/
+
+#tit_painel {width: 778px;border-top-left-radius: 9px; border-top-right-radius: 9px;}
+
+#adm {padding: 15px;display: table;}
+
+
+/***************************************************************
+*********************  LOGON  **********************************
+***************************************************************/
+.centraliza {margin: 0 auto;}
+
+#Autentica {background: whitesmoke;width: 400px;height: 350px;font-size: 14px;font-family: "Times New Roman";
+            border: solid 1px gray;border-radius: 1em;box-shadow: black 0.5em 0.5em 0.3em;}
+
+    #superior {width: 400px;height: 100px;text-align: center;border-top-left-radius: 1em;border-top-right-radius: 1em;
+               border-bottom: 1px solid #999;}
+    #logar {padding: 10px;height: 100%;position: relative;text-align: center;}
+    
+        #logar input {width: 150px;height: 30px;margin-bottom: 15px;font-weight: bold;}
+        
+        
+        
+/***************
+******   TEXTOS 
+****************/
+.txtCampos {font-size: 13px;color: #666666;font-family: Arial, Tahoma, Verdana;font-weight: bold;}
+
+
+/*****************************************************************************
+*************************  BOTÕES  *******************************************
+*****************************************************************************/
+.botao {display: inline-block;padding: 3px 5px;border: 2px solid #999;border-radius: 5px;font-size: 14px;
+        font-weight: bold;background-color: #CCC;cursor: pointer;}
+
+.botao:hover {background-color: #999;color: white;text-decoration: none;}
+
+
+/** CAIXA DE MENSAGEM **/
+#mensagem {display: table;margin: 0 auto;min-width: 400px;}
+
+    .titulo_mess {background-color: #999;color: white;font-weight: bold;padding: 5px;border-top-left-radius: 10px;
+           border-top-right-radius: 10px;text-align: left;}
+    .campo_mess {position: relative;height: 180px;background-color: #ececec;border-bottom: 1px solid #807e7e;
+                 border-left: 1px solid #807e7e;border-right: 1px solid #807e7e;}
+    .ico_mess {position: absolute;left: 315px;top: 10px;}
+    .msn_mess {position: absolute;left: 10px;top: 55px;width: 370px;font: 16px monospace bold;}
+    .msn_alerta {position: absolute;left: 100px;top: 15px;font: 32px monospace bold;text-shadow: 2px 2px 2px #555;}
+    .btn_mess {position: absolute;left: 10px;top: 140px;text-decoration: none;color: #555;}

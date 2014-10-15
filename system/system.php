@@ -110,12 +110,25 @@ class System
     {
         $controller_path = CONTROLLERS . $this->_controller . 'Controller.php';
         
-        if (!file_exists($controller_path))
-        {
-            die('Houve um erro. O Controller nao existe!');
-        }
+        define('CONTROLL', $this->_controller);
         
-        require_once ($controller_path);
+        if (file_exists($controller_path))
+        {
+            require_once ($controller_path);            
+        }
+        else
+        {
+            $controller_path = MODULES . $this->_controller . '/controllers/' .  $this->_controller. 'Controller.php';
+            
+            if (file_exists($controller_path))
+            {
+                require_once ($controller_path);
+            }
+            else
+            {
+                die('Controller não existe!!');
+            }
+        }       
         
         $app = new $this->_controller($this->_controller);
         

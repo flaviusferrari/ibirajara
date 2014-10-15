@@ -11,11 +11,10 @@ class Logout extends Controller
     public function __construct($controller)
     {
         setcookie('usuario');
-        setcookie('servidor');
         setcookie('idUsuario');
-        setcookie('idEmpresa');
+        setcookie('nomeUsuario');
         
-        header("Location: index");
+        header("Location: administrator");
     }    
    
 }

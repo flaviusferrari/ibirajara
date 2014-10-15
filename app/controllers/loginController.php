@@ -20,7 +20,7 @@ class Login extends Controller
         $this->pass = md5($_POST['senha']);
         
         // Inclui os models
-        require_once (BASEPATH . '/app/models/login/Login_Model.php');       
+        require_once (BASEPATH . '/app/models/Login_Model.php');       
         
     }      
     

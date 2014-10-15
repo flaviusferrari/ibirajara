@@ -6,10 +6,7 @@
  * and open the template in the editor.
  */
 
-class EmailHelper
+class Programacao_Model extends Model
 {
-    public function enviaEmail()
-    {
-        echo 'Email enviado!';
-    }
+    
 }

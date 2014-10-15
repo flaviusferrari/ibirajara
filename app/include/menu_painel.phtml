@@ -1,0 +1,18 @@
+<div id="nav">
+    <ul class="box">
+        <li><a href="<?=DIR ?>index" target="new">Home</a></li>
+    <?php
+    if (isset($_COOKIE['usuario']) and !empty($_COOKIE['usuario']))
+    { ?>
+        <li><a href="#">Cadastro</a>
+            <ul>
+                <li><a href="<?=DIR ?>administrator/programacao">Programação</a></li>
+                <li><a href="#">Boletim</a></li>
+            </ul>
+        </li>        
+        <li><a href="<?=DIR ?>logout">Sair</a></li>
+<?php 
+    } ?>
+        
+    </ul>
+</div>
