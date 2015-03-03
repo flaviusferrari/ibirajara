@@ -16,7 +16,7 @@ $(document).ready(function() {
            data : 'controller=login&action=logar&usuario=' + $('#usuario').val() + '&senha=' + $('#senha').val(),
            success: function(data){ 
                if (!data) {
-                   window.location.href = 'administrator';
+                   window.location.href = 'administrator/programacao';
                } else {
                    $('#resposta').html(data);   
                }
@@ -29,5 +29,6 @@ $(document).ready(function() {
     $('#btnGravaProgramacao').click(function() {
         $('#formulario').submit();
     });
+    
     
 });

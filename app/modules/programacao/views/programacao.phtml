@@ -1,106 +1,97 @@
+<?php
+// Verifica qual o mes corrente
+switch ($dados['mes'])
+{
+    case 01:
+        $mes = "JANEIRO";
+        break;
+    case 02:
+        $mes = 'FEVEREIRO';
+        break;
+    case 03:
+        $mes = 'MARÇO';
+        break;
+    case 04:
+        $mes = 'ABRIL';
+        break;
+    case 05:
+        $mes = 'MAIO';
+        break;
+    case 06:
+        $mes = 'JUNHO';
+        break;
+    case 07:
+        $mes = 'JULHO';
+        break;
+    case 08:
+        $mes = 'AGOSTO';
+        break;
+    case 09:
+        $mes = 'SETEMBRO';
+        break;
+    case 10:
+        $mes = 'OUTUBRO';
+        break;
+    case 11:
+        $mes = 'NOVEMBRO';
+        break;
+    case 12:
+        $mes = 'DEZEMBRO';
+        break;
+}
+
+$ano = $dados['ano'];
+
+unset($dados['mes'], $dados['ano']);
+
+?>
+
 <div id="mes" class="mes">
+    
     <!-- PERIODO -->
     <div class="titMes">
-        SETEMBRO de 2014
+        <?php echo $mes; ?> de <?php echo $ano; ?>
     </div>
-
+    
     <!-- SEGUNDA -->
-    <div class="week">                
+    <div class="week">  
         <div class="semana">
-            <span  class="dia_semana">SEGUNDAS-FEIRAS - 15h</span>
+            <span  class="dia_semana">SEGUNDA - 15h</span>
             <br>
             <!-- Estudo -->
             <span class="estudo">Estudo de "O Evangelho segundo o Espiritismo"</span>
         </div>
-        <!-- PROGRAMAÇAO DIA-->
-        <div class="programaDia">
-            <div class="dia">
-                <!-- Dia -->
-                <span class="dtDia">01</span>
-            </div>
-            <span class="fundo">
-                <!-- Tema -->
-                <span class="tema">
-                    <span style="color: #006; font-weight: bold;">Tema:</span>
-                    "O caminho do Reino" (No Roteiro de Jesus, Gerson S. Monteiro, cap 34)
-                </span>
-                <br>
-                <!-- Expositor -->
-                <span class="expositor">
-                    <span style="color: #006; font-weight: bold;">Expositor:</span> Regina Branco
-                </span>
-            </span>
-        </div>
-        
-        <!-- PROGRAMAÇAO DIA-->
-        <div class="programaDia">
-            <div class="dia">
-                <!-- Dia -->
-                <span class="dtDia">08</span>
-            </div>
-            <span class="fundo">
-                <!-- Tema -->
-                <span class="tema">
-                    <span style="color: #006; font-weight: bold;">Tema:</span>
-                    "A vingança. O ódio" (cap. XII, itens 9 e 10)
-                </span>
-                <br>
-                <!-- Expositor -->
-                <span class="expositor">
-                    <span style="color: #006; font-weight: bold;">Expositor:</span> Telma Cerqueira
-                </span>
-            </span>
-        </div>
-        
-        <!-- PROGRAMAÇAO DIA-->
-        <div class="programaDia">
-            <div class="dia">
-                <!-- Dia -->
-                <span class="dtDia">15</span>
-            </div>
-            <span class="fundo">
-                <!-- Tema -->
-                <span class="tema">
-                    <span style="color: #006; font-weight: bold;">Tema:</span>
-                    "O duelo" (cap.XII , itens 11 a 16)
-                </span>
-                <br>
-                <!-- Expositor -->
-                <span class="expositor">
-                    <span style="color: #006; font-weight: bold;">Expositor:</span> Ademar (CEJN)
-                </span>
-            </span>
-        </div>
-        
-        <!-- PROGRAMAÇAO DIA-->
-        <div class="programaDia">
-            <div class="dia">
-                <!-- Dia -->
-                <span class="dtDia">22</span>
-            </div>
-            <span class="fundo">
-                <!-- Tema -->
-                <span class="tema">
-                    <span style="color: #006; font-weight: bold;">Tema:</span>
-                    "Fazer o bem sem ostentação" (cap. XIII, itens 1 a 3 )
-                </span>
-                <br>
-                <!-- Expositor -->
-                <span class="expositor">
-                    <span style="color: #006; font-weight: bold;">Expositor:</span> Maria Helena Araujo
-                </span>
-            </span>
-        </div>
-        
-    </div>
+    
+    <?php 
+    foreach ($dados as $programacao): 
+        $d = date('w', strtotime($programacao['data']));
 
+        if($d == 1)
+        { ?>
+            <!-- PROGRAMAÇAO DIA-->
+            <div class="programaDia">
+                <div class="dia">
+                    <!-- Dia -->
+                    <span class="dtDia"><?php echo date('d', strtotime($programacao['data'])); ?></span>
+                </div>
+                <span class="fundo">
+                    <!-- Tema -->
+                    <span class="tema">
+                        <span style="color: #006; font-weight: bold;">Tema:</span>
+                        <?php echo $programacao['tema']; ?>
+                    </span>
+                    <br>
+                    <!-- Expositor -->
+                    <span class="expositor">
+                        <span style="color: #006; font-weight: bold;">Expositor:</span> <?php echo $programacao['expositor']; ?> 
+                    </span>
+                </span>
+            </div> <?php
+        } 
+    endforeach; ?>
+    </div>    
     
-       
     
-    
-    
-   
-
     <!-- TERÇA -->
     <div class="semana">                
         <div class="dia_semana">
@@ -111,143 +102,36 @@
             &nbsp;
         </div>
     </div>
+    
+    <?php 
+    foreach ($dados as $programacao): 
+        $d = date('w', strtotime($programacao['data']));
 
-    <!-- PROGRAMAÇAO 01-->
-    <div class="borda_baixo">
-        <table cellpadding="0" cellspacing="0">
-            <tbody>
-                <tr>
-                    <td class="dia">
-                        <!-- Dia -->
-                        <div >
-                            02
-                        </div>
-                    </td>
-                    <td class="fundo">
-                        <!-- Tema -->
-                        <span class="tema">
-                            <span style="color: #006; font-weight: bold;">Tema:</span>
-                            "Não julgueis" (ESE, cap. X, itens 11 a 13)
-                        </span>
-                        <br>
-                        <!-- Expositor -->
-                        <span class="expositor">
-                            <span style="color: #006; font-weight: bold;">Expositor:</span> Octávio Sotero
-                        </span>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>            
-    <!-- PROGRAMAÇAO 02-->
-    <div class="borda_baixo">
-        <table cellpadding="0" cellspacing="0">
-            <tbody>
-                <tr>
-                    <td class="dia">
-                        <!-- Dia -->
-                        <div >
-                            09
-                        </div>
-                    </td>
-                    <td class="fundo">
-                        <!-- Tema -->
-                        <span class="tema">
-                            <span style="color: #006; font-weight: bold;">Tema:</span>
-                            "Solidariedade" (Estudos Espíritas, Divaldo P.Franco/J.de Ângelis, cap. 12; Obras Póstumas, Allan Kardec)
-                        </span>
-                        <br>
-                        <!-- Expositor -->
-                        <span class="expositor">
-                            <span style="color: #006; font-weight: bold;">Expositor:</span> Jorge Camargo
-                        </span>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>            
-    <!-- PROGRAMAÇAO 03-->
-    <div class="borda_baixo">
-        <table cellpadding="0" cellspacing="0">
-            <tbody>
-                <tr>
-                    <td class="dia">
-                        <!-- Dia -->
-                        <div >
-                            16
-                        </div>
-                    </td>
-                    <td class="fundo">
-                        <!-- Tema -->
-                        <span class="tema">
-                            <span style="color: #006; font-weight: bold;">Tema:</span>
-                            "Parábola da Previdência"  (Parábolas Evangélicas, R. Calligaris)
-                        </span>
-                        <br>
-                        <!-- Expositor -->
-                        <span class="expositor">
-                            <span style="color: #006; font-weight: bold;">Expositor:</span> Felipe Treistman
-                        </span>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <!-- PROGRAMAÇAO 04-->
-    <div class="borda_baixo">
-        <table cellpadding="0" cellspacing="0">
-            <tbody>
-                <tr>
-                    <td class="dia">
-                        <!-- Dia -->
-                        <div >
-                            23
-                        </div>
-                    </td>
-                    <td class="fundo">
-                        <!-- Tema -->
-                        <span class="tema">
-                            <span style="color: #006; font-weight: bold;">Tema:</span>
-                            "Autoperdão"
-                        </span>
-                        <br>
-                        <!-- Expositor -->
-                        <span class="expositor">
-                            <span style="color: #006; font-weight: bold;">Expositor:</span> Marcelo Nazareth (São Paulo)
-                        </span>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <!-- PROGRAMAÇAO 05-->
-    <div class="borda_baixo">
-        <table cellpadding="0" cellspacing="0">
-            <tbody>
-                <tr>
-                    <td class="dia">
-                        <!-- Dia -->
-                        <div >
-                            30
-                        </div>
-                    </td>
-                    <td class="fundo">
-                        <!-- Tema -->
-                        <span class="tema">
-                            <span style="color: #006; font-weight: bold;">Tema:</span>
-                            "Felicidade: de que mundo ela é?"
-                        </span>
-                        <br>
-                        <!-- Expositor -->
-                        <span class="expositor">
-                            <span style="color: #006; font-weight: bold;">Expositor:</span> Rosana Cruz
-                        </span>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
+        if($d == 2)
+        { ?>
+            <!-- PROGRAMAÇAO DIA-->
+            <div class="programaDia">
+                <div class="dia">
+                    <!-- Dia -->
+                    <span class="dtDia"><?php echo date('d', strtotime($programacao['data'])); ?></span>
+                </div>
+                <span class="fundo">
+                    <!-- Tema -->
+                    <span class="tema">
+                        <span style="color: #006; font-weight: bold;">Tema:</span>
+                        <?php echo $programacao['tema']; ?>
+                    </span>
+                    <br>
+                    <!-- Expositor -->
+                    <span class="expositor">
+                        <span style="color: #006; font-weight: bold;">Expositor:</span> <?php echo $programacao['expositor']; ?> 
+                    </span>
+                </span>
+            </div> <?php
+        } 
+    endforeach; ?>
+            
+    
     <!-- QUARTA -->
     <div class="semana">                
         <div class="dia_semana">
@@ -258,143 +142,36 @@
             Estudo aprofundado da Doutrina Espírita - (FEB)
         </div>
     </div>
+    
+    <?php 
+    foreach ($dados as $programacao): 
+        $d = date('w', strtotime($programacao['data']));
 
-    <!-- PROGRAMAÇAO 01-->
-    <div class="borda_baixo">
-        <table cellpadding="0" cellspacing="0">
-            <tbody>
-                <tr>
-                    <td class="dia">
-                        <!-- Dia -->
-                        <div >
-                            03
-                        </div>
-                    </td>
-                    <td class="fundo">
-                        <!-- Tema -->
-                        <span class="tema">
-                            <span style="color: #006; font-weight: bold;">Tema:</span>
-                            "Parábola do Semeador" (Parábolas Evangélicas, R.Calligaris;ESE, cap XVII)
-                        </span>
-                        <br>
-                        <!-- Expositor -->
-                        <span class="expositor">
-                            <span style="color: #006; font-weight: bold;">Expositor:</span> Telma Cerqueira (CEJN)
-                        </span>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>            
-    <!-- PROGRAMAÇAO 02-->
-    <div class="borda_baixo">
-        <table cellpadding="0" cellspacing="0">
-            <tbody>
-                <tr>
-                    <td class="dia">
-                        <!-- Dia -->
-                        <div >
-                            10
-                        </div>
-                    </td>
-                    <td class="fundo">
-                        <!-- Tema -->
-                        <span class="tema">
-                            <span style="color: #006; font-weight: bold;">Tema:</span>
-                            "Parábola da Candeia" (Parábolas Evangélicas, R.Calligaris;Em Torno do Mestre, Vinicius
-                        </span>
-                        <br>
-                        <!-- Expositor -->
-                        <span class="expositor">
-                            <span style="color: #006; font-weight: bold;">Expositor:</span> Sonia Formiga (UEFFBM)
-                        </span>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>            
-    <!-- PROGRAMAÇAO 03-->
-    <div class="borda_baixo">
-        <table cellpadding="0" cellspacing="0">
-            <tbody>
-                <tr>
-                    <td class="dia">
-                        <!-- Dia -->
-                        <div >
-                            17
-                        </div>
-                    </td>
-                    <td class="fundo">
-                        <!-- Tema -->
-                        <span class="tema">
-                            <span style="color: #006; font-weight: bold;">Tema:</span>
-                            "Parábola dos Talentos e da Minas" (Parábolas Evangélicas, R.Calligaris;Parábolas e Ensinos de Jesus, C.Schutel)
-                        </span>
-                        <br>
-                        <!-- Expositor -->
-                        <span class="expositor">
-                            <span style="color: #006; font-weight: bold;">Expositor:</span> Suely Pumar
-                        </span>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <!-- PROGRAMAÇAO 04-->
-    <div class="borda_baixo">
-        <table cellpadding="0" cellspacing="0">
-            <tbody>
-                <tr>
-                    <td class="dia">
-                        <!-- Dia -->
-                        <div >
-                            24
-                        </div>
-                    </td>
-                    <td class="fundo">
-                        <!-- Tema -->
-                        <span class="tema">
-                            <span style="color: #006; font-weight: bold;">Tema:</span>
-                            "Família" (Fonte Viva, F.C.X./Emmanuel, cap. 156; Pão Nosso, F.C.X./Emmanuel, caps.93, 94,117 e 141)
-                        </span>
-                        <br>
-                        <!-- Expositor -->
-                        <span class="expositor">
-                            <span style="color: #006; font-weight: bold;">Expositor:</span> Rosana Cruz
-                        </span>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <!-- PROGRAMAÇAO 05-->
-    <!--            <div class="borda_baixo">
-                    <table cellpadding="0" cellspacing="0">
-                        <tbody>
-                            <tr>
-                                <td class="dia">
-                                     Dia 
-                                    <div >
-                                        30
-                                    </div>
-                                </td>
-                                <td class="fundo">
-                                     Tema 
-                                    <span class="tema">
-                                        <span style="color: #006; font-weight: bold;">Tema:</span>
-                                        "O Homem Novo" ( Pão Nosso, F.C.Xavier/Emmanuel, caps. 41,68,138/9 e 154;Vinha de Luz,F.C.X/Emmanuel, caps.24 e 28)
-                                    </span>
-                                    <br>
-                                     Expositor 
-                                    <span class="expositor">
-                                        <span style="color: #006; font-weight: bold;">Expositor:</span> Denise Xavier(Casa da Caridade)
-                                    </span>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>-->
-
+        if($d == 3)
+        { ?>
+            <!-- PROGRAMAÇAO DIA-->
+            <div class="programaDia">
+                <div class="dia">
+                    <!-- Dia -->
+                    <span class="dtDia"><?php echo date('d', strtotime($programacao['data'])); ?></span>
+                </div>
+                <span class="fundo">
+                    <!-- Tema -->
+                    <span class="tema">
+                        <span style="color: #006; font-weight: bold;">Tema:</span>
+                        <?php echo $programacao['tema']; ?>
+                    </span>
+                    <br>
+                    <!-- Expositor -->
+                    <span class="expositor">
+                        <span style="color: #006; font-weight: bold;">Expositor:</span> <?php echo $programacao['expositor']; ?> 
+                    </span>
+                </span>
+            </div> <?php
+        } 
+    endforeach; ?>
+    
+            
     <!-- SEXTA -->
     <div class="semana">                
         <div class="dia_semana">
@@ -405,116 +182,36 @@
             Estudo de “O Livro dos Espíritos”
         </div>
     </div>
+    
+    <?php 
+    foreach ($dados as $programacao): 
+        $d = date('w', strtotime($programacao['data']));
 
-    <!-- PROGRAMAÇAO 01-->
-    <div class="borda_baixo">
-        <table cellpadding="0" cellspacing="0">
-            <tbody>
-                <tr>
-                    <td class="dia">
-                        <!-- Dia -->
-                        <div >
-                            05
-                        </div>
-                    </td>
-                    <td class="fundo">
-                        <!-- Tema -->
-                        <span class="tema">
-                            <span style="color: #006; font-weight: bold;">Tema:</span>
-                            "Justiça da reencarnação" (perg. 171)
-                        </span>
-                        <br>
-                        <!-- Expositor -->
-                        <span class="expositor">
-                            <span style="color: #006; font-weight: bold;">Expositor:</span> Manoel Messias
-                        </span>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>            
-    <!-- PROGRAMAÇAO 02-->
-    <div class="borda_baixo">
-        <table cellpadding="0" cellspacing="0">
-            <tbody>
-                <tr>
-                    <td class="dia">
-                        <!-- Dia -->
-                        <div >
-                            12
-                        </div>
-                    </td>
-                    <td class="fundo">
-                        <!-- Tema -->
-                        <span class="tema">
-                            <span style="color: #006; font-weight: bold;">Tema:</span>
-                            "Encarnação nos diferentes mundos" (pergs. 172 a 180)
-                        </span>
-                        <br>
-                        <!-- Expositor -->
-                        <span class="expositor">
-                            <span style="color: #006; font-weight: bold;">Expositor:</span>  Angela Rodrigues
-                        </span>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>            
-    <!-- PROGRAMAÇAO 03-->
-    <div class="borda_baixo">
-        <table cellpadding="0" cellspacing="0">
-            <tbody>
-                <tr>
-                    <td class="dia">
-                        <!-- Dia -->
-                        <div >
-                            19
-                        </div>
-                    </td>
-                    <td class="fundo">
-                        <!-- Tema -->
-                        <span class="tema">
-                            <span style="color: #006; font-weight: bold;">Tema:</span>
-                            "Encarnação nos diferentes mundos" (pergs. 181 a 188)
-                        </span>
-                        <br>
-                        <!-- Expositor -->
-                        <span class="expositor">
-                            <span style="color: #006; font-weight: bold;">Expositor:</span> Maria Helena Holanda
-                        </span>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <!-- PROGRAMAÇAO 04-->
-    <div class="borda_baixo">
-        <table cellpadding="0" cellspacing="0">
-            <tbody>
-                <tr>
-                    <td class="dia">
-                        <!-- Dia -->
-                        <div >
-                            26
-                        </div>
-                    </td>
-                    <td class="fundo">
-                        <!-- Tema -->
-                        <span class="tema">
-                            <span style="color: #006; font-weight: bold;">Tema:</span>
-                            "Transmigrações progressivas" (pergs. 189 a 196)
-                        </span>
-                        <br>
-                        <!-- Expositor -->
-                        <span class="expositor">
-                            <span style="color: #006; font-weight: bold;">Expositor:</span> Jurema Seckler
-                        </span>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
+        if($d == 5)
+        { ?>
+            <!-- PROGRAMAÇAO DIA-->
+            <div class="programaDia">
+                <div class="dia">
+                    <!-- Dia -->
+                    <span class="dtDia"><?php echo date('d', strtotime($programacao['data'])); ?></span>
+                </div>
+                <span class="fundo">
+                    <!-- Tema -->
+                    <span class="tema">
+                        <span style="color: #006; font-weight: bold;">Tema:</span>
+                        <?php echo $programacao['tema']; ?>
+                    </span>
+                    <br>
+                    <!-- Expositor -->
+                    <span class="expositor">
+                        <span style="color: #006; font-weight: bold;">Expositor:</span> <?php echo $programacao['expositor']; ?> 
+                    </span>
+                </span>
+            </div> <?php
+        } 
+    endforeach; ?>
+            
+            
     <!-- SABADO -->
     <div class="semana">                
         <div class="dia_semana">
@@ -525,113 +222,32 @@
             Tríplice Aspecto da Doutrina Espírita
         </div>
     </div>
+    
+     <?php 
+    foreach ($dados as $programacao): 
+        $d = date('w', strtotime($programacao['data']));
 
-    <!-- PROGRAMAÇAO 01-->
-    <div class="borda_baixo">
-        <table cellpadding="0" cellspacing="0">
-            <tbody>
-                <tr>
-                    <td class="dia">
-                        <!-- Dia -->
-                        <div >
-                            06
-                        </div>
-                    </td>
-                    <td class="fundo">
-                        <!-- Tema -->
-                        <span class="tema">
-                            <span style="color: #006; font-weight: bold;">Tema:</span>
-                            "Crede em Deus"  (Isto vos mando..., Júlio Cezar Ribeiro/Estevão, cap.8)
-                        </span>
-                        <br>
-                        <!-- Expositor -->
-                        <span class="expositor">
-                            <span style="color: #006; font-weight: bold;">Expositor:</span> Luana Sá
-                        </span>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>            
-    <!-- PROGRAMAÇAO 02-->
-    <div class="borda_baixo">
-        <table cellpadding="0" cellspacing="0">
-            <tbody>
-                <tr>
-                    <td class="dia">
-                        <!-- Dia -->
-                        <div >
-                            13
-                        </div>
-                    </td>
-                    <td class="fundo">
-                        <!-- Tema -->
-                        <span class="tema">
-                            <span style="color: #006; font-weight: bold;">Tema:</span>
-                            Série Psicológica de Joanna de Ângelis - "Abnegação" (Vitória sobre a depressão)
-                        </span>
-                        <br>
-                        <!-- Expositor -->
-                        <span class="expositor">
-                            <span style="color: #006; font-weight: bold;">Expositor:</span> Verginia Silva     
-                        </span>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>            
-    <!-- PROGRAMAÇAO 03-->
-    <div class="borda_baixo">
-        <table cellpadding="0" cellspacing="0">
-            <tbody>
-                <tr>
-                    <td class="dia">
-                        <!-- Dia -->
-                        <div >
-                            20
-                        </div>
-                    </td>
-                    <td class="fundo">
-                        <!-- Tema -->
-                        <span class="tema">
-                            <span style="color: #006; font-weight: bold;">Tema:</span>
-                            "Sofrimento" (Plenitude, Divaldo Franco/Joanna de Ângelis, cap. 1)
-                        </span>
-                        <br>
-                        <!-- Expositor -->
-                        <span class="expositor">
-                            <span style="color: #006; font-weight: bold;">Expositor:</span> Álvaro Luiz da Silva
-                        </span>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <!-- PROGRAMAÇAO 04-->
-    <div class="borda_baixo">
-        <table cellpadding="0" cellspacing="0">
-            <tbody>
-                <tr>
-                    <td class="dia">
-                        <!-- Dia -->
-                        <div >
-                            27
-                        </div>
-                    </td>
-                    <td class="fundo">
-                        <!-- Tema -->
-                        <span class="tema">
-                            <span style="color: #006; font-weight: bold;">Tema:</span>
-                            "Jesus, o Lider"
-                        </span>
-                        <br>
-                        <!-- Expositor -->
-                        <span class="expositor">
-                            <span style="color: #006; font-weight: bold;">Expositor:</span> Dayse Lourenço
-                        </span>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+        if($d == 6)
+        { ?>
+            <!-- PROGRAMAÇAO DIA-->
+            <div class="programaDia">
+                <div class="dia">
+                    <!-- Dia -->
+                    <span class="dtDia"><?php echo date('d', strtotime($programacao['data'])); ?></span>
+                </div>
+                <span class="fundo">
+                    <!-- Tema -->
+                    <span class="tema">
+                        <span style="color: #006; font-weight: bold;">Tema:</span>
+                        <?php echo $programacao['tema']; ?>
+                    </span>
+                    <br>
+                    <!-- Expositor -->
+                    <span class="expositor">
+                        <span style="color: #006; font-weight: bold;">Expositor:</span> <?php echo $programacao['expositor']; ?> 
+                    </span>
+                </span>
+            </div> <?php
+        } 
+    endforeach; ?>
 </div>

@@ -2,12 +2,52 @@
     <div class="TabControl">
         <div id="header">
             <ul class="abas">
+            <?php
+                foreach ($texto as $programa)
+                { 
+                    
+                    $d = date('w', strtotime($programa['data']));
+                    
+                    switch ($d)
+                    {
+                        case 1:
+                            $dia = "Segunda";
+                            $horario = '15h';
+                            break;
+                        case 2:
+                            $dia = "Terça";
+                            $horario = '20:10h';
+                            break;
+                        case 3:
+                            $dia = 'Quarta';
+                            $horario = '19:30h';
+                            break;
+                        case 5:
+                            $dia = 'Sexta';
+                            $horario = '19:30h';
+                            break;
+                        case 6:
+                            $dia = 'Sábado';
+                            $horario = '19:45h';
+                            break;
+                    }
+                    
+                    
+                    
+                    
+                    ?>
                 <li>
                     <div class="aba">
-                        <span>Segunda</span>
+                        <span><?php echo $dia; ?></span>
+                        <br>
+                        <span class="cit"><?php echo $horario; ?></span>
                     </div>
                 </li>
-                <li>
+            
+                <?php } ?>
+            
+                
+<!--                <li>
                     <div class="aba">
                         <span>Terça</span>
                     </div>
@@ -26,71 +66,41 @@
                     <div class="aba">
                         <span>Sábado</span>
                     </div>
-                </li>
+                </li>-->
             </ul>
         </div>
         <div id="content_aba">
-            <div class="conteudo_aba">                             
-                <!-- Dia -->
-                <p class="dtPalestra">
-                   07 de Agosto de 2014
-                </p>                           
-                <!-- Tema -->
-                <p style="margin-top:15px">
-                    <span class="tema">
-                        <span style="color: #006; font-weight: bold;">Tema:</span>
-                        "A dissertação inacabada" 
-                        <span class="cit">(No Roteiro de Jesus, Gerson S. Monteiro, cap 32)</span>
-                    </span>
-                </p>
-                <!-- Expositor -->
-                <p style="margin-top:15px">
-                    <span class="expositor">
-                        <span style="color: #006; font-weight: bold;">Expositor:</span> Denise Delgado
-                    </span>
-                </p>
-            </div>
-            <div class="conteudo_aba">
-                <!-- Dia -->
-                <p class="dtPalestra">
-                   14 de Agosto de 2014
-                </p>                           
-                <!-- Tema -->
-                <p style="margin-top:15px">
-                    <span class="tema">
-                        <span style="color: #006; font-weight: bold;">Tema:</span>
-                        "O egoísmo"
-                        <span class="cit">(cap. XI, itens 11 e 12)</span>
-                    </span>
-                </p>
-                <!-- Expositor -->
-                <p style="margin-top:15px">
-                    <span class="expositor">
-                        <span style="color: #006; font-weight: bold;">Expositor:</span> Lilian Souza (AE Izabel)
-                    </span>
-                </p>
-            </div>
-            <div class="conteudo_aba">
-                <!-- Dia -->
-                <p class="dtPalestra">
-                   14 de Agosto de 2014
-                </p> 
-                Conteúdo da aba 3
-            </div>
-            <div class="conteudo_aba">
-                <!-- Dia -->
-                <p class="dtPalestra">
-                   14 de Agosto de 2014
-                </p> 
-                Conteúdo da aba 4
-            </div>
-            <div class="conteudo_aba">
-                <!-- Dia -->
-                <p class="dtPalestra" style="display: block;">
-                   14 de Agosto de 2014
-                </p> 
-                Conteúdo da aba 5
-            </div>
-        </div>
+            <?php
+                foreach ($texto as $programa)
+                { ?>
+                    <div class="conteudo_aba">  
+                        <!-- Dia -->
+                        <p class="dtPalestra">
+                           <?php
+                            $data = new TDate($programa['data']);
+                            echo $data->getDataExtenso();
+                            
+                            // Pega o dia da semana
+                            //$diasemana = date('w', strtotime($programa['data']));
+                           ?>
+                        </p>                           
+                        <!-- Tema -->
+                        <p style="margin-top:15px">
+                            <span class="tema">
+                                <span style="color: #006; font-weight: bold;">Tema:</span>
+                                <?php echo $programa['tema']; ?> 
+                                <span class="cit">(<?php echo $programa['subsidio']; ?>)</span>
+                            </span>
+                        </p>
+                        <!-- Expositor -->
+                        <p style="margin-top:15px">
+                            <span class="expositor">
+                                <span style="color: #006; font-weight: bold;">Expositor:</span> <?php echo $programa['expositor']; ?>
+                            </span>
+                        </p>
+                    </div> <?php
+                }
+            ?>
     </div>
 </div>
+</div> <!-- end Programação Semana -->

@@ -1,115 +1,67 @@
-2014-07-18 09:24:05 :: admin :: SELECT max(ID) as ID FROM clientes
-2014-07-18 09:24:05 :: admin :: INSERT INTO clientes (tipo, nome, endereco, numero, complemento, bairro, idCidade, uf, id) values ('PF', 'Erika Ferrari', 'Rua Caçapava', '171', NULL, 'Grajaú', '1', 'RJ', 5)
-2014-07-18 09:24:15 :: admin :: SELECT * FROM clientes WHERE (nome like '%a%' AND tipo = 'PF') ORDER BY nome
-2014-07-18 09:24:19 :: admin :: SELECT * FROM clientes WHERE (nome like '%a%' AND tipo = 'PF') ORDER BY nome
-2014-07-18 09:24:30 :: admin :: SELECT * FROM clientes WHERE (nome like '%a%' AND tipo = 'PF') ORDER BY nome
-2014-07-18 09:24:32 :: admin :: SELECT * FROM clientes WHERE (nome like '%a%' AND tipo = 'PF') ORDER BY nome
-2014-07-18 09:25:11 :: admin :: SELECT * FROM clientes WHERE (nome like '%a%' AND tipo = 'PJ') ORDER BY nome
-2014-07-18 09:25:13 :: admin :: SELECT * FROM clientes WHERE (id = '3')
-2014-07-18 09:31:19 :: admin :: SELECT * FROM clientes WHERE (id = '3')
-2014-07-18 09:33:14 :: admin :: SELECT * FROM clientes WHERE (id = '3')
-2014-07-18 09:33:46 :: admin :: SELECT * FROM clientes WHERE (id = '3')
-2014-07-18 09:34:28 :: admin :: SELECT * FROM clientes WHERE (id = '3')
-2014-07-18 09:35:12 :: admin :: SELECT * FROM clientes WHERE (id = '3')
-2014-07-18 09:37:22 :: admin :: SELECT * FROM clientes WHERE (id = '3')
-2014-07-18 09:40:01 :: admin :: SELECT * FROM clientes WHERE (id = '3')
-2014-07-18 09:42:17 :: admin :: SELECT * FROM clientes WHERE (id = '3')
-2014-07-18 09:42:47 :: admin :: SELECT * FROM clientes WHERE (id = '3')
-2014-07-18 09:43:15 :: admin :: SELECT * FROM clientes WHERE (id = '3')
-2014-07-18 09:43:43 :: admin :: SELECT * FROM clientes WHERE (id = '3')
-2014-07-18 09:44:11 :: admin :: SELECT * FROM clientes WHERE (id = '3')
-2014-07-18 09:44:13 :: admin :: SELECT * FROM clientes WHERE (id = '3')
-2014-07-18 09:44:23 :: admin :: SELECT * FROM clientes WHERE (id = '3')
-2014-07-18 09:44:24 :: admin :: SELECT * FROM clientes WHERE (id = '3')
-2014-07-18 09:44:53 :: admin :: SELECT * FROM clientes WHERE (id = '3')
-2014-07-18 09:45:04 :: admin :: SELECT * FROM clientes WHERE (id = '3')
-2014-07-18 09:46:19 :: admin :: SELECT * FROM clientes WHERE (id = '3')
-2014-07-18 09:47:17 :: admin :: SELECT * FROM clientes WHERE (id = '3')
-2014-07-18 09:48:13 :: admin :: SELECT * FROM clientes WHERE (id = '3')
-2014-07-18 09:49:07 :: admin :: SELECT * FROM clientes WHERE (id = '3')
-2014-07-18 09:49:55 :: admin :: SELECT * FROM clientes WHERE (id = '3')
-2014-07-18 09:50:22 :: admin :: SELECT * FROM clientes WHERE (id = '3')
-2014-07-18 09:53:56 :: admin :: SELECT * FROM clientes WHERE (id = '3')
-2014-07-18 09:54:10 :: admin :: SELECT * FROM clientes WHERE (nome like '%a%' AND tipo = 'PF') ORDER BY nome
-2014-07-18 09:54:12 :: admin :: SELECT * FROM clientes WHERE (id = '5')
-2014-07-18 09:56:17 :: admin :: SELECT * FROM clientes WHERE (id = '5')
-2014-07-18 09:57:02 :: admin :: SELECT * FROM clientes WHERE (id = '5')
-2014-07-18 09:58:02 :: admin :: SELECT * FROM clientes WHERE (id = '5')
-2014-07-18 09:58:27 :: admin :: SELECT * FROM clientes WHERE (id = '5')
-2014-07-18 10:00:20 :: admin :: SELECT * FROM clientes WHERE (id = '5')
-2014-07-18 10:00:23 :: admin :: SELECT * FROM clientes WHERE (id = '5')
-2014-07-18 10:00:23 :: admin :: SELECT * FROM clientes WHERE (id = '5')
-2014-07-18 10:00:23 :: admin :: UPDATE clientes SET tipo = 'PF', nome = 'Erika Ferrari', endereco = 'Rua Caçapava', numero = '171', bairro = 'Grajaú', idCidade = '1', uf = 'RJ', complemento = NULL WHERE (id = '5')
-2014-07-18 10:00:55 :: admin :: SELECT * FROM clientes WHERE (nome like '%a%' AND tipo = 'PF') ORDER BY nome
-2014-07-18 10:00:56 :: admin :: SELECT * FROM clientes WHERE (id = '5')
-2014-07-18 10:01:01 :: admin :: SELECT * FROM clientes WHERE (id = '5')
-2014-07-18 10:01:01 :: admin :: SELECT * FROM clientes WHERE (id = '5')
-2014-07-18 10:01:01 :: admin :: UPDATE clientes SET tipo = 'PF', nome = 'Erika Ferrari', endereco = 'Rua Caçapava', numero = '171', bairro = 'Grajaú', idCidade = '1', uf = 'RJ', complemento = NULL WHERE (id = '5')
-2014-07-18 10:02:55 :: admin :: SELECT * FROM clientes WHERE (nome like '%a%' AND tipo = 'PF') ORDER BY nome
-2014-07-18 10:02:56 :: admin :: SELECT * FROM clientes WHERE (id = '4')
-2014-07-18 10:03:19 :: admin :: SELECT * FROM clientes WHERE (nome like '%a%' AND tipo = 'PJ') ORDER BY nome
-2014-07-18 10:03:21 :: admin :: SELECT * FROM clientes WHERE (id = '2')
-2014-07-25 10:06:11 :: admin :: SELECT * FROM clientes WHERE (nome like '%a%' AND tipo = 'PF') ORDER BY nome
-2014-07-25 10:06:13 :: admin :: SELECT * FROM clientes WHERE (id = '5')
-2014-07-25 10:49:09 :: admin :: SELECT * FROM clientes WHERE (id = '5')
-2014-08-01 09:28:41 :: admin :: SELECT * FROM clientes WHERE (nome like '%a%' AND tipo = 'PF') ORDER BY nome
-2014-08-01 09:28:43 :: admin :: SELECT * FROM clientes WHERE (id = '5')
-2014-08-01 09:32:24 :: admin :: SELECT * FROM clientes WHERE (nome like '%a%' AND tipo = 'PF') ORDER BY nome
-2014-08-01 09:32:26 :: admin :: SELECT * FROM clientes WHERE (id = '5')
-2014-08-14 09:18:16 ::  :: Usuario admin logou!!
-2014-08-14 09:22:19 ::  :: Usuario admin logou!!
-2014-08-14 11:11:51 ::  :: Usuario admin logou!!
-2014-08-19 08:28:33 ::  :: Usuario admin logou!!
-2014-08-19 08:28:39 :: admin :: Usuario admin logou!!
-2014-08-19 08:30:41 ::  :: Usuario admin logou!!
-2014-08-19 09:22:38 ::  :: Usuario admin logou!!
-2014-08-19 10:30:18 ::  :: Usuario admin logou!!
-2014-08-19 10:30:42 ::  :: Usuario admin logou!!
-2014-08-19 11:25:43 ::  :: Usuario admin logou!!
-2014-08-19 11:33:42 ::  :: Usuario admin logou!!
-2014-08-19 14:15:48 ::  :: Usuario admin logou!!
-2014-08-21 08:44:40 ::  :: Usuario admin logou!!
-2014-08-21 08:44:48 :: admin :: Usuario admin logou!!
-2014-08-21 09:58:08 :: admin :: SELECT * FROM clientes WHERE (nome like '%rico%' AND tipo = 'PF') ORDER BY nome
-2014-08-21 09:58:46 :: admin :: SELECT * FROM clientes WHERE (nome like '%fri%' AND tipo = 'PF') ORDER BY nome
-2014-08-21 10:01:36 :: admin :: SELECT * FROM clientes WHERE (nome like '%fla%' AND tipo = 'PF') ORDER BY nome
-2014-08-21 10:01:51 :: admin :: SELECT * FROM clientes WHERE (nome like '%a%' AND tipo = 'PF') ORDER BY nome
-2014-08-21 10:02:01 :: admin :: SELECT * FROM clientes WHERE (nome like '%z%' AND tipo = 'PF') ORDER BY nome
-2014-08-21 10:03:37 :: admin :: SELECT * FROM clientes WHERE (nome like '%z%' AND tipo = 'PF') ORDER BY nome
-2014-08-21 10:03:45 :: admin :: SELECT * FROM clientes WHERE (nome like '%camilla%' AND tipo = 'PF') ORDER BY nome
-2014-08-21 10:03:52 :: admin :: SELECT * FROM clientes WHERE (nome like '%Carolina%' AND tipo = 'PF') ORDER BY nome
-2014-08-21 10:05:36 :: admin :: SELECT * FROM clientes WHERE (nome like '%Fla%' AND tipo = 'PF') ORDER BY nome
-2014-08-21 10:06:09 :: admin :: SELECT * FROM clientes WHERE (nome like '%ca%' AND tipo = 'PF') ORDER BY nome
-2014-08-21 10:07:34 :: admin :: SELECT * FROM clientes WHERE (nome like '%car%' AND tipo = 'PF') ORDER BY nome
-2014-08-21 10:08:18 :: admin :: SELECT * FROM clientes WHERE (nome like '%a%' AND tipo = 'PF') ORDER BY nome
-2014-08-21 10:10:49 :: admin :: SELECT * FROM clientes WHERE (nome like '%a%' AND tipo = 'PF') ORDER BY nome
-2014-08-21 10:11:01 :: admin :: SELECT * FROM clientes WHERE (nome like '%a%' AND tipo = 'PF') ORDER BY nome
-2014-08-21 10:13:26 :: admin :: SELECT * FROM clientes WHERE (nome like '%a%' AND tipo = 'PF') ORDER BY nome
-2014-08-21 10:13:29 :: admin :: SELECT * FROM clientes WHERE (nome like '%a%' AND tipo = 'PF') ORDER BY nome
-2014-08-21 10:16:49 ::  :: Usuario admin logou!!
-2014-08-21 10:16:51 :: admin :: Usuario admin logou!!
-2014-08-21 10:17:40 ::  :: Usuario admin logou!!
-2014-08-21 10:18:47 ::  :: Usuario admin logou!!
-2014-08-21 10:18:55 :: admin :: Usuario admin logou!!
-2014-08-21 10:21:19 ::  :: Usuario admin logou!!
-2014-08-21 10:22:55 ::  :: Usuario admin logou!!
-2014-08-21 10:23:19 ::  :: Usuario admin logou!!
-2014-08-21 10:26:25 :: admin :: SELECT * FROM clientes WHERE (nome like '%f%' AND tipo = 'PF') ORDER BY nome
-2014-08-21 10:27:46 :: admin :: SELECT * FROM clientes WHERE (nome like '%zz%' AND tipo = 'PF') ORDER BY nome
-2014-08-21 10:28:01 :: admin :: SELECT * FROM clientes WHERE (nome like '%ca%' AND tipo = 'PF') ORDER BY nome
-2014-08-21 10:50:03 :: admin :: SELECT * FROM clientes WHERE (nome like '%rrr%' AND tipo = 'PF') ORDER BY nome
-2014-08-21 10:50:08 :: admin :: SELECT * FROM clientes WHERE (nome like '%a%' AND tipo = 'PF') ORDER BY nome
-2014-08-21 11:26:51 :: admin :: SELECT * FROM clientes WHERE (nome like '%a%' AND tipo = 'PF') ORDER BY nome
-2014-10-01 18:37:03 :: admin :: Usuario admin logou!!
-2014-10-01 18:37:38 :: admin :: Usuario flavius logou!!
-2014-10-01 18:53:57 ::  :: Usuario admin logou!!
-2014-10-01 18:57:13 ::  :: Usuario admin logou!!
-2014-10-05 18:51:53 ::  :: Usuario flavius logou!!
-2014-10-12 10:52:14 ::  :: Usuario admin logou!!
-2014-10-12 11:58:55 :: admin :: INSERT INTO programacao (data, tema, subsidio, expositor) values ('2014-10-10', 'Parentesco e Filiação', '(pergs. 203 a 206)', 'Angela Delou')
-2014-10-12 12:00:08 :: admin :: INSERT INTO programacao (data, tema, subsidio, expositor) values ('2014-10-10', 'Parentesco e Filiação', '(pergs. 203 a 206)', 'Angela Delou')
-2014-10-12 12:02:17 :: admin :: INSERT INTO programacao (data, tema, subsidio, expositor) values ('2014-10-10', 'Parentesco e Filiação', '(pergs. 203 a 206)', 'Angela Delou')
-2014-10-12 12:04:48 :: admin :: INSERT INTO programacao (data, tema, subsidio, expositor) values ('2014-10-10', 'Parentesco e Filiação', '(pergs. 203 a 206)', 'Angela Delou')
-2014-10-12 12:06:38 :: admin :: INSERT INTO programacao (data, tema, subsidio, expositor) values ('2014-10-10', 'Parentesco e Filiação', '(pergs. 203 a 206)', 'Angela Delou')
-2014-10-12 12:07:41 :: admin :: INSERT INTO programacao (data, tema, subsidio, expositor) values ('2014-10-10', 'Parentesco e Filiação', '(pergs. 203 a 206)', 'Angela Delou')
-2014-10-12 12:09:17 :: admin :: INSERT INTO programacao (data, tema, subsidio, expositor) values ('2014-10-11', ' Série Psicológica de Joanna de Ângelis - \"Vida, morte e depressão\"', '(Vitória sobre a depressão)', 'Vergínia Silva')
+2015-02-28 15:43:06 ::  :: Usuario admin logou!!
+2015-02-28 15:47:56 ::  :: Usuario admin logou!!
+2015-02-28 15:50:03 ::  :: Usuario admin logou!!
+2015-02-28 15:58:06 :: admin :: INSERT INTO programacao (data, tema, subsidio, expositor) values ('2015-03-02', 'Servir Mais', NULL, 'Regina')
+2015-02-28 15:59:54 :: admin :: INSERT INTO programacao (data, tema, subsidio, expositor) values ('2015-03-03', '\"Jesus nos conhece?\"', 'Boa Nova, F.C.Xavier/Irmão X', 'Jurema Seckler ')
+2015-02-28 16:14:55 :: admin :: SELECT * FROM boletim WHERE (id = '5')
+2015-02-28 16:16:48 :: admin :: SELECT * FROM boletim WHERE (id = '5')
+2015-02-28 16:16:52 :: admin :: SELECT * FROM boletim WHERE (titulo like '%pala%') ORDER BY titulo
+2015-02-28 16:16:53 :: admin :: SELECT * FROM boletim WHERE (id = '4')
+2015-02-28 16:17:22 :: admin :: SELECT * FROM boletim WHERE (titulo like '%depoi%') ORDER BY titulo
+2015-02-28 16:17:23 :: admin :: SELECT * FROM boletim WHERE (id = '5')
+2015-02-28 16:20:47 :: admin :: SELECT * FROM boletim WHERE (id = '5')
+2015-02-28 16:21:08 :: admin :: UPDATE boletim SET dtInicio = '2015-03-02', dtFim = '2015-03-08', titulo = 'DEPOIS...', citacao = '\"Depois, sobrevindo tribulação ou perseguição...\" - Jesus. (MARCOS, 4:17.)', texto = 'Toda a gente conhece a ciência de começar as boas obras.
+Aceita-se o braço de um benfeitor, com exclamações de júbilo, todavia, depois...
+quando desaparece a necessidade, cultiva-se a queixa descabida, no rumo da ingratidão
+declarada, afirmando-se - \"ele não é tão bom quanto parece\".
+Inicia-se a missão de caridade, com entusiasmo santo, contudo, depois... ao
+surgirem os primeiros espinhos, proclama-se a falência da fé, gritando-se com toda força -
+\"não vale a pena\".
+Empreende-se a jornada da virtude e aproveita-se o estímulo que o Senhor
+concede à alma, através de mil recursos diferentes, entretanto, depois... quando a
+disciplina e o sacrifício cobram o justo imposto devido à iluminação espiritual, clama-se
+com enfado - \"assim também, não\".
+Ajuda-se a um companheiro da estrada, com extremado carinho, adornando-se-lhe
+o coração de flores encomiásticas, no entanto, depois... se a nossa sementeira não
+corresponde à ternura exigente, abandonamo-lo aos azares da senda, asseverando com
+ênfase - \"não posso mais\".
+Todos sabem principiar o ministério do bem, poucos prosseguem na lide
+salvadora, raríssimos terminam a tarefa edificante.
+Entretanto, por outro lado, as perigosas realizações da perturbação e da sombra se
+concretizam com rapidez.
+Um companheiro começa a trair os seus compromissos divinos e efetua, sem
+demora, o que deseja.
+Outro enceta a plantação do desânimo e, lesto, alcança os fins a que se propõe.
+Outro, ainda, inicia a discórdia e, sem detença, cria a desarmonia geral.
+Realmente, é muito difícil perseverar no bem e sempre fácil atingir o mal.
+Todavia, depois...', livro = 'Vinha de Luz' WHERE (id = '5')
+2015-02-28 16:21:13 :: admin :: SELECT * FROM boletim WHERE (titulo like '%depo%') ORDER BY titulo
+2015-02-28 16:21:14 :: admin :: SELECT * FROM boletim WHERE (id = '5')
+2015-02-28 16:26:11 :: admin :: UPDATE boletim SET dtInicio = '2015-03-02', dtFim = '2015-03-08', titulo = 'DEPOIS...', citacao = '\"Depois, sobrevindo tribulação ou perseguição...\" - Jesus. (MARCOS, 4:17.)', texto = 'Toda a gente conhece a ciência de começar as boas obras.
+Aceita-se o braço de um benfeitor, com exclamações de júbilo, todavia, depois...
+quando desaparece a necessidade, cultiva-se a queixa descabida, no rumo da ingratidão declarada, afirmando-se - \"ele não é tão bom quanto parece\".
+Inicia-se a missão de caridade, com entusiasmo santo, contudo, depois... ao surgirem os primeiros espinhos, proclama-se a falência da fé, gritando-se com toda força - \"não vale a pena\".
+Empreende-se a jornada da virtude e aproveita-se o estímulo que o Senhor concede à alma, através de mil recursos diferentes, entretanto, depois... quando a disciplina e o sacrifício cobram o justo imposto devido à iluminação espiritual, clama-se com enfado - \"assim também, não\".
+Ajuda-se a um companheiro da estrada, com extremado carinho, adornando-se-lhe o coração de flores encomiásticas, no entanto, depois... se a nossa sementeira não corresponde à ternura exigente, abandonamo-lo aos azares da senda, asseverando com ênfase - \"não posso mais\".
+Todos sabem principiar o ministério do bem, poucos prosseguem na lide salvadora, raríssimos terminam a tarefa edificante.
+Entretanto, por outro lado, as perigosas realizações da perturbação e da sombra se concretizam com rapidez.
+Um companheiro começa a trair os seus compromissos divinos e efetua, sem demora, o que deseja.
+Outro enceta a plantação do desânimo e, lesto, alcança os fins a que se propõe.
+Outro, ainda, inicia a discórdia e, sem detença, cria a desarmonia geral.
+Realmente, é muito difícil perseverar no bem e sempre fácil atingir o mal.
+Todavia, depois...', livro = 'Vinha de Luz' WHERE (id = '5')
+2015-02-28 16:27:05 :: admin :: SELECT * FROM boletim WHERE (titulo like '%depo%') ORDER BY titulo
+2015-02-28 16:27:06 :: admin :: SELECT * FROM boletim WHERE (id = '5')
+2015-02-28 16:27:56 :: admin :: UPDATE boletim SET dtInicio = '2015-03-02', dtFim = '2015-03-08', titulo = 'DEPOIS...', citacao = '\"Depois, sobrevindo tribulação ou perseguição...\" - Jesus. (MARCOS, 4:17.)', texto = 'Toda a gente conhece a ciência de começar as boas obras.
+Aceita-se o braço de um benfeitor, com exclamações de júbilo, todavia, depois... quando desaparece a necessidade, cultiva-se a queixa descabida, no rumo da ingratidão declarada, afirmando-se - \"ele não é tão bom quanto parece\".
+Inicia-se a missão de caridade, com entusiasmo santo, contudo, depois... ao surgirem os primeiros espinhos, proclama-se a falência da fé, gritando-se com toda força - \"não vale a pena\".
+Empreende-se a jornada da virtude e aproveita-se o estímulo que o Senhor concede à alma, através de mil recursos diferentes, entretanto, depois... quando a disciplina e o sacrifício cobram o justo imposto devido à iluminação espiritual, clama-se com enfado - \"assim também, não\".
+Ajuda-se a um companheiro da estrada, com extremado carinho, adornando-se-lhe o coração de flores encomiásticas, no entanto, depois... se a nossa sementeira não corresponde à ternura exigente, abandonamo-lo aos azares da senda, asseverando com ênfase - \"não posso mais\".
+Todos sabem principiar o ministério do bem, poucos prosseguem na lide salvadora, raríssimos terminam a tarefa edificante.
+Entretanto, por outro lado, as perigosas realizações da perturbação e da sombra se concretizam com rapidez.
+Um companheiro começa a trair os seus compromissos divinos e efetua, sem demora, o que deseja.
+Outro enceta a plantação do desânimo e, lesto, alcança os fins a que se propõe.
+Outro, ainda, inicia a discórdia e, sem detença, cria a desarmonia geral.
+Realmente, é muito difícil perseverar no bem e sempre fácil atingir o mal.
+Todavia, depois...', livro = 'Vinha de Luz' WHERE (id = '5')
+2015-03-02 09:38:13 ::  :: SELECT * FROM programacao WHERE (data >= '2015-03-01' AND data <= '2015-03-31') ORDER BY data

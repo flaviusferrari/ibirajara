@@ -19,5 +19,15 @@ $(document).ready(function(){
     $(".aba").hover(
         function(){$(this).addClass("ativa")},
         function(){$(this).removeClass("ativa")}
-    );				
+    );			
+    
+    
+    // Paga o ID do Evento e leva a página
+    $('.wrapper').click(function() {
+        ano = $(this).children('input[name=ano]').val();
+        arquivo = $(this).children('input[name=arquivo]').val();
+        
+        var novaURL = 'eventos/exibe/'+ano+'/'+arquivo;
+        $(window.document.location).attr('href',novaURL);
+    });
 });

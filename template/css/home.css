@@ -21,14 +21,14 @@ and open the template in the editor.
     .TabControl #content_aba{ width:99%; border: solid 1px;overflow:hidden; height:99%; }
     .TabControl .abas{display:inline;}
     .TabControl .abas li{float:left;list-style: none;}
-    .aba{width:108px; height:30px; border:solid 1px; border-radius:5px 5px 0 0;
+    .aba{width:108px; height:36px; border:solid 1px; border-radius:5px 5px 0 0;
             text-align:center; padding-top:5px; background:#CCF;}
-    .ativa{width:108px; height:30px; border:solid 1 px; border-radius:5px 5px 0 0;
+    .ativa{width:108px; height:36px; border:solid 1 px; border-radius:5px 5px 0 0;
             text-align:center; padding-top:5px; background:#666;}
     .ativa span, .selected span{color:#fff}
     .TabControl #content_aba{background:#CCF}
     .TabControl .conteudo_aba{width:100%;  background:#CCF; display:none; height:99%;}
-    .selected{width:100px; height:30px; border:solid 1 px; border-radius:5px 5px 0 0;
+    .selected{width:100px; height:36px; border:solid 1 px; border-radius:5px 5px 0 0;
             text-align:center; padding-top:5px; background:#999}
 
 #aviso {font-family: Courier New, monospace;font-size: 14px;}
@@ -39,4 +39,6 @@ and open the template in the editor.
     .epistola {text-align: right !important;font-size: 12px;margin-bottom: 10px;}
         .txt_evan {font-style: italic;}
     .txt_boletim {text-indent:2em;margin-bottom: 15px;text-align: justify;}    
+    
+.wrapper {cursor: pointer;}
     

@@ -2,7 +2,8 @@
 <html lang="pt-br">
 <head>
   <title>Centro Espírita Ibirajara</title>
-    <meta charset="UTF-8">
+        <base href="/ibirajara/">
+        <meta charset="UTF-8">
     
     {LIBRARIES}
 </head>
@@ -13,7 +14,7 @@
     <!-- DIV CABEÇALHO -->
     <div id="cabecalho">
         <div id="logo">
-            <img src="{DIR}template/images/logo_cei.png" width="110">
+            <img src="template/images/logo_cei.png" width="110">
         </div>
         
         <!-- C. E. Ibirajara -->
@@ -33,7 +34,7 @@
         
         <!-- Lema Ibirajara -->
         <div class="lema">
-            <img src="{DIR}template/images/IBIRAJARA.png">
+            <img src="template/images/IBIRAJARA.png">
         </div>
     </div>
         
@@ -44,7 +45,7 @@
     <div class="clear"></div>  
     
     <!-- Content -->
-        <div id="cols">            
+        <div id="sistema" class="sistema">            
             {SISTEMA}
         </div> <!-- /content -->
         
@@ -56,5 +57,17 @@
     </div>
     
 </div>
+
+    <!-- MENSAGEM -->
+    <div id="mess" style="display: none;" title="Mensagem">
+        <p id="txtMensagem"></p>
+    </div>
+
+    <!-- JANELA MODAL -->
+    <div id="janelaModal" class="reveal-modal">
+	<a class="close-reveal-modal">×</a>
+        <div id="janelaModalData"></div>
+    </div>
+    
 </body>
 </html>        

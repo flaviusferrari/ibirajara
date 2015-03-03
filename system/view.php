@@ -10,6 +10,7 @@ class View
 {
     public $result;
     protected $_menu;
+    protected $_sub;
     protected $_content;
     public $_controller;
     public $_sessao;
@@ -32,11 +33,11 @@ class View
     
     
     /**
-     *  metodo getInclude( )
-     *  retorna o include desejado
-     * 
-     * @parm $include = nome do include
-     */
+        *  metodo getInclude( )
+        *  retorna o include desejado
+        * 
+        * @parm $include = nome do include
+        */
     public function getInclude($include, $texto = NULL)
     {
         // Inica a gravaçao do retorno
@@ -56,42 +57,57 @@ class View
     }
     
     /**
-     * Método setMenu()
-     *   seta o menu
-     * 
-     * @param type $name = Menu do sistema
-     */
+        * Método setMenu()
+        *   seta o menu
+        * 
+        * @param type $name = Menu do sistema
+        */
     public function setMenu($menu)
     {
         $this->_menu = $menu;
     }
     
+    
     /**
-     * Método setContent()
-     *   Inclui o conteúdo
-     * 
-     * @param type $sys = sistema
-     */
+        * Método setSub()
+        *   seta o menu
+        * 
+        * @param type $name = Menu do sistema
+        */
+    public function setSub($sub)
+    {
+        $this->_sub = $sub;
+    }
+    
+    
+    /**
+        * Método setContent()
+        *   Inclui o conteúdo
+        * 
+        * @param type $sys = sistema
+        */
     public function setContent($content)
     {
         $this->_content = $content;
     }
     
+    
     /**
-     * Método setSessao()
-     *   Inclui o nome da Sessão
-     */
+        * Método setSessao()
+        *   Inclui o nome da Sessão
+        */
     public function setSessao($sessao)
     {
         $this->_sessao = $sessao;
     }
+    
 
-        /**
-     * Método setMensagem()
-     *   exibe uma mensagem na tela
-     * 
-     * @param $mensagem = texto da mensagem
-     */
+    /**
+        * Método setMensagem()
+        *   exibe uma mensagem na tela
+        * 
+        * @param $mensagem = texto da mensagem
+        */
     public function setMensagem($mensagem)
     {
         // lê o INI e retorna um array
@@ -107,9 +123,9 @@ class View
     
     
     /**
-     * Método exibeLayout()
-     *  exibe o layou
-     */
+        * Método exibeLayout()
+        *  exibe o layou
+        */
     public function exibeLayout()
     {
         //instancia a classe
@@ -120,6 +136,7 @@ class View
                     'DIR'       => DIR,
                     'LIBRARIES' => $this->setLibraries(CONTROLL),
                     'MENU'      => $this->_menu,
+                    'SUB_MENU'  => $this->_sub,
                     'SESSAO'    => $this->_sessao,
                     'CONTENT'   => $this->_content
                 );

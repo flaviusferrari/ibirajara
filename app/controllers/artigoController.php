@@ -27,11 +27,12 @@ class Artigo extends Controller
     public function exibe($param)
     {
         $this->VIEW->setMenu($this->VIEW->getInclude('menu'));
+        $this->VIEW->setSub($this->VIEW->getInclude('sub'));
         
-        $this->VIEW->_sessao = strtoupper($param['sessao']);
-        $this->VIEW->_controller = $param['sessao'];
+        $this->VIEW->_sessao = strtoupper($param[0]);
+        //$this->VIEW->_controller = $param['sessao'];
         
-        $this->VIEW->setContent($this->VIEW->getInclude($param['sessao']));
+        $this->VIEW->setContent($this->VIEW->getInclude($param[0]));
         
         $this->VIEW->exibeLayout();
     }

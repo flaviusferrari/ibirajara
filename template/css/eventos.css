@@ -1,0 +1,16 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 24/10/2014, 15:26:44
+    Author     : flavius
+*/
+
+#evento {padding: 10px;}
+
+    #evento h2 {text-align: center;margin-bottom: 10px;}
+    #evento img {float: left;padding-right: 10px;}
+    
+    .dia {}

@@ -17,7 +17,7 @@ and open the template in the editor.
 .stripViewer .panelContainer .panel	{ float: left; height: 100%; position: relative; width: 488px; }
 .stripNavL, .stripNavR, .stripNav	{ display: none; }
 .nav-thumb 				{ border: 1px solid black; margin-right: 5px; }
-#movers-row				{ margin: -45px 0 0 62px; }
+#movers-row				{ margin: -68px 0 0 80px; }
 #movers-row div                         { width: 20%; float: left; }
 #movers-row div a.cross-link 		{ float: right; }
 .photo-meta-data			{ background: url(../images/slideshow/transpBlack.png); padding: 10px; height: 30px; 

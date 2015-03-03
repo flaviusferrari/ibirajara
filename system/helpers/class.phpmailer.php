@@ -74,7 +74,7 @@ class PHPMailer {
    * Sets the From email address for the message.
    * @var string
    */
-  var $From              = 'root@localhost';
+  var $From              = 'teste@ceibirajara.url.ph';
 
   /**
    * Sets the From name of the message.
@@ -176,13 +176,13 @@ class PHPMailer {
    * Hosts will be tried in order.
    * @var string
    */
-  var $Host        = 'localhost';
+  var $Host        = 'mx1.hostinger.com.br';
 
   /**
    * Sets the default SMTP server port.
    * @var int
    */
-  var $Port        = 25;
+  var $Port        = 2525;
 
   /**
    * Sets the SMTP HELO of the message (Default is $Hostname).
@@ -207,13 +207,13 @@ class PHPMailer {
    * Sets SMTP username.
    * @var string
    */
-  var $Username     = '';
+  var $Username     = 'teste@ceibirajara.url.ph';
 
   /**
    * Sets SMTP password.
    * @var string
    */
-  var $Password     = '';
+  var $Password     = 'q1w2e3r4';
 
   /**
    * Sets the SMTP server timeout in seconds. This function will not

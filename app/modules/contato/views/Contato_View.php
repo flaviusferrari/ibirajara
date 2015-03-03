@@ -21,4 +21,20 @@ class Contato_View extends View
         
         return $result;
     }   
+    
+    
+    /**
+     * Método enviandoEmail()
+     */
+    public function enviandoEmail()
+    {
+        ob_start();  
+        
+        include_once "app/modules/contato/views/Envmail.php";
+        
+        $result = ob_get_contents();
+        ob_end_clean();   
+        
+        return $result;
+    }
 }

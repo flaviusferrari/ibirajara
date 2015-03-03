@@ -65,6 +65,7 @@ class System
     // Obtem os demais parametros
     public function getParams()
     {
+        // Remove o módulo e a ação
         unset($this->_explode[0], $this->_explode[1]);
         
         if (end($this->_explode) == NULL)
@@ -72,36 +73,8 @@ class System
             array_pop($this->_explode);
         }
         
-        $i = 0;
-        if (!empty($this->_explode))
-        {
-            foreach ($this->_explode as $val)
-            {
-                if ($i % 2 == 0)
-                {
-                    $ind[] = $val;
-                }
-                else
-                {
-                    $value[] = $val;
-                }
-                $i++;
-            }
-        }
-        else
-        {
-            $ind = array();
-            $value = array();
-        }
-        
-        if (count($ind) == count($value) && !empty($ind) && !empty($value))
-        {
-            $this->_params = array_combine($ind, $value);
-        }
-        else
-        {
-            $this->_params = array();
-        }
+        // Renumera o array para começar do 0
+        $this->_params = array_values($this->_explode);
     }
 
     
@@ -110,9 +83,7 @@ class System
     {
         $controller_path = CONTROLLERS . $this->_controller . 'Controller.php';
         
-        define('CONTROLL', $this->_controller);
-        
-        if (file_exists($controller_path))
+         if (file_exists($controller_path))
         {
             require_once ($controller_path);            
         }
@@ -129,6 +100,9 @@ class System
                 die('Controller não existe!!');
             }
         }       
+        
+        define('CONTROLL', $this->_controller);
+        define('ACTION', $this->_action);
         
         $app = new $this->_controller($this->_controller);
         

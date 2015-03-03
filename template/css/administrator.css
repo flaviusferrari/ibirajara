@@ -12,6 +12,11 @@ and open the template in the editor.
 
 #adm {padding: 15px;display: table;}
 
+#sistema {margin-top: 5px;width: 798px;background-color: white;border: 1px solid black;border-radius: 10px;
+       display:  table;}
+
+/*.sistema {padding-top: 20px;padding-bottom: 20px;}*/
+
 
 /***************************************************************
 *********************  LOGON  **********************************
@@ -35,13 +40,6 @@ and open the template in the editor.
 .txtCampos {font-size: 13px;color: #666666;font-family: Arial, Tahoma, Verdana;font-weight: bold;}
 
 
-/*****************************************************************************
-*************************  BOTÕES  *******************************************
-*****************************************************************************/
-.botao {display: inline-block;padding: 3px 5px;border: 2px solid #999;border-radius: 5px;font-size: 14px;
-        font-weight: bold;background-color: #CCC;cursor: pointer;}
-
-.botao:hover {background-color: #999;color: white;text-decoration: none;}
 
 
 /** CAIXA DE MENSAGEM **/

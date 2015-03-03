@@ -21,7 +21,21 @@ $controller = $_POST['controller'];
 $action     = $_POST['action'];
 
 // Caminho do Controller
-$controller_path = CONTROLLERS . $controller . '/' . $controller . 'Controller.php';
+$controller_path = CONTROLLERS . $controller . 'Controller.php';
+
+if (file_exists($controller_path))
+{
+    require_once ($controller_path);            
+}
+else
+{
+    $controller_path = MODULES . $controller . '/controllers/' .  $controller. 'Controller.php';
+
+    if (file_exists($controller_path))
+    {
+        require_once ($controller_path);
+    }
+} 
 
 // Inclui o arquivo de Controller
 require_once ($controller_path);

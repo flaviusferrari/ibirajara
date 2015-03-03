@@ -2,6 +2,7 @@
 <link href="<?=DIR ?>template/css/geral.css" rel="stylesheet" type="text/css" />
 <link href="<?=DIR ?>template/css/MenuPrincipalCss.css" rel="stylesheet" type="text/css" />
 <link href="<?=DIR ?>template/css/smoothness/jquery-ui.css" rel="stylesheet" type="text/css" />
+<link href="template/css/smoothness/reveal.css" rel="stylesheet" type="text/css" />
 <link href="<?=DIR ?>template/css/slideshow.css" rel="stylesheet" type="text/css" />
 <link href="<?=DIR ?>template/css/home.css" rel="stylesheet" type="text/css" />
 <link href="<?=DIR ?>template/css/<?php echo $controller ?>.css" rel="stylesheet" type="text/css" />
@@ -9,6 +10,7 @@
 <!-- Importa os arquivos JQuery -->
 <script type="text/javascript" src="<?=DIR ?>system/jquery/jquery.js"></script>
 <script type="text/javascript" src="<?=DIR ?>system/jquery/jquery-ui.js"></script>
+<script type="text/javascript" src="system/jquery/jquery.reveal.js"></script>
 <script type="text/javascript" src="<?=DIR ?>system/jquery/maskedinput.js"></script>
 <script type="text/javascript" src="<?=DIR ?>system/jquery/geral.js"></script>
 <script type="text/javascript" src="<?=DIR ?>template/jquery/jquery-easing-1.3.pack.js"></script>
@@ -17,3 +19,9 @@
 <script type="text/javascript" src="<?=DIR ?>template/jquery/slider.js"></script>
 <script type="text/javascript" src="<?=DIR ?>template/jquery/home.js"></script>
 <script type="text/javascript" src="<?=DIR ?>template/jquery/<?php echo $controller ?>.js"></script>
+<?php
+    if($controller == 'administrator') 
+    {
+        echo '<script type="text/javascript" src="template/jquery/administrator/'. ACTION .'.js"></script>';
+    }
+?>

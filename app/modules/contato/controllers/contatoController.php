@@ -22,6 +22,9 @@ class Contato extends Controller
         // Instancia o Menu
         $this->view->setMenu($this->view->getInclude('menu')); 
         
+        // Instancia o Sub-Menu
+        $this->view->setSub($this->view->getInclude('sub'));
+        
         // Inclui os models
         require_once (BASEPATH . '/app/modules/contato/models/Contato_Model.php');  
         $this->model = new Contato_Model();
@@ -40,6 +43,36 @@ class Contato extends Controller
         $this->view->setContent($sistema);
         
         $this->view->setSessao('Formulário de Contato');        
+        
+        $this->view->exibeLayout();
+    }
+    
+    
+   /**
+     *  Método enviaEmail()
+    *   Envia email de contato
+     */
+    public function enviaEmail()
+    {
+        // Recebe os dados
+        $mail['nome']    = $_POST['nome'];
+        $mail['area']    = $_POST['area'];
+        $mail['assunto'] = $_POST['assunto'];
+        $mail['remetente'] = $_POST['email'];
+        
+        
+        $enviar = $this->model->enviaEmail($mail);
+        
+        if ($enviar)
+        {
+            $this->view->setContent('Enviou');
+        }
+        else
+        {
+            $this->view->setContent('Erro');
+        }
+        
+        //$this->view->setContent($this->view->enviandoEmail());
         
         $this->view->exibeLayout();
     }
