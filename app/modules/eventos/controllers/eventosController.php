@@ -32,10 +32,10 @@ class Eventos extends Controller
     
     
     /** 
-    * Metdo index()
-    *   Verifica se o Usuário se logou, caso não tenha feito o login,
-     *  encaminha para a página de logon
-    */
+        * Metdo index()
+        *   Verifica se o Usuário se logou, caso não tenha feito o login,
+         *  encaminha para a página de logon
+        */
     public function index()
     {   
         // Redireciona para a página de Inicial do Painel
@@ -49,19 +49,19 @@ class Eventos extends Controller
     
     
     /**
-     * Método exibe
-     *   exibe o evento discriminado
-     * 
-     * @param $id = Id do Evento
-     */
+        * Método exibe
+        *   exibe o evento discriminado
+        * 
+        * @param $id = Id do Evento
+        */
     public function exibe($params)
     {
         // recebe os dados da página a ser exibida
-        $key = array_keys($params);
-        $value = array_values($params);
+        $ano     = $params[0];
+        $arquivo = $params[1];
         
         // inclui o evento desejado
-        $this->view->setContent($this->view->exibeEvento($key[0], $value[0]));
+        $this->view->setContent($this->view->exibeEvento($ano, $arquivo));
         
         $this->view->setSessao('Eventos');        
         

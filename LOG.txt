@@ -65,3 +65,4 @@ Outro, ainda, inicia a discórdia e, sem detença, cria a desarmonia geral.
 Realmente, é muito difícil perseverar no bem e sempre fácil atingir o mal.
 Todavia, depois...', livro = 'Vinha de Luz' WHERE (id = '5')
 2015-03-02 09:38:13 ::  :: SELECT * FROM programacao WHERE (data >= '2015-03-01' AND data <= '2015-03-31') ORDER BY data
+2015-03-05 14:49:11 ::  :: SELECT * FROM programacao WHERE (data >= '2015-03-01' AND data <= '2015-03-31') ORDER BY data
