@@ -1,0 +1,15 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 14/03/2015, 16:00:48
+    Author     : flavius
+*/
+
+table {width: 100%;}
+table th {background-color: blue;color: white;}
+table td {border: 1px solid #666;}
+
+.semana_td {text-align: center;font-weight: bold;color: #666;background-color: #cccccc;}
