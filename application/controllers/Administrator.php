@@ -1,6 +1,7 @@
 <?php
+defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Administrator extends Controller
+class Administrator extends MY_Controller
 {
     private $view;
     private $model;
@@ -10,6 +11,13 @@ class Administrator extends Controller
 
     public function __construct()
     {
+        parent::__construct();
+        
+        $this->dados['css'] = 'administrator';
+        $this->dados['js']  = '';
+        $this->dados['conteudo'] = 'principal_view';
+        
+        
 //        // Inclui as Views
 //        require_once (BASEPATH . '/app/modules/administrator/'.ACTION.'/views/Camada_View.php'); 
 //        $this->view = new Camada_View();
@@ -30,23 +38,8 @@ class Administrator extends Controller
         */
     public function index()
     {   
-        header("Location:indexCode.php/administrator");
+        $this->load->view('layout', $this->dados);
         
-        // Verifica se o usuário fez login no site
-//        if(!isset($_COOKIE['usuario']) or empty($_COOKIE['usuario']))
-//        {
-//            // Redireciona para a página de Logon do Painel
-//            $sistema = $this->view->exibeView('logon');       
-//            $this->view->setSistema($sistema);
-//        }
-//        else
-//        {
-//            // Redireciona para a página de Inicial do Painel
-//            $sistema = $this->view->exibeView('programacao');       
-//            $this->view->setSistema($sistema);
-//        }
-//        
-//        $this->view->exibePainel();
     }
     
     
