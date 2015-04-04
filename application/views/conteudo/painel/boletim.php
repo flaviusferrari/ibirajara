@@ -15,71 +15,48 @@
             <a class="btn btn-primary" id="btnAtualizarBoletim">Atualizar</a>
             <a class="btn btn-primary" id="btnLocalizarBoletim">Localizar</a>
             <a class="btn btn-primary" id="btnExcluirBoletim">Excluir</a>                    
-        </div>       
+        </div>     
+        
+        <br>
         
         <form id="formulario" method="POST" autocomplete="off" action="">
-            <div class="tableBlock">
+            
+            <div class="row">
                 <!-- DATA INICIO -->
-                <span class="tableCell" style="width: 130px;">
-                    <label class="txtCampos">
-                        Data Inicio:
-                    </label>
-                    <br>
-                    <input name="dtInicio" id="dtInicio" class="dtForm" style="width: 100px;" value="">                      
+                <div class="col-md-2 form-group">
+                    <label>Data Inicio:</label>
+                    <input name="dtInicio" id="dtInicio" class="form-control dtForm" value="">                      
                     <input type="hidden" name="idBoletim" id="idBoletim" value="">
-                </span>  
+                </div>  
                 <!-- DATA FIM -->
-                <span class="tableCell">
-                    <label class="txtCampos">
-                        Data Fim:
-                    </label>
-                    <br>
-                    <input name="dtFim" id="dtFim" class="dtForm" style="width: 100px;" value="">                      
-                </span>  
-            </div>
+                <div class="col-md-2 col-md-offset-1 form-group">
+                    <label>Data Fim:</label>
+                    <input name="dtFim" id="dtFim" class="form-control dtForm" value="">                      
+                </div>
+            </div>            
             
-            <div class="tableBlock">
-                <!-- TÍTULO -->
-                <span class="tableCell">
-                    <label class="txtCampos">
-                        Título:
-                    </label>
-                    <br>
-                    <input name="titulo" id="titulo" style="width: 300px;" value="">
-                </span>   
-            </div>
+            <!-- TÍTULO -->
+            <div class="form-group">
+                <label>Título:</label>
+                <input name="titulo" id="titulo" class="form-control" value="">
+            </div> 
             
-            <div class="tableBlock">
-                <!-- CITAÇÃO -->
-                <span class="tableCell">
-                    <label class="txtCampos">
-                        Citação:
-                    </label>
-                    <br>
-                    <input name="citacao" style="width: 300px;" value="" type="text">
-                </span>   
+            <!-- CITAÇÃO -->
+             <div class="form-group">
+                <label>Citação:</label>
+                <input name="citacao" class="form-control" value="" type="text">
+             </div>
+           
+            <!-- TEXTO -->
+            <div class="form-group">
+                <label>Texto:</label>
+                <textarea name="texto" class="form-control" rows="5"></textarea>
             </div>  
             
-            <div class="tableBlock">
-                <!-- TEXTO -->
-                <span class="tableCell">
-                    <label class="txtCampos">
-                        Texto:
-                    </label>
-                    <br>
-                    <textarea name="texto" class="msnBox" rows="5"></textarea>
-                </span>   
-            </div>
-            
-            <div class="tableBlock">
-                <!-- LIVRO -->
-                <span class="tableCell">
-                    <label class="txtCampos">
-                        Livro:
-                    </label>
-                    <br>
-                    <input name="livro" style="width: 300px;" value="">
-                </span>   
+            <!-- LIVRO -->
+            <div class="form-group">
+                <label>Livro:</label>
+                <input name="livro" class="form-control"  value="">
             </div>  
         </form>
     </div>
