@@ -6,16 +6,18 @@
         
         <title>Ibirajara - Painel de Controle</title>
         
-
+        <!-- JAVASCRIPT -->
+        <script src="<?php echo base_url('includes/js/jquery.js') ?>"></script>
+        <script src="<?php echo base_url('includes/js/jquery-ui.js') ?>"></script>
+        <script src="<?php echo base_url('includes/bootstrap/js/bootstrap.min.js') ?>"></script>
+        <script src="<?php echo base_url('includes/js/geral.js') ?>"></script>
+        <script src="<?php echo base_url("includes/js/$js.js") ?>"></script>
+        
         <!-- CSS -->        
         <link href="<?php echo base_url('includes/bootstrap/css/bootstrap.min.css') ?>" rel="stylesheet" type="text/css" />
-        <link href="<?php echo base_url('includes/css/geral.css') ?>" rel="stylesheet" type="text/css" />
+        <link href="<?php echo base_url('includes/css/jquery-ui.css') ?>" rel="stylesheet" type="text/css" />
+        <link href="<?php echo base_url('includes/css/geral.css') ?>" rel="stylesheet" type="text/css" />        
         <link href="<?php echo base_url("includes/css/$css.css") ?>" rel="stylesheet" type="text/css" />
-
-        <!-- Latest compiled and minified JavaScript -->
-        <script src="<?php echo base_url('includes/js/jquery.js') ?>"></script>
-        <script src="<?php echo base_url('includes/bootstrap/js/bootstrap.min.js') ?>"></script>
-        <script src="<?php echo base_url("includes/js/$js.js") ?>"></script>
         
     </head>
     <body>
