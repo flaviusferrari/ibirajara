@@ -14,6 +14,9 @@ class Administrator extends MY_Controller
         parent::__construct();
         
         $this->dados['css'] = 'administrator';        
+        
+        // Carrega a validação dos formulários
+        $this->load->library('form_validation');
     }    
     
     
@@ -64,9 +67,21 @@ class Administrator extends MY_Controller
         */
     public function cadastraProgramacao()
     {
-        $this->dados['conteudo'] = 'sucess';
+        // Efetua a validação dos dados
+        $this->form_validation->set_rules('data', 'Data', 'required');
+        $this->form_validation->set_rules('tema', 'Tema', 'required');
+        $this->form_validation->set_rules('expositor', 'Expositor', 'required');
         
-        $this->load->view('layout', $this->dados);
+        if ($this->form_validation->run() === FALSE)
+        {
+            $this->load->view('layout', $this->dados);
+        }
+        else
+        {
+            $this->dados['conteudo'] = 'sucess';
+            
+            $this->load->view('layout', $this->dados);
+        }
     }
     
     

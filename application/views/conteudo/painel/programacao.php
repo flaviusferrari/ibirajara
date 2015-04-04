@@ -19,50 +19,40 @@
         
         <!-- FORMULÁRIO -->
         <form id="formulario" method="POST" autocomplete="off" action="">
-            <div class="tableBlock">
+            
+            <div class="row">
                 <!-- LOGIN -->
-                <span class="tableCell">
-                    <label class="txtCampos">
-                        Data:
-                    </label>
-                    <br>
-                    <input name="data" id="data" class="dtForm" style="width: 100px;" value="">  
+                <div class="col-md-2 form-group">
+                    <label>Data:</label>
+                    <input name="data" id="data" class="form-control dtForm" value="<?php echo set_value('data'); ?>">  
+                    <?php echo form_error('data', '<div class="label label-danger">', '</div>'); ?>
                     <input type="hidden" name="idProgramacao" id="idProgramacao" value=""> 
-                </span>                
+                </div>   
             </div>
             
-            <div class="tableBlock">
-                <!-- TEMA PALESTRA -->
-                <span class="tableCell">
-                    <label class="txtCampos">
-                        Tema:
-                    </label>
-                    <br>
-                    <input name="tema" id="tema" style="width: 300px;" value="">
-                </span>   
+           
+            <!-- TEMA PALESTRA -->
+            <div class="form-group">
+                <label>Tema:</label>
+                <input name="tema" id="tema" class="form-control" value="<?php echo set_value('tema'); ?>">
+                <?php echo form_error('tema', '<div class="label label-danger">', '</div>'); ?>
+            </div>   
+           
+            
+            <!-- SUBSÍDIRO -->
+            <div class="form-group">
+                <label >Subsídio:</label>
+                <input name="subsidio" class="form-control" value="<?php echo set_value('subsidio'); ?>">
+            </div> 
+            
+           
+            <!-- EXPOSITOR -->
+            <div class="form-group">
+                <label>Expositor:</label>
+                <input name="expositor" class="form-control" value="<?php echo set_value('expositor'); ?>">
+                <?php echo form_error('expositor', '<div class="label label-danger">', '</div>'); ?>
             </div>
-            
-            <div class="tableBlock">
-                <!-- SUBSÍDIRO -->
-                <span class="tableCell">
-                    <label class="txtCampos">
-                        Subsídio:
-                    </label>
-                    <br>
-                    <input name="subsidio" style="width: 300px;" value="">
-                </span>   
-            </div>  
-            
-            <div class="tableBlock">
-                <!-- EXPOSITOR -->
-                <span class="tableCell">
-                    <label class="txtCampos">
-                        Expositor:
-                    </label>
-                    <br>
-                    <input name="expositor" style="width: 300px;" value="">
-                </span>   
-            </div>  
+           
         </form>
     </div>
 </div>
