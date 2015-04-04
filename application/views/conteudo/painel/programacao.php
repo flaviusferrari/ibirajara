@@ -7,7 +7,18 @@
 
 <div id="adm">    
     <div class="padding">
-        <form id="formulario" method="POST" autocomplete="off" action="administrator/programacao/cadastraProgramacao">
+        
+        <!-- BOTÕES -->
+        <div id="menuBotoes">
+            <a class="btn btn-primary" id="btnSalvar">Salvar</a>
+            <a class="btn btn-primary" id="btnNovo">Novo</a>
+            <a class="btn btn-primary" id="btnAtualizar">Atualizar</a>
+            <a class="btn btn-primary" id="btnLocalizar">Localizar</a>
+            <a class="btn btn-primary" id="btnExcluir">Excluir</a>                    
+        </div>     
+        
+        <!-- FORMULÁRIO -->
+        <form id="formulario" method="POST" autocomplete="off" action="">
             <div class="tableBlock">
                 <!-- LOGIN -->
                 <span class="tableCell">
@@ -52,11 +63,6 @@
                     <input name="expositor" style="width: 300px;" value="">
                 </span>   
             </div>  
-            
-            <br>
-            <a class="btn btn-primary" id="btnGravaProgramacao">
-                Gravar
-            </a>
         </form>
     </div>
 </div>

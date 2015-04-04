@@ -9,5 +9,11 @@ $(document).ready(function() {
         $(this).parent().hide();
     });
     
+    /**** BOTÃO GRAVA PROGRAMAÇÃO ****/
+    $('#btnSalvar').click(function() {
+        $('#formulario').attr('action', 'indexCode.php/administrator/programacao/cadastraProgramacao');
+        $('#formulario').submit();
+    });
+    
 });
 

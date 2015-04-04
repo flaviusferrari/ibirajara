@@ -41,25 +41,20 @@ class Administrator extends MY_Controller
         $this->dados['js']       = 'programacao';
         $this->dados['conteudo'] = 'painel/programacao';
         
-        // Exibe o formulário
-        $this->load->view('layout', $this->dados);
+        // Busca a ação a ser executada
+        $acao = $this->uri->segment(3);        
         
         // Verifica se foi enviada alguma ação
-//        if (!empty($params))
-//        {    
-//            // Recebe a ação
-//            $acao = $params[0];
-//
-//            $this->$acao($params);
-//        }
-//        else
-//        {
-//            // Insere o formulário pedido        
-//            $this->view->setSistema($this->view->exibeView('programacao'));
-//        }
-//        
-//        // Exibe o painel
-//        $this->view->exibePainel();
+        if (!empty($acao))
+        {   
+            $this->$acao();
+            //$this->load->view('layout', $this->dados);
+        }
+        else
+        {
+            // Exibe o painel
+            $this->load->view('layout', $this->dados);
+        }
     }
     
     
@@ -69,16 +64,9 @@ class Administrator extends MY_Controller
         */
     public function cadastraProgramacao()
     {
-        // Salva os parâmetros no objeto
-        $this->setProgramParam();
+        $this->dados['conteudo'] = 'sucess';
         
-        $this->model->setTablename('programacao');
-        
-        $salvaProgramacao = $this->model->salvaProgramacao($this->program);
-        
-        // Verifica o Resultado da gravação
-        // e imprime a resposta
-        $this->view->verificaGravacao($salvaProgramacao, 'programacao'); 
+        $this->load->view('layout', $this->dados);
     }
     
     
