@@ -17,6 +17,9 @@ class Administrator extends MY_Controller
         
         // Carrega a validação dos formulários
         $this->load->library('form_validation');
+        
+        // Carrega o Model
+        $this->load->model('administrator_model');
     }    
     
     
@@ -51,7 +54,6 @@ class Administrator extends MY_Controller
         if (!empty($acao))
         {   
             $this->$acao();
-            //$this->load->view('layout', $this->dados);
         }
         else
         {
@@ -78,6 +80,8 @@ class Administrator extends MY_Controller
         }
         else
         {
+            $this->administrator_model->salvar_programacao();
+            
             $this->dados['conteudo'] = 'sucess';
             
             $this->load->view('layout', $this->dados);
