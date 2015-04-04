@@ -5,16 +5,12 @@
  */
 $(document).ready(function() {
     
-    $('.week').click(function() {
-        $(this).parent().hide();
-    });
     
-    /**** BOTÃO GRAVA PROGRAMAÇÃO ****/
+    /**** BOTÃO SALVA BOLETIM ****/
     $('#btnSalvar').click(function() {
-        $('#formulario').attr('action', 'indexCode.php/administrator/programacao/cadastraProgramacao');
+        $('#formulario').attr('action', 'indexCode.php/administrator/boletim/salvarBoletim');
         $('#formulario').submit();
     });
-    
     
 });
 

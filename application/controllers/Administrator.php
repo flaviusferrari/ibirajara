@@ -96,62 +96,45 @@ class Administrator extends MY_Controller
      {  
         $this->dados['js']       = 'boletim';
         $this->dados['conteudo'] = 'painel/boletim';
-
-        // Exibe o formulário
-        $this->load->view('layout', $this->dados);
-         
-         
-//        // Verifica se foi enviada alguma ação
-//        if (!empty($params))
-//        {    
-//            // Recebe a ação
-//            $acao = $params[0];
-//
-//            $this->$acao($params);
-//        }
-//        else
-//        {
-//            // Insere o formulário pedido        
-//            $this->view->setSistema($this->view->exibeView('boletim'));
-//        }
-//        
-//        // Exibe o painel
-//        $this->view->exibePainel();
+        
+        // Busca a ação a ser executada
+        $acao = $this->uri->segment(3);        
+        
+        // Verifica se foi enviada alguma ação
+        if (!empty($acao))
+        {   
+            $this->$acao();
+        }
+        else
+        {
+            // Exibe o painel
+            $this->load->view('layout', $this->dados);
+        }
      }
      
-    /**
-        * Método setBoletimParam()
-        *  Inclui os parâmetros 
-        */
-    private function setBoletimParam()
-    {
-        $this->program = new Boletim_Param();
-        
-        $this->program->id        = $_POST['idBoletim'];
-        // Data
-        $dtInicio = new TDate($_POST['dtInicio']);
-        $dtFim = new TDate($_POST['dtFim']);
-        
-        $this->program->dtInicio  = $dtInicio->getDate();
-        $this->program->dtFim     = $dtFim->getDate();
-        $this->program->titulo    = $_POST['titulo'];        
-        $this->program->citacao   = $_POST['citacao'];
-        $this->program->texto     = $_POST['texto'];
-        $this->program->livro     = $_POST['livro'];
-    }
-     
+         
      public function salvarBoletim()
      {
-         // Salva os parâmetros no objeto
-        $this->setBoletimParam();
+        // Efetua a validação dos dados
+        $this->form_validation->set_rules('dtInicio', 'Data Inicio', 'required');
+        $this->form_validation->set_rules('dtFim', 'Data Fim', 'required');
+        $this->form_validation->set_rules('titulo', 'Título', 'required');
+        $this->form_validation->set_rules('citacao', 'Citação', 'required');
+        $this->form_validation->set_rules('texto', 'Texto', 'required');
+        $this->form_validation->set_rules('livro', 'Livro', 'required');
         
-        $this->model->setTablename('boletim');
-        
-        $salvaBoletim = $this->model->salvaBoletim($this->program);
-        
-        // Verifica o Resultado da gravação
-        // e imprime a resposta
-        $this->view->verificaGravacao($salvaBoletim, 'boletim'); 
+        if ($this->form_validation->run() === FALSE)
+        {
+            $this->load->view('layout', $this->dados);
+        }
+        else
+        {
+            $this->administrator_model->salvar_boletim();
+            
+            $this->dados['conteudo'] = 'sucess';
+            
+            $this->load->view('layout', $this->dados);
+        }
      }
      
      
