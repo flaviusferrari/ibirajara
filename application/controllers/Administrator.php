@@ -13,21 +13,7 @@ class Administrator extends MY_Controller
     {
         parent::__construct();
         
-        $this->dados['css'] = 'administrator';
-        $this->dados['js']  = '';
-        $this->dados['conteudo'] = 'principal_view';
-        
-        
-//        // Inclui as Views
-//        require_once (BASEPATH . '/app/modules/administrator/'.ACTION.'/views/Camada_View.php'); 
-//        $this->view = new Camada_View();
-//        
-//        // Instancia o Menu
-//        $this->view->setMenu($this->view->getInclude('menu_painel')); 
-//        
-//        // Inclui os models
-//        require_once (BASEPATH . '/app/modules/administrator/'.ACTION.'/models/Camada_Model.php');  
-//        $this->model = new Camada_Model();
+        $this->dados['css'] = 'administrator';        
     }    
     
     
@@ -38,51 +24,42 @@ class Administrator extends MY_Controller
         */
     public function index()
     {   
-        $this->load->view('layout', $this->dados);
+        $this->dados['js']  = '';
+        $this->dados['conteudo'] = 'principal_view';
         
+        $this->load->view('layout', $this->dados);        
     }
     
     
-    /**
-        * Método setProgramParam()
-        *  Inclui os parâmetros 
-        */
-    private function setProgramParam()
-    {
-        $this->program = new Programacao_Param();
-        
-        $this->program->id        = $_POST['idProgramacao'];
-        // Data
-        $dt = new TDate($_POST['data']);
-        $this->program->data      = $dt->getDate();
-        $this->program->tema      = $_POST['tema'];        
-        $this->program->subsidio  = $_POST['subsidio'];
-        $this->program->expositor = $_POST['expositor'];
-    }
-    
+       
     /** 
         * Metdo Programacao()
         *  exibe o formulário de cadastro da programação     
         */
-    public function programacao($params)
+    public function programacao()
     {   
+        $this->dados['js']       = 'programacao';
+        $this->dados['conteudo'] = 'painel/programacao';
+        
+        // Exibe o formulário
+        $this->load->view('layout', $this->dados);
         
         // Verifica se foi enviada alguma ação
-        if (!empty($params))
-        {    
-            // Recebe a ação
-            $acao = $params[0];
-
-            $this->$acao($params);
-        }
-        else
-        {
-            // Insere o formulário pedido        
-            $this->view->setSistema($this->view->exibeView('programacao'));
-        }
-        
-        // Exibe o painel
-        $this->view->exibePainel();
+//        if (!empty($params))
+//        {    
+//            // Recebe a ação
+//            $acao = $params[0];
+//
+//            $this->$acao($params);
+//        }
+//        else
+//        {
+//            // Insere o formulário pedido        
+//            $this->view->setSistema($this->view->exibeView('programacao'));
+//        }
+//        
+//        // Exibe o painel
+//        $this->view->exibePainel();
     }
     
     
@@ -108,24 +85,31 @@ class Administrator extends MY_Controller
     /***********************************
         *****  BOLETIM   *******
         **************************************/
-     public function boletim($params)
-     {   
-        // Verifica se foi enviada alguma ação
-        if (!empty($params))
-        {    
-            // Recebe a ação
-            $acao = $params[0];
+     public function boletim()
+     {  
+        $this->dados['js']       = 'boletim';
+        $this->dados['conteudo'] = 'painel/boletim';
 
-            $this->$acao($params);
-        }
-        else
-        {
-            // Insere o formulário pedido        
-            $this->view->setSistema($this->view->exibeView('boletim'));
-        }
-        
-        // Exibe o painel
-        $this->view->exibePainel();
+        // Exibe o formulário
+        $this->load->view('layout', $this->dados);
+         
+         
+//        // Verifica se foi enviada alguma ação
+//        if (!empty($params))
+//        {    
+//            // Recebe a ação
+//            $acao = $params[0];
+//
+//            $this->$acao($params);
+//        }
+//        else
+//        {
+//            // Insere o formulário pedido        
+//            $this->view->setSistema($this->view->exibeView('boletim'));
+//        }
+//        
+//        // Exibe o painel
+//        $this->view->exibePainel();
      }
      
     /**

@@ -4,7 +4,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <base href="/ibirajara/">
         
-        <title>Vigapetro - Sistema de Gestão Empresarial</title>
+        <title>Ibirajara - Painel de Controle</title>
         
 
         <!-- CSS -->        
@@ -25,7 +25,7 @@
                 <div class="row">
                     <!-- LOGO -->
                     <div id="logo" class="col-md-4">
-                        <img src="<?php echo base_url('includes/images/logo.png') ?>" alt="Vigapetro">
+                        <img src="<?php echo base_url('includes/images/logo.png') ?>" width="150" alt="C. E. Ibirjajara">
                     </div>
 
                     <!-- USUARIO -->
