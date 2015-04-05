@@ -1,9 +1,9 @@
-<div id="tit_painel" class="sessao">
-    <span class="">
-        Cadastra Boletim
-    </span>
+<!-- TÍTULO DA SESSÃO -->
+<div class="panel panel-default sessao">
+    <div class="panel-body">
+        <span>Cadastra Boletim</span>
+    </div>
 </div>
-
 
 <div id="adm">    
     <div class="padding">

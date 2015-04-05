@@ -1,7 +1,8 @@
-<div id="tit_painel" class="sessao">
-    <span class="">
-        Cadastra Programação
-    </span>
+<!-- TÍTULO DA SESSÃO -->
+<div class="panel panel-default sessao">
+    <div class="panel-body">
+        <span>Cadastra Programação</span>
+    </div>
 </div>
 
 

@@ -146,16 +146,25 @@ class Administrator extends MY_Controller
         */
     public function LocalizaBoletim()
     {
-        $boletim = $this->model->localizarBoletim($_POST['termo']);
+        $boletins = $this->administrator_model->localiza_boletim($this->input->post('termo'));
         
-        if ($boletim)
+        
+        foreach ($boletins as $boletim)
         {
-           $this->view->exibeBoletins($boletim);
+            $data[] = array('value' => $boletim['titulo'], 'valor' => $boletim['id'],);
         }
-        else
-        {
-            return FALSE;
-        }
+//        
+//
+        echo json_encode($data);
+        
+//        if ($boletim)
+//        {
+//           $this->view->exibeBoletins($boletim);
+//        }
+//        else
+//        {
+//            return FALSE;
+//        }
     }
     
     
