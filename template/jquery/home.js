@@ -27,6 +27,11 @@ $(document).ready(function(){
         ano = $(this).children('input[name=ano]').val();
         arquivo = $(this).children('input[name=arquivo]').val();
         
+        if (arquivo == '#')
+        {
+            return false;
+        }
+        
         var novaURL = 'eventos/exibe/'+ano+'/'+arquivo;
         $(window.document.location).attr('href',novaURL);
     });
