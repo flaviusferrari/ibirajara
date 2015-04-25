@@ -152,19 +152,9 @@ class Administrator extends MY_Controller
         foreach ($boletins as $boletim)
         {
             $data[] = array('value' => $boletim['titulo'], 'valor' => $boletim['id'],);
-        }
-//        
-//
+        }        
+
         echo json_encode($data);
-        
-//        if ($boletim)
-//        {
-//           $this->view->exibeBoletins($boletim);
-//        }
-//        else
-//        {
-//            return FALSE;
-//        }
     }
     
     
@@ -172,27 +162,21 @@ class Administrator extends MY_Controller
         * Método exibeBoletim()
         *   exibe a Empresa
         */
-    public function exibeBoletim($params)
+    public function exibeBoletim()
     {
-        $boletim = $this->model->buscaDadosTabela($params[1], 'boletim');
+        // Recebe o ID do Boletim
+        $idBoletim = $this->uri->segment(4);      
         
-        if (is_string($boletim))
-        {
-            $this->view->mensagem($boletim);
-        }        
-        else
-        {
-            // Data
-            $dtInicio = new TDate($boletim['dtInicio']);
-            $dtFim = new TDate($boletim['dtFim']);
-
-            $boletim['dtInicio']  = $dtInicio->getDate();
-            $boletim['dtFim']     = $dtFim->getDate();
+        $boletim = $this->administrator_model->buscaDadosBoletim($idBoletim);
         
+        // Insere o arquivo a ser exibido
+        $this->dados['conteudo'] = 'painel/boletim_exibe';
         
-            // Exibe a Ordem
-            $this->view->setSistema($this->view->exibeView('boletim', $boletim));
-        } 
+        // Mescla os arrays
+        $dados = array_merge($this->dados, $boletim);
+        
+        // Exibe a página
+        $this->load->view('layout', $dados);
     }
     
     

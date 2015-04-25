@@ -53,10 +53,25 @@ class Administrator_model extends CI_Model
     
     
     /**
-     * Método Localiza_boletim()
-     *  localiza o título do boletim 
-     * 
-     */
+        *  Método buscaDadosBoletim()
+        *    busca os dados do boletim
+        */
+    public function buscaDadosBoletim($id)
+    {
+        // Efetua a consulta
+        $this->db->where('id', $id);
+        $query = $this->db->get('boletim');
+        
+        return $query->row_array();
+    }
+
+    
+
+    /**
+        * Método Localiza_boletim()
+        *  localiza o título do boletim 
+        * 
+        */
     public function localiza_boletim($termo)
     {
         $sql = "SELECT id, titulo FROM boletim WHERE titulo LIKE '%$termo%'";
