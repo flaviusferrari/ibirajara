@@ -169,6 +169,10 @@ class Administrator extends MY_Controller
         
         $boletim = $this->administrator_model->buscaDadosBoletim($idBoletim);
         
+        // Ajusta as datas do Boletim
+        $boletim['dtInicio'] = date('d/m/Y', strtotime($boletim['dtInicio']));
+        $boletim['dtFim'] = date('d/m/Y', strtotime($boletim['dtFim']));
+        
         // Insere o arquivo a ser exibido
         $this->dados['conteudo'] = 'painel/boletim_exibe';
         

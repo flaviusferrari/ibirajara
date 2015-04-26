@@ -25,13 +25,13 @@
                 <!-- DATA INICIO -->
                 <div class="col-md-2 form-group">
                     <label>Data Inicio:</label>
-                    <input name="dtInicio" id="dtInicio" class="form-control dtForm" value="<?php echo set_value('dtInicio'); ?>">  
+                    <input name="dtInicio" id="dtInicio" class="form-control dtForm" value="<?php echo $dtInicio; ?>">  
                     <input type="hidden" name="idBoletim" id="idBoletim" value="">
                 </div>  
                 <!-- DATA FIM -->
                 <div class="col-md-2 col-md-offset-1 form-group">
                     <label>Data Fim:</label>
-                    <input name="dtFim" id="dtFim" class="form-control dtForm" value="<?php echo set_value('dtFim'); ?>">  
+                    <input name="dtFim" id="dtFim" class="form-control dtForm" value="<?php echo $dtFim; ?>">  
                     <?php echo form_error('dtFim', '<div class="label label-danger">', '</div>'); ?>
                 </div>
             </div>            
