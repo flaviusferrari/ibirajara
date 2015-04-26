@@ -19,7 +19,7 @@ class Programacao extends MY_Controller
         $this->load->library('form_validation');
         
         // Carrega o Model
-        $this->load->model('administrator/programacao_Model', 'Model');
+        $this->load->model('administrator/Programacao_Model', 'Model');
     }    
     
     
@@ -61,6 +61,25 @@ class Programacao extends MY_Controller
             
             $this->load->view('layout', $this->dados);
         }
+    }
+    
+    
+    /**
+     *  Métdo localizaProgramacao()
+     *   localiza a programação pelo dia escolhido
+     */
+    public function localizaProgramacao()
+    {
+        $programacao = $this->Model->localizaProgramacao();
+        
+        // Insere o arquivo a ser exibido
+        $this->dados['conteudo'] = 'painel/programacao_exibe';
+        
+        // Mescla os arrays
+        $dados = array_merge($this->dados, $programacao);
+        
+        // Exibe a página
+        $this->load->view('layout', $dados);
     }
     
 }

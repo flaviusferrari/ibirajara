@@ -25,4 +25,17 @@ class Programacao_model extends CI_Model
     }
     
     
+    public function localizaProgramacao()
+    {
+        $dia = str_replace('/', '-', $this->input->post('data'));
+        $dia = date('Y-m-d', strtotime($dia));
+        
+        // Efetua a consulta
+        $this->db->where('data', $dia);
+        $query = $this->db->get('programacao');
+        
+        return $query->row_array();
+    }
+    
+    
 }

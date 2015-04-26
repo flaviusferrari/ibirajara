@@ -16,5 +16,12 @@ $(document).ready(function() {
     });
     
     
+    /**** BOTÃO LOCALIZAR ****/
+    $('#btnLocalizar').click(function() {
+        $('#formulario').attr('action', 'indexCode.php/administrator/programacao/localizaProgramacao');
+        $('#formulario').submit();
+    });
+    
+    
 });
 
