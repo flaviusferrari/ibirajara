@@ -15,21 +15,6 @@ class Administrator_model extends CI_Model
     }
     
     
-    public function salvar_programacao()
-    {
-        $dia = str_replace('/', '-', $this->input->post('data'));
-        $dia = date('Y-m-d', strtotime($dia));
-        
-         $data = array(
-            'data' => $dia,
-            'tema' => $this->input->post('tema'),
-            'subsidio' => $this->input->post('subsidio'),
-            'expositor' => $this->input->post('expositor')
-        );
-
-        return $this->db->insert('programacao', $data);
-    }
-    
     
     public function salvar_boletim()
     {

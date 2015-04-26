@@ -19,7 +19,7 @@ class Programacao extends MY_Controller
         $this->load->library('form_validation');
         
         // Carrega o Model
-        $this->load->model('administrator_model');
+        $this->load->model('administrator/programacao_Model', 'Model');
     }    
     
     
@@ -55,7 +55,7 @@ class Programacao extends MY_Controller
         }
         else
         {
-            $this->administrator_model->salvar_programacao();
+            $this->Model->salvar_programacao();
             
             $this->dados['conteudo'] = 'sucess';
             
