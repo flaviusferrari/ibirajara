@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Administrator extends MY_Controller
+class Boletim extends MY_Controller
 {
     private $view;
     private $model;
@@ -30,90 +30,15 @@ class Administrator extends MY_Controller
         */
     public function index()
     {   
-        $this->dados['js']  = '';
-        $this->dados['conteudo'] = 'principal_view';
-        
-        $this->load->view('layout', $this->dados);        
-    }
-    
-    
-       
-    /** 
-        * Metdo Programacao()
-        *  exibe o formulário de cadastro da programação     
-        */
-    public function programacao()
-    {   
-        $this->dados['js']       = 'programacao';
-        $this->dados['conteudo'] = 'painel/programacao';
-        
-        // Busca a ação a ser executada
-        $acao = $this->uri->segment(3);        
-        
-        // Verifica se foi enviada alguma ação
-        if (!empty($acao))
-        {   
-            $this->$acao();
-        }
-        else
-        {
-            // Exibe o painel
-            $this->load->view('layout', $this->dados);
-        }
-    }
-    
-    
-    /**
-        * Método cadastraProgramacao
-        *   cadastra a programação no Banco de Dados
-        */
-    public function cadastraProgramacao()
-    {
-        // Efetua a validação dos dados
-        $this->form_validation->set_rules('data', 'Data', 'required');
-        $this->form_validation->set_rules('tema', 'Tema', 'required');
-        $this->form_validation->set_rules('expositor', 'Expositor', 'required');
-        
-        if ($this->form_validation->run() === FALSE)
-        {
-            $this->load->view('layout', $this->dados);
-        }
-        else
-        {
-            $this->administrator_model->salvar_programacao();
-            
-            $this->dados['conteudo'] = 'sucess';
-            
-            $this->load->view('layout', $this->dados);
-        }
-    }
-    
-    
-    /***********************************
-        *****  BOLETIM   *******
-        **************************************/
-     public function boletim()
-     {  
         $this->dados['js']       = 'boletim';
         $this->dados['conteudo'] = 'painel/boletim';
         
-        // Busca a ação a ser executada
-        $acao = $this->uri->segment(3);        
-        
-        // Verifica se foi enviada alguma ação
-        if (!empty($acao))
-        {   
-            $this->$acao();
-        }
-        else
-        {
-            // Exibe o painel
-            $this->load->view('layout', $this->dados);
-        }
-     }
-     
-         
-     public function salvarBoletim()
+        // Exibe o painel
+        $this->load->view('layout', $this->dados);           
+    }
+    
+    
+    public function salvarBoletim()
      {
         // Efetua a validação dos dados
         $this->form_validation->set_rules('dtInicio', 'Data Inicio', 'required');
@@ -204,5 +129,5 @@ class Administrator extends MY_Controller
         // e imprime a resposta
         $this->view->verificaGravacao($atualizaBoletim, 'boletim'); 
      }
-   
+    
 }

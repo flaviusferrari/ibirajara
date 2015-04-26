@@ -35,7 +35,7 @@ class Login extends CI_Controller
         {
             $this->session->set_userdata("logado", 1);
             $this->session->set_userdata('nome', $user['Nome']);
-            redirect(base_url('indexCode.php/administrator'));
+            redirect(base_url('indexCode.php/administrator/principal'));
         } 
         else
         {
