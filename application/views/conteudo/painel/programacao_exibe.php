@@ -25,7 +25,7 @@
                 <!-- LOGIN -->
                 <div class="col-md-2 form-group">
                     <label>Data:</label>
-                    <input name="data" id="data" class="form-control dtForm" value="<?php echo $data; ?>">  
+                    <input name="data" id="data" class="form-control dtForm" value="<?php echo $this->tdate->setDateBr($data); ?>">  
                     <input type="hidden" name="idProgramacao" id="idProgramacao" value="<?php echo $id ?>"> 
                 </div>   
             </div>
