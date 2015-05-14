@@ -23,5 +23,10 @@ $(document).ready(function() {
     });
     
     
+    /**** NOVO ****/
+    $('#btnNovo').click(function() {
+        $(window.document.location).attr('href', 'indexCode.php/administrator/programacao');
+    });
+    
 });
 
