@@ -15,7 +15,8 @@ class Programacao extends MY_Controller
         
         // Carrega a validação dos formulários
         $this->load->library('form_validation');
-        
+        $this->load->library('tdate');
+                
         // Carrega o Model
         $this->load->model('administrator/Programacao_Model', 'Model');
     }    
@@ -70,14 +71,22 @@ class Programacao extends MY_Controller
     {
         $programacao = $this->Model->localizaProgramacao();
         
-        // Insere o arquivo a ser exibido
-        $this->dados['conteudo'] = 'painel/programacao_exibe';
+        if ($programacao)
+        {
+            // Insere o arquivo a ser exibido
+            $this->dados['conteudo'] = 'painel/programacao_exibe';
         
-        // Mescla os arrays
-        $dados = array_merge($this->dados, $programacao);
+            // Mescla os arrays
+            $this->dados = array_merge($this->dados, $programacao);
+        }
+        else
+        {
+            // Insere o arquivo a ser exibido
+            $this->dados['conteudo'] = 'painel/programacao';
+        }
         
         // Exibe a página
-        $this->load->view('layout', $dados);
+        $this->load->view('layout', $this->dados);
     }
     
     
@@ -89,7 +98,6 @@ class Programacao extends MY_Controller
         */
     public function data_check($str)
     {
-        $this->load->library('tdate');
         $dia = $this->tdate->setDateBd($str);
         
         $this->db->where('data', $dia);
