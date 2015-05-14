@@ -63,9 +63,9 @@ class Programacao extends MY_Controller
     
     
     /**
-     *  Métdo localizaProgramacao()
-     *   localiza a programação pelo dia escolhido
-     */
+        *  Métdo localizaProgramacao()
+        *   localiza a programação pelo dia escolhido
+        */
     public function localizaProgramacao()
     {
         $programacao = $this->Model->localizaProgramacao();
@@ -80,24 +80,31 @@ class Programacao extends MY_Controller
         $this->load->view('layout', $dados);
     }
     
+    
+    /**
+        * Método data_check()
+        *   verifica se a data já inserida no Banco de Dados
+        * @param type $str
+        * @return boolean
+        */
     public function data_check($str)
     {
-        $dia = str_replace('/', '-', $str);
-        $dia = date('Y-m-d', strtotime($dia));
+        $this->load->library('tdate');
+        $dia = $this->tdate->setDateBd($str);
         
         $this->db->where('data', $dia);
         $query = $this->db->get('programacao');
-        //$data = $query->row_array();
         
-            if ($query->num_rows() > 0)
-            {
-                    $this->form_validation->set_message('data_check', 'A {field} já foi cadastrada!!');
-                    return FALSE;
-            }
-            else
-            {
-                    return TRUE;
-            }
+        // Verifica se retornou alguma consulta
+        if ($query->num_rows() > 0)
+        {
+            $this->form_validation->set_message('data_check', 'A {field} já foi cadastrada!!');
+            return FALSE;
+        }
+        else
+        {
+            return TRUE;
+        }
     }
     
 }
