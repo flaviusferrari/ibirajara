@@ -57,6 +57,8 @@ class Programacao extends MY_Controller
             $this->Model->salvar_programacao();
             
             $this->dados['conteudo'] = 'sucess';
+            $this->dados['msn_content'] = 'Programação salva com sucesso!!!';
+            $this->dados['msn_link']    = 'indexCode.php/administrator/programacao';
             
             $this->load->view('layout', $this->dados);
         }
