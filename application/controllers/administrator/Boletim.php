@@ -3,19 +3,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Boletim extends MY_Controller
 {
-    private $view;
-    private $model;
-    private $_user;
-    private $program;
+    private $dados;
 
 
     public function __construct()
     {
         parent::__construct();
         
-        $this->dados['css'] = 'administrator';        
+        $this->dados['css'] = 'administrator';      
+        $this->dados['js']       = 'boletim';
+        $this->dados['conteudo'] = 'painel/boletim';
         
-        // Carrega a validação dos formulários
+        // Carrega as Bibliotecas necessárias
         $this->load->library('form_validation');
         
         // Carrega o Model
@@ -30,9 +29,6 @@ class Boletim extends MY_Controller
         */
     public function index()
     {   
-        $this->dados['js']       = 'boletim';
-        $this->dados['conteudo'] = 'painel/boletim';
-        
         // Exibe o painel
         $this->load->view('layout', $this->dados);           
     }
@@ -57,6 +53,8 @@ class Boletim extends MY_Controller
             $this->administrator_model->salvar_boletim();
             
             $this->dados['conteudo'] = 'sucess';
+            $this->dados['msn_content'] = 'Boletim salvo com sucesso!!!';
+            $this->dados['msn_link']    = 'indexCode.php/administrator/boletim';
             
             $this->load->view('layout', $this->dados);
         }
