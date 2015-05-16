@@ -93,6 +93,36 @@ class Programacao extends MY_Controller
     
     
     /**
+        * Método atualizar()
+        *   atualiza a programação do dia
+        */
+    public function atualizar()
+    {
+        // Efetua a validação dos dados
+        $this->form_validation->set_rules('data', 'Data', 'required');
+        $this->form_validation->set_rules('tema', 'Tema', 'required');
+        $this->form_validation->set_rules('expositor', 'Expositor', 'required');
+        
+        if ($this->form_validation->run() === FALSE)
+        {
+            $this->dados['conteudo'] = 'painel/programacao';
+            $this->load->view('layout', $this->dados);
+        }
+        else
+        {
+            $this->Model->atualizarProgramacao();
+            
+            $this->dados['conteudo'] = 'sucess';
+            $this->dados['msn_content'] = 'Programação atualizada com sucesso!!!';
+            $this->dados['msn_link']    = 'indexCode.php/administrator/programacao';
+            
+            $this->load->view('layout', $this->dados);
+        }
+    }
+
+    
+
+    /**
         * Método data_check()
         *   verifica se a data já inserida no Banco de Dados
         * @param type $str

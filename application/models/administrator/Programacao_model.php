@@ -40,9 +40,26 @@ class Programacao_model extends CI_Model
         else
         {
             return FALSE;
-        }
-        
+        }        
     }
     
+    
+    /**
+        * Método atualizarProgramacao()
+        *  atualiza a programação do dia
+        */
+    public function atualizarProgramacao()
+    {
+        $data = array(
+            'data' => $this->tdate->setDateBd($this->input->post('data')),
+            'tema' => $this->input->post('tema'),
+            'subsidio' => $this->input->post('subsidio'),
+            'expositor' => $this->input->post('expositor')
+        );
+        
+        $this->db->where('id', $this->input->post('idProgramacao'));
+        
+        return $this->db->update('programacao', $data);
+    }
     
 }

@@ -28,5 +28,27 @@ $(document).ready(function() {
         $(window.document.location).attr('href', 'indexCode.php/administrator/programacao');
     });
     
+    /**** BOTÃO ATUALIZAR ****/
+    $('#btnAtualizar').click(function() {
+        // Verifica se há dia selecionado
+        if($('#idProgramacao').val() == '')
+        {
+            $('#btnSaveModal').hide();
+            
+            $('#contentModal').html("Selecione um dia com Programação válida!!");
+            
+            $('#myModal').modal('show');
+        }
+        else
+        {
+            // Direciona para a ação correta
+            $('#formulario').attr("action","indexCode.php/administrator/programacao/atualizar");
+
+            // Envia o Formulário
+            $('#formulario').submit();
+        }
+    });
+    
+    
 });
 
