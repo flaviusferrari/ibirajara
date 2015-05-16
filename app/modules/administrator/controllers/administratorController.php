@@ -10,16 +10,16 @@ class Administrator extends Controller
 
     public function __construct()
     {
-        // Inclui as Views
-        require_once (BASEPATH . '/app/modules/administrator/'.ACTION.'/views/Camada_View.php'); 
-        $this->view = new Camada_View();
-        
-        // Instancia o Menu
-        $this->view->setMenu($this->view->getInclude('menu_painel')); 
-        
-        // Inclui os models
-        require_once (BASEPATH . '/app/modules/administrator/'.ACTION.'/models/Camada_Model.php');  
-        $this->model = new Camada_Model();
+//        // Inclui as Views
+//        require_once (BASEPATH . '/app/modules/administrator/'.ACTION.'/views/Camada_View.php'); 
+//        $this->view = new Camada_View();
+//        
+//        // Instancia o Menu
+//        $this->view->setMenu($this->view->getInclude('menu_painel')); 
+//        
+//        // Inclui os models
+//        require_once (BASEPATH . '/app/modules/administrator/'.ACTION.'/models/Camada_Model.php');  
+//        $this->model = new Camada_Model();
     }    
     
     
@@ -30,21 +30,23 @@ class Administrator extends Controller
         */
     public function index()
     {   
-        // Verifica se o usuário fez login no site
-        if(!isset($_COOKIE['usuario']) or empty($_COOKIE['usuario']))
-        {
-            // Redireciona para a página de Logon do Painel
-            $sistema = $this->view->exibeView('logon');       
-            $this->view->setSistema($sistema);
-        }
-        else
-        {
-            // Redireciona para a página de Inicial do Painel
-            $sistema = $this->view->exibeView('programacao');       
-            $this->view->setSistema($sistema);
-        }
+        header("Location:indexCode.php/administrator");
         
-        $this->view->exibePainel();
+        // Verifica se o usuário fez login no site
+//        if(!isset($_COOKIE['usuario']) or empty($_COOKIE['usuario']))
+//        {
+//            // Redireciona para a página de Logon do Painel
+//            $sistema = $this->view->exibeView('logon');       
+//            $this->view->setSistema($sistema);
+//        }
+//        else
+//        {
+//            // Redireciona para a página de Inicial do Painel
+//            $sistema = $this->view->exibeView('programacao');       
+//            $this->view->setSistema($sistema);
+//        }
+//        
+//        $this->view->exibePainel();
     }
     
     

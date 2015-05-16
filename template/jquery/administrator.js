@@ -24,11 +24,6 @@ $(document).ready(function() {
            }           
        });    
     });
-     
-    /**** BOTÃO GRAVA PROGRAMAÇÃO ****/
-    $('#btnGravaProgramacao').click(function() {
-        $('#formulario').submit();
-    });
     
     
 });

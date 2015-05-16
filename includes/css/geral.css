@@ -1,0 +1,26 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 19/01/2015, 15:13:34
+    Author     : flavius
+*/
+
+body {background-color: #ebebeb;}
+
+#cabecalho {padding: 15px;}
+
+#sidebar {border-left: 1px solid #777}
+
+footer {border-top: 1px solid #555;}
+
+.sessao {background-color: #ccc;border:1px solid #555;}
+    .sessao span {font-size: 20px;font-weight: bold;}
+    
+#cxConteudo {background-color: white;border: 1px solid #ccc;border-top: none;}
+
+.padding {padding: 10px;}
+
+.red {color: red;}
