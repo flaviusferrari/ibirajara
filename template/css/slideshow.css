@@ -17,15 +17,15 @@ and open the template in the editor.
 .stripViewer .panelContainer .panel	{ float: left; height: 100%; position: relative; width: 488px; }
 .stripNavL, .stripNavR, .stripNav	{ display: none; }
 .nav-thumb 				{ border: 1px solid black; margin-right: 5px; }
-#movers-row				{ margin: -84px 0 0 80px; }
+#movers-row				{ margin: -84px 0 0 75px; }
 #movers-row div                         { width: 20%; float: left; }
 #movers-row div a.cross-link 		{ float: right; }
 .photo-meta-data			{ background: url(../images/slideshow/transpBlack.png); padding: 10px; height: 30px; 
 					  margin-top: -50px; position: relative; z-index: 9999; color: white; }
 .photo-meta-data span 			{ font-size: 13px; }
-.cross-link				{ display: block; width: 62px; margin-top: -14px; 
+.cross-link				{ display: block; width: 65px; margin-top: -10px; 
 					  position: relative; padding-top: 15px; z-index: 9999; }
 .active-thumb 				{ background: transparent url(../images/slideshow/icon-uparrowsmallwhite.png) top center no-repeat; }
 
-.floatLeft 				{ float: left; margin-right: 10px;}
+.floatLeft 				{ float: left; margin-right: 15px;}
 .floatRight				{ float: right; }
