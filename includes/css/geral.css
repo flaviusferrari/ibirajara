@@ -12,7 +12,7 @@ body {background-color: #ebebeb;}
 
 #cabecalho {padding: 15px;}
 
-#sidebar {border-left: 1px solid #777}
+#sidebar {}
 
 footer {border-top: 1px solid #555;}
 
@@ -24,3 +24,25 @@ footer {border-top: 1px solid #555;}
 .padding {padding: 10px;}
 
 .red {color: red;}
+
+
+/**** CABEÇALHO ****/
+#cabecalho {background-color: #3366ff;}
+    .cei {font-size: 38px;color: white;font-family: Arial, Lucida, sans-serif;font-weight: bold;}
+    .endereco {font-size: 12px;font-weight: bold;color: #ccc;}
+    
+/**** MENU ****/
+.navbar-collapse {background-color: #ccc;}
+    .navbar-collapse a {color: #555;font-size: 16px;}
+    .dropdown-menu a {color: #555;font-weight: bolder;}
+    .dropdown-menu li a:hover {background-color: #ccc;}
+    .navbar-toggle {background-color: #888;}
+
+    
+/**** RODAPÉ ****/
+footer {background-color: #3366ff;}
+
+/**** CONTEÚDO ****/
+#conteudo {border-right: 1px solid #777;}
+    /* Sessões */
+    #conteudo .panel-heading {font-weight: bold;}

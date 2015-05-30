@@ -1,40 +1,61 @@
-<div id="evento">
-    <h2>Seminário Autocura e Relação Familiar</h2>
-    
-    <!-- CARTAZ -->
-    <a href="template/images/eventos/<?php echo $ano . '/' . $evento; ?>.jpg" target="new">
-        <img src="template/images/eventos/<?php echo $ano . '/' . $evento; ?>.jpg" width="200" title="Clique para ver em tamanho normal">
-    </a>
-    
-    <!-- TEXTO -->
-    <p>Grupo Plenitude e Área de Assuntos Doutrinários convida você para participar do Seminário 
-        <b>"Autocura e Relação Familiar"</b> com a Dr. Luzia Matias da CELD.</p>
-    
+    <div class="panel panel-default sessao">
+        <div class="panel-body">
+            <span class="title_evento">Seminário Autocura e Relação Familiar</span>
+        </div>
+    </div>
+
+
+   <div class="row">    
+        <!--CARTAZ--> 
+        <div class="col-md-5">
+            <a href="template/images/eventos/<?php echo $ano . '/' . $evento; ?>.jpg" target="img">
+                <img src="template/images/eventos/<?php echo $ano . '/' . $evento; ?>.jpg" class=" img-thumbnail" title="Clique para ver em tamanho normal">
+            </a>
+        </div>
+
+        <!--TEXTO--> 
+        <div class="col-md-7">
+            <p class="lead">Grupo Plenitude e Área de Assuntos Doutrinários convida você para participar do Seminário 
+            <b>"Autocura e Relação Familiar"</b> com a Dr. Luzia Matias da CELD.</p>
+        </div>
+    </div> <!-- /div row--> 
+
     <br>
+    
+    <div class="row">
     <!-- DATA -->
-    <div id="dia">
-        <span class="destaque">Data</span>
-        <br>
-        Dia 30 de Maio de 2015
+    <div class="col-md-4">
+        <div class="panel panel-info">
+            <!-- Panel heading -->
+            <div class="panel-heading">Data</div>
+            <!-- Panel Body -->
+            <div class="panel-body">
+               Dia 30 de Maio de 2015
+            </div> <!-- /panel-body -->
+        </div>        
     </div>
-    <br>
-    
+
     <!-- EXPOSITOR -->
-    <div id="expositor">
-        <span class="destaque">Horário</span>
-        <br>
-        Das 16:30 às 18:30h
-    </div>
-    <br>
-    
-    <!-- HORÁRIO -->
-    <div id="horario">
-        <span class="destaque">Público Alvo</span>
-        <br>
-        Pais, Evangelizadores e <br>trabalhadores da Casa Espírita.
+    <div class="col-md-4">
+        <div class="panel panel-info">
+            <!-- Panel heading -->
+            <div class="panel-heading">Horário</div>
+            <!-- Panel Body -->
+            <div class="panel-body">
+                Das 16:30 às 18:30h
+            </div> <!-- /panel-body -->
+        </div>        
     </div>
     
-    <br>
-    
-    
-</div>
+    <!-- PÚBLICO ALVO -->
+    <div class="col-md-4">
+        <div class="panel panel-info">
+            <!-- Panel heading -->
+            <div class="panel-heading">Público Alvo</div>
+            <!-- Panel Body -->
+            <div class="panel-body">
+                Pais, Evangelizadores e <br>trabalhadores da Casa Espírita.
+            </div> <!-- /panel-body -->
+        </div>        
+    </div>
+</div> <!-- /row -->

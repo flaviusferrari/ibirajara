@@ -8,7 +8,7 @@ and open the template in the editor.
     Author     : flavius
 */
 
-#pageSlide                              {margin:0 auto; margin-top: 10px; margin-bottom: 10px; background-color: #CCF; border-top-left-radius: 10px;
+/*#pageSlide                              {margin:0 auto; margin-top: 10px; margin-bottom: 10px; background-color: #CCF; border-top-left-radius: 10px;
                                          border-top-right-radius: 10px; display: table; padding: 15px;}
 .slider-wrap				{ width: 490px;}			
 .panel ul				{ text-align: left; margin: 0 15px 0 30px; }
@@ -27,5 +27,5 @@ and open the template in the editor.
 					  position: relative; padding-top: 15px; z-index: 9999; }
 .active-thumb 				{ background: transparent url(../images/slideshow/icon-uparrowsmallwhite.png) top center no-repeat; }
 
-.floatLeft 				{ float: left; margin-right: 15px;}
-.floatRight				{ float: right; }
+.floatLeft 				{ float: left; margin-right: 10px;}
+.floatRight				{ float: right; }*/

@@ -1,106 +1,110 @@
-<div id="prog_semana">
-    <div class="TabControl">
-        <div id="header">
-            <ul class="abas">
-            <?php
-                foreach ($texto as $programa)
-                { 
-                    
-                    $d = date('w', strtotime($programa['data']));
-                    
-                    switch ($d)
-                    {
-                        case 1:
-                            $dia = "Segunda";
-                            $horario = '15h';
-                            break;
-                        case 2:
-                            $dia = "Terça";
-                            $horario = '20:10h';
-                            break;
-                        case 3:
-                            $dia = 'Quarta';
-                            $horario = '19:30h';
-                            break;
-                        case 5:
-                            $dia = 'Sexta';
-                            $horario = '19:30h';
-                            break;
-                        case 6:
-                            $dia = 'Sábado';
-                            $horario = '19:45h';
-                            break;
-                    }
-                    
-                    
-                    
-                    
-                    ?>
-                <li>
-                    <div class="aba">
-                        <span><?php echo $dia; ?></span>
-                        <br>
-                        <span class="cit"><?php echo $horario; ?></span>
-                    </div>
-                </li>
+<div role="tabpanel" id="tabpanel">
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+
+
+<?php
+    $ativo = 0;
+    foreach ($texto as $programa)
+    { 
+        $d = date('w', strtotime($programa['data']));
+
+        switch ($d)
+        {
+            case 1:
+                $dia = "Segunda";
+                $horario = '15:00h';
+                break;
+            case 2:
+                $dia = "Terça";
+                $horario = '20:10h';
+                break;
+            case 3:
+                $dia = 'Quarta';
+                $horario = '19:30h';
+                break;
+            case 5:
+                $dia = 'Sexta';
+                $horario = '19:30h';
+                break;
+            case 6:
+                $dia = 'Sábado';
+                $horario = '19:45h';
+                break;
+        }
+?>
+
+        <li role="presentation" class="<?php if($ativo == 0) echo 'active'; ?>">
+            <a href="#<?php echo $dia; ?>" aria-controls="<?php echo $dia; ?>" role="tab" data-toggle="tab"><?php echo $dia; ?> - <?php echo $horario; ?></a>
             
-                <?php } ?>
-            
+        </li>
+
+
+<?php 
+    $ativo++;
+        } ?>
+       
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <?php
+            $ativo = 0;
+            foreach ($texto as $programa)
+            { 
                 
-<!--                <li>
-                    <div class="aba">
-                        <span>Terça</span>
-                    </div>
-                </li>
-                <li>
-                    <div class="aba">
-                        <span>Quarta</span>
-                    </div>
-                </li>
-                <li>
-                    <div class="aba">
-                        <span>Sexta</span>
-                    </div>
-                </li>
-                <li>
-                    <div class="aba">
-                        <span>Sábado</span>
-                    </div>
-                </li>-->
-            </ul>
-        </div>
-        <div id="content_aba">
-            <?php
-                foreach ($texto as $programa)
-                { ?>
-                    <div class="conteudo_aba">  
-                        <!-- Dia -->
-                        <p class="dtPalestra">
-                           <?php
-                            $data = new TDate($programa['data']);
-                            echo $data->getDataExtenso();
-                            
-                            // Pega o dia da semana
-                            //$diasemana = date('w', strtotime($programa['data']));
-                           ?>
-                        </p>                           
-                        <!-- Tema -->
-                        <p style="margin-top:15px">
-                            <span class="tema">
-                                <span style="color: #006; font-weight: bold;">Tema:</span>
-                                <?php echo $programa['tema']; ?> 
-                                <span class="cit">(<?php echo $programa['subsidio']; ?>)</span>
-                            </span>
-                        </p>
-                        <!-- Expositor -->
-                        <p style="margin-top:15px">
-                            <span class="expositor">
-                                <span style="color: #006; font-weight: bold;">Expositor:</span> <?php echo $programa['expositor']; ?>
-                            </span>
-                        </p>
-                    </div> <?php
+                $d = date('w', strtotime($programa['data']));
+
+                switch ($d)
+                {
+                    case 1:
+                        $dia = "Segunda";
+                        break;
+                    case 2:
+                        $dia = "Terça";
+                        break;
+                    case 3:
+                        $dia = 'Quarta';
+                        break;
+                    case 5:
+                        $dia = 'Sexta';
+                        break;
+                    case 6:
+                        $dia = 'Sábado';
+                        break;
                 }
-            ?>
+                ?>
+                <div role="tabpanel" class="tab-pane <?php if($ativo == 0) echo 'active'; ?>" id="<?php echo $dia; ?>"> 
+                    <!-- Dia -->
+                    <p class="dtPalestra">
+                       <?php
+                        $data = new TDate($programa['data']);
+                        echo $data->getDataExtenso();
+
+                        // Pega o dia da semana
+                        //$diasemana = date('w', strtotime($programa['data']));
+                       ?>
+                    </p>                           
+                    <!-- Tema -->
+                    <p style="margin-top:15px">
+                        <span class="tema padding">
+                            <span style="color: #006; font-weight: bold;">Tema:</span>
+                            <?php echo $programa['tema']; ?> 
+                            <span class="cit">(<?php echo $programa['subsidio']; ?>)</span>
+                        </span>
+                    </p>
+                    <!-- Expositor -->
+                    <p style="margin-top:15px;padding-bottom: 10px;">
+                        <span class="expositor padding">
+                            <span style="color: #006; font-weight: bold;">Expositor:</span> <?php echo $programa['expositor']; ?>
+                        </span>
+                    </p>
+                </div> <?php
+                $ativo++;
+            }
+        ?>
     </div>
+
 </div>
-</div> <!-- end Programação Semana -->
+
+

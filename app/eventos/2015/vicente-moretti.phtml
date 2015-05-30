@@ -1,40 +1,49 @@
-<div id="evento">
-    <h2>Visita à Ação Cristã Vicente Moretti</h2>
-    
-    <!-- CARTAZ -->
-    <a href="template/images/eventos/<?php echo $ano . '/' . $evento; ?>.jpg" target="new">
-        <img src="template/images/eventos/<?php echo $ano . '/' . $evento; ?>.jpg" width="200" title="Clique para ver em tamanho normal">
-    </a>
-    
-    <!-- TEXTO -->
-    <p>A Coordenação da Area de Assistencia e Promoção Social convida a todos para participarem da visita 
-        a Ação Cristã Vicente Moretti
-    
-    <br>
-    <!-- DATA -->
-    <div id="dia">
-        <span class="destaque">Data</span>
-        <br>
-        Dia 30 de Maio de 2015
+<div class="panel panel-default sessao">
+    <div class="panel-body">
+        <span class="title_evento">Visita à Ação Cristã Vicente Moretti</span>
     </div>
-    <br>
-    
-    <!-- EXPOSITOR -->
-    <div id="expositor">
-        <span class="destaque">Horário</span>
-        <br>
-        Saída do CEI as 13:30h
-    </div>
-    <br>
-    
-    <!-- HORÁRIO -->
-<!--    <div id="horario">
-        <span class="destaque">Público Alvo</span>
-        <br>
-        Pais, Evangelizadores e <br>trabalhadores da Casa Espírita.
-    </div>-->
-    
-    <br>
-    
-    
 </div>
+
+
+<div class="row">    
+    <!--CARTAZ--> 
+    <div class="col-md-5">
+        <a href="template/images/eventos/<?php echo $ano . '/' . $evento; ?>.jpg" target="img">
+            <img src="template/images/eventos/<?php echo $ano . '/' . $evento; ?>.jpg" class=" img-thumbnail" title="Clique para ver em tamanho normal">
+        </a>
+    </div>
+
+    <!--TEXTO--> 
+    <div class="col-md-7">
+        <p class="lead">A Coordenação da Area de Assistencia e Promoção Social convida a todos para participarem da visita 
+            a Ação Cristã Vicente Moretti</p>
+    </div>
+</div> <!-- /div row--> 
+    
+<br>
+
+<div class="row">
+    <!-- DATA -->
+    <div class="col-md-4">
+        <div class="panel panel-info">
+            <!-- Panel heading -->
+            <div class="panel-heading">Data</div>
+            <!-- Panel Body -->
+            <div class="panel-body">
+                Dia 30 de Maio de 2015
+            </div> <!-- /panel-body -->
+        </div>        
+    </div>
+
+    <!-- EXPOSITOR -->
+    <div class="col-md-4">
+        <div class="panel panel-info">
+            <!-- Panel heading -->
+            <div class="panel-heading">Horário</div>
+            <!-- Panel Body -->
+            <div class="panel-body">
+                Saída do CEI as 13:30h
+            </div> <!-- /panel-body -->
+        </div>        
+    </div>
+</div> <!-- /row -->

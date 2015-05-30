@@ -5,21 +5,27 @@
  */
 
 $(document).ready(function(){
-    $("#content_aba div:nth-child(1)").show();
-    $(".abas li:first div").addClass("selected");		
-    $(".aba").click(function(){
-        $(".aba").removeClass("selected");
-        $(this).addClass("selected");
-        var indice = $(this).parent().index();
-        indice++;
-        $("#content_aba div").hide();
-        $("#content_aba div:nth-child("+indice+")").show();
+//    $("#content_aba div:nth-child(1)").show();
+//    $(".abas li:first div").addClass("selected");		
+//    $(".aba").click(function(){
+//        $(".aba").removeClass("selected");
+//        $(this).addClass("selected");
+//        var indice = $(this).parent().index();
+//        indice++;
+//        $("#content_aba div").hide();
+//        $("#content_aba div:nth-child("+indice+")").show();
+//    });
+//
+//    $(".aba").hover(
+//        function(){$(this).addClass("ativa")},
+//        function(){$(this).removeClass("ativa")}
+//    );		
+    
+    // TABS
+    $('#myTab a').click(function (e) {
+        e.preventDefault();
+        $(this).tab('show');
     });
-
-    $(".aba").hover(
-        function(){$(this).addClass("ativa")},
-        function(){$(this).removeClass("ativa")}
-    );			
     
     
     // Paga o ID do Evento e leva a página

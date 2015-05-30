@@ -1,23 +1,46 @@
-<div id="nav">
-    <ul class="box">
-        <li><a href="index">Home</a></li>
-        <li><a href="programacao" title="Reuniões Públicas">Programação</a></li> <!-- Active page (highlighted) -->
-        <li><a href="#">Estudos</a>
-            <ul>
-                <li><a href="artigo/exibe/esde">ESDE</a></li>
-                <li><a href="artigo/exibe/mediunidade">Mediunidade</a></li>
-                <li><a href="artigo/exibe/complementares"><span style="font-size: 14px;">Obras Complementares</span></a></li>
-            </ul>
-        </li>
-        <li>
-            <a href="#">Evangelização</a>
-            <ul>
-                <li><a href="artigo/exibe/infantil">Infantil</a></li>
-                <li><a href="artigo/exibe/mocidade">Mocidade</a></li>
-                <li><a href="artigo/exibe/familia">Família</a></li>
-            </ul>
-        </li>
-        <li><a href="eventos">Eventos</a></li>
-        <li><a href="contato">Contato</a></li>
-    </ul>
-</div>
+<div id="" class="navbar navbar-collapse" role="navigation">
+    <div class="container">
+        
+        <!-- HOME -->
+        <div class="navbar-header">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> 
+                <span class="sr-only">Toggle navigation</span><b class="caret"></b> 
+            </button> 
+            <a class="navbar-brand" href="index">HOME</a>
+        </div>
+        
+        <!-- MENU -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <!-- PROGRAMACAO -->
+                <li><a href="programacao" title="Reuniões Públicas">Programação</a></li> <!-- Active page (highlighted) -->
+                <!-- ESTUDOS -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" href="#" data-toggle="dropdown">Estudos <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="artigo/exibe/esde">ESDE</a></li>
+                        <li class="divider"></li>
+                        <li><a href="artigo/exibe/mediunidade">Mediunidade</a></li>
+                        <li class="divider"></li>
+                        <li><a href="artigo/exibe/complementares"><span style="font-size: 14px;">Obras Complementares</span></a></li>
+                    </ul>
+                </li>
+                <!-- EVANGELIZAÇÃO -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" href="#" data-toggle="dropdown">Evangelização <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="artigo/exibe/infantil">Infantil</a></li>
+                        <li class="divider"></li>
+                        <li><a href="artigo/exibe/mocidade">Mocidade</a></li>
+                        <li class="divider"></li>
+                        <li><a href="artigo/exibe/familia">Família</a></li>
+                    </ul>
+                </li>
+                <!-- EVENTOS -->
+                <li><a href="eventos">Eventos</a></li>
+                <!-- CONTATO -->
+                <li><a href="contato">Contato</a></li>
+            </ul>            
+        </div><!-- /.navbar-collapse -->
+    </div> <!-- /container -->
+</div> <!-- /navbar -->

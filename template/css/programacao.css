@@ -17,7 +17,7 @@ and open the template in the editor.
             .estudo {font-size: 12px;font-style: italic;}
 
         .programaDia {display: block;border-bottom: 1px gray solid;}
-            .dia {display: table-cell;padding: 5px;background-color: #3F6;vertical-align: middle;}
+            .dia {display: table-cell;padding: 5px;background-color: #9F9;vertical-align: middle;}
                 .dtDia {font-family: Lucida Console, Monaco, monospace;font-size: 18px;}
                 
             .fundo {display: table-cell;padding: 8px;background-color: #d8e4f1;width: 100%;}

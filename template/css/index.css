@@ -1,0 +1,18 @@
+
+.dtPalestra {background-color: blue;color: white;text-align: center;}
+.cit {font-style: italic; font-size: 12px;}
+
+.panel-body ul li a {background-color: #ccf;}
+.tab-pane {background:#CCF;}
+
+/*** Boletim ***/
+#boletim {padding: 10px;}
+    .title_boletim {margin-bottom: 10px;font-weight: bold;}
+    .epistola {text-align: right !important;font-size: 12px;margin-bottom: 10px;}
+        .txt_evan {font-style: italic;}
+    .txt_boletim {text-indent:2em;margin-bottom: 15px;text-align: justify;}   
+    
+.wrapper {cursor: pointer;}
+    
+/**** SLIDESHOW ****/
+.carousel-caption {background-color: #999;opacity:0.65;-moz-opacity: 0.55;filter: alpha(opacity=55);}
