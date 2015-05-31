@@ -1,41 +1,49 @@
-<div id="evento">
-    <h2>Seminário Conhecendo a Si Mesmo</h2>
-    
-    <!-- CARTAZ -->
-    <a href="template/images/eventos/<?php echo $ano . '/' . $evento; ?>.jpg" target="new">
-        <img src="template/images/eventos/<?php echo $ano . '/' . $evento; ?>.jpg" width="200" title="Clique para ver em tamanho normal">
-    </a>
-    
-    <!-- TEXTO -->
-    <p>Grupo de Estudos Joana de Ângelis convida você para participar do Seminário 
-        <b>"Conhecendo a Si Mesmo"</b> com a Íris e Claudio Sinoti da Mansão do Caminho - Bahia.</p>
-    
-    <br>
-    <!-- DATA -->
-    <div id="dia">
-        <span class="destaque">Data</span>
-        <br>
-        Dia 16 de Junho de 2015
+<div class="panel panel-default sessao">
+    <div class="panel-body">
+        <span class="title_evento">Seminário Conhecendo a Si Mesmo</span>
     </div>
-    <br>
-    
-    <!-- EXPOSITOR -->
-    <div id="expositor">
-        <span class="destaque">Horário</span>
-        <br>
-        Das 18 às 19:30h - Estudo aberto do Grupo Joanna<br>
-        Das 19:45 às 20:30h - Palestra Pública
-    </div>
-    <br>
-    
-    <!-- HORÁRIO -->
-<!--    <div id="horario">
-        <span class="destaque">Público Alvo</span>
-        <br>
-        Pais, Evangelizadores e <br>trabalhadores da Casa Espírita.
-    </div>
-    
-    <br>-->
-    
-    
 </div>
+
+<div class="row">    
+    <!--CARTAZ--> 
+    <div class="col-md-5">
+        <a href="template/images/eventos/<?php echo $ano . '/' . $evento; ?>.jpg" target="img">
+            <img src="template/images/eventos/<?php echo $ano . '/' . $evento; ?>.jpg" class=" img-thumbnail" title="Clique para ver em tamanho normal">
+        </a>
+    </div>
+
+    <!--TEXTO--> 
+    <div class="col-md-7">
+        <p class="lead">Grupo de Estudos Joana de Ângelis convida você para participar do Seminário 
+        <b>"Conhecendo a Si Mesmo"</b> com a Íris e Claudio Sinoti da Mansão do Caminho - Bahia.</p>
+    </div>
+</div> <!-- /div row--> 
+
+<br>
+
+<div class="row">
+    <!-- DATA -->
+    <div class="col-md-4">
+        <div class="panel panel-info">
+            <!-- Panel heading -->
+            <div class="panel-heading">Data</div>
+            <!-- Panel Body -->
+            <div class="panel-body">
+                Dia 16 de Junho de 2015
+            </div> <!-- /panel-body -->
+        </div>        
+    </div>
+
+    <!-- EXPOSITOR -->
+    <div class="col-md-4">
+        <div class="panel panel-info">
+            <!-- Panel heading -->
+            <div class="panel-heading">Horários</div>
+            <!-- Panel Body -->
+            <div class="panel-body">
+                Das 18 às 19:30h - Estudo aberto do Grupo Joanna<br>
+                Das 19:45 às 20:30h - Palestra Pública
+            </div> <!-- /panel-body -->
+        </div>        
+    </div>
+</div> <!-- /row -->
