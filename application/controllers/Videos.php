@@ -15,7 +15,7 @@ class Videos extends CI_Controller
         parent::__construct();
         
         // DADOS
-        $this->dados['css'] = '';
+        $this->dados['css'] = 'videos';
         $this->dados['js']  = '';
         $this->dados['conteudo'] = 'midia/videos';
         

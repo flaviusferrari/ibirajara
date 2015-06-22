@@ -18,7 +18,7 @@
     <link href="includes/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="includes/css/geral.css" rel="stylesheet" type="text/css" />
     <link href="template/css/smoothness/jquery-ui.css" rel="stylesheet" type="text/css" />
-    <link href="template/css/<?php echo $css ?>.css" rel="stylesheet" type="text/css" />
+    <link href="includes/css/<?php echo $css ?>.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
