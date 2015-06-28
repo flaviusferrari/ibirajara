@@ -20,6 +20,7 @@
                     <ul class="dropdown-menu">
                         <li><a href="<?php echo base_url('indexCode.php/administrator/programacao'); ?>">Programação</a></li>
                         <li><a href="<?php echo base_url('indexCode.php/administrator/boletim'); ?>">Boletim</a></li>
+                        <li><a href="<?php echo base_url('indexCode.php/administrator/eventos'); ?>">Eventos</a></li>
                     </ul>
                 </li>
                 <li><a href="<?php echo base_url('indexCode.php/login/logout') ?>">Sair</a></li>
