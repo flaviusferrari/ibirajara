@@ -17,6 +17,10 @@
         <!-- Panel Body -->
         <div class="panel-body">
             <iframe style="width: 100%;" src="https://www.youtube.com/embed/axTd_DmsNNw?showinfo=0" frameborder="0" allowfullscreen></iframe>
+            <p>Seminário Claudio e Íris Sinotti - part 01</p>
+            <div class="text-right">
+                <a href="indexCode.php/videos">Ver mais...</a>
+            </div>
         </div>
     </div>
 
