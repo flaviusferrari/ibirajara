@@ -7,14 +7,14 @@
     <div class="panel-body">
         
         <blockquote>
-            <p class="lead">Seminário Claudio e Íris Sinotti - Parte 1</p>
+            <p class="lead">Animismo - Porque o medo?</p>
         </blockquote>
         
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
                 <!-- Vídeo principal -->
                 <div class="embed-responsive embed-responsive-4by3">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/axTd_DmsNNw?showinfo=0" frameborder="0" allowfullscreen></iframe>
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/YqFnkgZlEMo?showinfo=0" frameborder="0" frameborder="0" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
@@ -23,9 +23,23 @@
         
         <div class="row">
             <div class="col-md-4">
+                <iframe style="width: 90%;" src="https://www.youtube.com/embed/_tEf3sKEY1Y?showinfo=0" frameborder="0" allowfullscreen></iframe>
+                <p class="lead">67 anos do Grupo de Estudos Asdrubal</p>
+            </div>
+            
+            <div class="col-md-4">
+                <iframe style="width: 90%;" src="https://www.youtube.com/embed/axTd_DmsNNw?showinfo=0" frameborder="0" frameborder="0" allowfullscreen></iframe>
+                <p class="lead">Seminário Cláudio e Íris Sinotti - Parte 1</p>
+            </div>
+            
+            <div class="col-md-4">
                 <iframe style="width: 90%;" src="https://www.youtube.com/embed/yYmiOJKdpj0?showinfo=0" frameborder="0" allowfullscreen></iframe>
                 <p class="lead">Seminário Cláudio e Íris Sinotti - Parte 2</p>
             </div>
+        </div>
+        
+        <div class="row">
+            
             
             <div class="col-md-4">
                 <iframe style="width: 90%;" src="https://www.youtube.com/embed/dQ-mlfk7_TA?showinfo=0" frameborder="0" allowfullscreen></iframe>
