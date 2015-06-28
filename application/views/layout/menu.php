@@ -1,6 +1,6 @@
 
 <!-- MENU -->
-<nav class="navbar navbar-default" role="navigation">
+<nav class="navbar navbar-collapse" role="navigation">
     <div class="container">
 
         <!-- Brand and toggle get grouped for better mobile display -->

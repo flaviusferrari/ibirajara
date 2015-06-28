@@ -1,0 +1,23 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 28/06/2015, 18:49:33
+    Author     : flavius
+*/
+
+body {background-color: #ebebeb;}
+
+    #cabecalho {padding: 15px;background-color: #3366ff;}
+    
+    footer {border-top: 1px solid #555;background-color: #3366ff;}
+    
+    
+/**** MENU ****/
+.navbar-collapse {background-color: #ccc;}
+    .navbar-collapse a {color: #555;font-size: 16px;}
+    .dropdown-menu a {color: #555;font-weight: bolder;}
+    .dropdown-menu li a:hover {background-color: #ccc;}
+    .navbar-toggle {background-color: #888;}

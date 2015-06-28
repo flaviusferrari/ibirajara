@@ -18,18 +18,18 @@
         <!-- CSS -->        
         <link href="<?php echo base_url('includes/bootstrap/css/bootstrap.min.css') ?>" rel="stylesheet" type="text/css" />
         <link href="<?php echo base_url('includes/css/jquery-ui.css') ?>" rel="stylesheet" type="text/css" />
-        <link href="<?php echo base_url('includes/css/geral.css') ?>" rel="stylesheet" type="text/css" />        
+        <link href="<?php echo base_url('includes/css/painel/geral.css') ?>" rel="stylesheet" type="text/css" />        
         <link href="<?php echo base_url("includes/css/$css.css") ?>" rel="stylesheet" type="text/css" />
         
     </head>
     <body>
         <!-- HEADER -->
-        <div id="cabecalho" style="background-color: #ccc;">
+        <div id="cabecalho">
             <div class="container">
                 <div class="row">
                     <!-- LOGO -->
                     <div id="logo" class="col-md-4">
-                        <img src="<?php echo base_url('includes/images/logo.png') ?>" width="150" alt="C. E. Ibirjajara">
+                        <img src="<?php echo base_url('includes/images/logo.png') ?>"width="130" class="img-responsive" alt="C. E. Ibirjajara">
                     </div>
 
                     <!-- USUARIO -->
@@ -37,7 +37,7 @@
                         <font class="txtBem">
                         Bem Vindo,</font>
                         <br>
-                        <a href="index.php?sessao=dados_pessoais" title="Clique para exibir os dados" style="text-decoration: none; color: blueviolet;">
+                        <a href="index.php?sessao=dados_pessoais" title="Clique para exibir os dados" style="text-decoration: none; color: black;">
                             <?php echo $this->session->userdata('nome'); ?>
                         </a>
                     </div>
