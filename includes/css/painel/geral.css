@@ -21,3 +21,9 @@ body {background-color: #ebebeb;}
     .dropdown-menu a {color: #555;font-weight: bolder;}
     .dropdown-menu li a:hover {background-color: #ccc;}
     .navbar-toggle {background-color: #888;}
+    
+    
+/**** CONTEÚDO ****/
+#conteudo {border-right: 1px solid #777;}
+    /* Sessões */
+    #conteudo .panel-heading {font-weight: bold;}
