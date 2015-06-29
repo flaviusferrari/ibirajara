@@ -25,7 +25,47 @@
                     <?php echo form_error('data', '<div class="label label-danger">', '</div>'); ?>
                     <input type="hidden" name="idEvento" id="idEvento" value="">
                 </div>  
-            </div>   
+            </div>  
+            
+            <!-- TÍTULO -->                
+            <div class="row">
+                <div class="form-group col-md-12">
+                    <label>Título:</label>
+                    <input name="titulo" id="titulo" class="form-control" value="<?php echo set_value('titulo'); ?>">
+                    <?php echo form_error('titulo', '<div class="label label-danger">', '</div>'); ?>
+                </div> 
+            </div>
+            
+            <!-- CARTAZ -->
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <label>Cartaz</label>
+                    <input type="file" name="cartaz" id="cartaz" value="<?php echo set_value('cartaz'); ?>">
+                    <?php echo form_error('cartaz', '<div class="label label-danger">', '</div>'); ?>
+                </div> 
+            </div>
+            
+            <!-- DESCRIÇÃO  -->
+            <div class="form-group">
+                <label>Descrição</label>
+                <textarea name="descricao" class="form-control" rows="3"><?php echo set_value('descricao'); ?></textarea>
+                <?php echo form_error('descricao', '<div class="label label-danger">', '</div>'); ?>
+            </div> 
+            
+            <!-- HORÁRIOS / PROGRAMAÇÃO -->
+            <div class="row">
+                <div class="col-md-4 form-group">
+                    <label>Horário</label>
+                    <input name="horario" id="horario" class="form-control" value="<?php echo set_value('horario'); ?>">  
+                    <?php echo form_error('horario', '<div class="label label-danger">', '</div>'); ?>
+                </div>  
+                
+                <div class="col-md-4 col-md-offset-2 form-group">
+                    <label>Programação</label>
+                    <input name="programacao" id="programacao" class="form-control" value="<?php echo set_value('programacao'); ?>">  
+                    <?php echo form_error('programacao', '<div class="label label-danger">', '</div>'); ?>
+                </div>
+            </div>    
             
         </form>
         
