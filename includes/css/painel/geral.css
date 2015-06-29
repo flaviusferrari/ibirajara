@@ -8,6 +8,9 @@ and open the template in the editor.
     Author     : flavius
 */
 
+/**** GOOGLE FONTS *****/
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:400,500,500italic,400italic);
+
 body {background-color: #ebebeb;}
 
     #cabecalho {padding: 15px;background-color: #3366ff;}
@@ -27,3 +30,11 @@ body {background-color: #ebebeb;}
 #conteudo {border-right: 1px solid #777;}
     /* Sessões */
     #conteudo .panel-heading {font-weight: bold;}
+    
+    
+/*** MODAL ****/
+.modal-header {background-color: #3366ff;; color: #333;}
+.modal-body {font-family: 'Ubuntu', sans-serif;font-weight: 500;font-size: 16px;}
+
+/**** MENSAGEM ****/
+.msn-body {font-family: 'Ubuntu', sans-serif;font-weight: 500;font-size: 16px;}

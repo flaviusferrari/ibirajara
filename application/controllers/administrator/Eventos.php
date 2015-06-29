@@ -11,7 +11,7 @@ class Eventos extends MY_Controller
         parent::__construct();
         
         $this->dados['css']      = 'eventos';      
-        $this->dados['js']       = 'eventos';
+        $this->dados['js']       = 'painel/eventos';
         $this->dados['conteudo'] = 'painel/eventos';
         
         // Carrega as Bibliotecas necessárias
