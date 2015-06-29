@@ -55,6 +55,7 @@ class Eventos extends MY_Controller
         {
             $config['upload_path']   = './includes/images/';
             $config['allowed_types'] = 'gif|jpg|png';
+            $config['file_name']     = url_title(convert_accented_characters($this->input->post('titulo')), 'dash', TRUE);
             
             $this->load->library('upload', $config);
                         
