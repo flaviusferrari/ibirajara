@@ -15,8 +15,8 @@
         
         <br>
         
-        <form id="formulario" method="POST" autocomplete="off" action="">
-            
+        <form id="formulario" method="POST" autocomplete="off" enctype="multipart/form-data" action="">
+
             <!-- DATA INICIO -->                
             <div class="row">
                 <div class="col-md-2 form-group">

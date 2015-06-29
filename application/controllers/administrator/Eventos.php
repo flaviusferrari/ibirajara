@@ -14,11 +14,14 @@ class Eventos extends MY_Controller
         $this->dados['js']       = 'painel/eventos';
         $this->dados['conteudo'] = 'painel/eventos';
         
-        // Carrega as Bibliotecas necessárias
+        // BIBLIOTECAS
         $this->load->library('form_validation');
+        $this->load->library('tdate');
+        // HELPER
+        $this->load->helper('text');
         
         // Carrega o Model
-        //$this->load->model('administrator_model');
+        $this->load->model('administrator/eventos_model', 'Model');
     }    
     
     
@@ -32,6 +35,51 @@ class Eventos extends MY_Controller
         // Exibe o painel
         $this->load->view('layout', $this->dados);           
     }
+    
+    
+    /**
+        * Métdodo salvar()
+        *   salva o evento no Banco de Dados
+        */
+    public function salvar()
+     {
+        // Efetua a validação dos dados
+        $this->form_validation->set_rules('data', 'Data', 'required');
+        
+        
+        if ($this->form_validation->run() === FALSE)
+        {
+            $this->load->view('layout', $this->dados);
+        }
+        else
+        {
+            $config['upload_path']   = './includes/images/';
+            $config['allowed_types'] = 'gif|jpg|png';
+            
+            $this->load->library('upload', $config);
+                        
+            if ( ! $this->upload->do_upload('cartaz'))
+            {
+                $this->dados['conteudo'] = 'sucess';
+
+                $error = array('error' => $this->upload->display_errors());
+                $this->dados['msn_content'] = $error['error'];
+                $this->dados['msn_link']    = 'indexCode.php/administrator/eventos';
+
+                $this->load->view('layout', $this->dados);
+            }
+            else
+            {
+                $this->Model->salvar();
+            
+                $this->dados['conteudo'] = 'sucess';
+                $this->dados['msn_content'] = 'Evento salvo com sucesso!!!';
+                $this->dados['msn_link']    = 'indexCode.php/administrator/eventos';
+
+                $this->load->view('layout', $this->dados);
+            }
+        }
+     }
     
     
     
