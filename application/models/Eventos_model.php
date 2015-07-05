@@ -25,4 +25,20 @@ class Eventos_model extends CI_Model
         return $query->result_array();
     }
     
+    
+    /**
+        *  Método buscaEventosAnteriores()
+        *  localiza os próximos eventos
+        */
+    public function buscaEventosAnteriores()
+    {
+        $data = date('Y-m-d');
+        
+        // Efetua a consulta
+        $this->db->where('data <', $data);
+        $query = $this->db->get('eventos');
+        
+        return $query->result_array();
+    }
+    
 }

@@ -32,6 +32,8 @@ class Eventos extends CI_Controller
         // Busca os próximos Eventos 
         $this->dados['proximosEventos'] = $this->Model->buscaProximosEventos();
         
+        // Busca os Eventos Anteriores
+        $this->dados['eventosAnteriores'] = $this->Model->buscaEventosAnteriores();        
                 
         $this->load->view('site', $this->dados);
     }
