@@ -11,18 +11,14 @@
         </blockquote>
 
         <div class="row">
-
+            
+        <?php foreach ($proximosEventos as $evento): ?>
             <div class="col-md-4">
-                <a href="eventos/exibe/2015/amor-em-movimento">
-                    <img src="template/images/eventos/2015/amor-em-movimento.jpg" class=" img-thumbnail" title="Clique para ver em tamanho normal">
+                <a href="eventos/exibe/2015/<?php echo $evento['evento']; ?>">
+                    <img src="template/images/eventos/2015/<?php echo $evento['evento']; ?>.jpg" class=" img-thumbnail" title="<?php echo $evento['titulo']; ?>">
                 </a>
             </div>
-
-            <div class="col-md-4">
-                <a href="eventos/exibe/2015/aniversario-75-anos-cei">
-                    <img src="template/images/eventos/2015/aniversario-75-anos-cei.jpg" class=" img-thumbnail" title="Clique para ver em tamanho normal">
-                </a>
-            </div>        
+        <?php endforeach; ?>
 
         </div>
 

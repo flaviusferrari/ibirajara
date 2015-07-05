@@ -22,7 +22,7 @@ class Eventos_model extends CI_Model
         $query = $this->db->get('eventos');
         
         
-        return $query->row_array();
+        return $query->result_array();
     }
     
 }
