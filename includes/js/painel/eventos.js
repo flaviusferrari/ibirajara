@@ -26,6 +26,11 @@ $(document).ready(function() {
     });
     
     
+    /****  BOTÃO NOVO ****/
+    $('#btnNovo').click(function() {
+       $(window.document.location).attr('href', 'indexCode.php/administrator/eventos'); 
+    });
+    
     // Localiza o Boletim desejado pelo título
     $('#titulo').autocomplete({
         source: function( request, response ) {
