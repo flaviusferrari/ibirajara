@@ -41,4 +41,20 @@ class Eventos_model extends CI_Model
         return $query->result_array();
     }
     
+    
+    /**
+        *  Método exibeEvento()
+        *   retorna os dados do evento a ser exibido
+        * 
+        * @param $idEvento = Id do Evento
+        */
+    public function exibeEvento($idEvento)
+    {
+        // Efetua a consulta
+        $this->db->where('id', $idEvento);
+        $query = $this->db->get('eventos');
+        
+        return $query->row_array();
+    }
+    
 }

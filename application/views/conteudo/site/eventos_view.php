@@ -14,7 +14,7 @@
             
         <?php foreach ($proximosEventos as $evento): ?>
             <div class="col-md-4">
-                <a href="eventos/exibe/2015/<?php echo $evento['evento']; ?>">
+                <a href="indexCode.php/eventos/exibe/<?php echo $evento['id']; ?>">
                     <img src="includes/images/eventos/<?php echo $evento['evento']; ?>.jpg" class=" img-thumbnail" title="<?php echo $evento['titulo']; ?>">
                 </a>
             </div>
@@ -34,7 +34,7 @@
         
         <?php foreach ($eventosAnteriores as $evento): ?>
             <div class="col-md-4">
-                <a href="eventos/exibe/2015/<?php echo $evento['evento']; ?>">
+                <a href="indexCode.php/eventos/exibe/<?php echo $evento['id']; ?>">
                     <img src="includes/images/eventos/<?php echo $evento['evento']; ?>.jpg" class=" img-thumbnail" title="<?php echo $evento['titulo']; ?>">
                 </a>
             </div>
