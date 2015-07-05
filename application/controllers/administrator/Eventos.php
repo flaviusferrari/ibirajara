@@ -102,5 +102,30 @@ class Eventos extends MY_Controller
         echo json_encode($data);
     }
     
+    
+    /**
+        * Método exibe()
+        *   exibe a Empresa
+        */
+    public function exibe()
+    {
+        // Recebe o ID do Boletim
+        $idEvento = $this->uri->segment(4);      
+        
+        $evento = $this->Model->buscaDadosEvento($idEvento);
+        
+        // Ajusta as datas do Boletim
+        $evento['data'] = date('d/m/Y', strtotime($evento['data']));
+        
+        // Insere o arquivo a ser exibido
+        $this->dados['conteudo'] = 'painel/eventos_exibe';
+        
+        // Mescla os arrays
+        $dados = array_merge($this->dados, $evento);
+        
+        // Exibe a página
+        $this->load->view('layout', $dados);
+    }
+    
 }
 

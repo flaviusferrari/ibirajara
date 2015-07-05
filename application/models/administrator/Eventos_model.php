@@ -38,4 +38,18 @@ class Eventos_model extends CI_Model
         return $query->result_array();
     }
     
+    
+    /**
+        *  Método buscaDadosEvento()
+        *    busca os dados do boletim
+        */
+    public function buscaDadosEvento($id)
+    {
+        // Efetua a consulta
+        $this->db->where('id', $id);
+        $query = $this->db->get('eventos');
+        
+        return $query->row_array();
+    }
+    
 }

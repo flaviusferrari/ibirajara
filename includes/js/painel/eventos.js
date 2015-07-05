@@ -43,7 +43,7 @@ $(document).ready(function() {
         },
         minLength: 3,
         select: function( event, ui ) {
-            var novaURL = 'indexCode.php/administrator/eventos/exibeEvento/'+ui.item.valor;
+            var novaURL = 'indexCode.php/administrator/eventos/exibe/'+ui.item.valor;
             $(window.document.location).attr('href',novaURL);        
         }
     });
