@@ -82,6 +82,33 @@ class Eventos extends MY_Controller
         }
      }
     
+     
+    /**
+        * Método atualizar()
+        *   atualiza a programação do dia
+        */
+    public function atualizar()
+    {
+        // Efetua a validação dos dados
+        $this->form_validation->set_rules('data', 'Data', 'required');
+        $this->form_validation->set_rules('titulo', 'Título', 'required');
+        
+        if ($this->form_validation->run() === FALSE)
+        {
+            $this->load->view('layout', $this->dados);
+        }
+        else
+        {
+            $this->Model->atualizarEvento();
+            
+            $this->dados['conteudo'] = 'sucess';
+            $this->dados['msn_content'] = 'Evento atualizada com sucesso!!!';
+            $this->dados['msn_link']    = 'indexCode.php/administrator/eventos/exibe/'.$this->input->post('idEvento');
+            
+            $this->load->view('layout', $this->dados);
+        }
+    }
+    
     
     /**
         * Método localizaBoletim()

@@ -25,6 +25,27 @@ class Eventos_model extends CI_Model
     
     
     /**
+        * Método atualizarEvento()
+        *  atualiza o Evento selecionado
+        */
+    public function atualizarEvento()
+    {
+        $data = array(
+            'data'        => $this->tdate->setDateBd($this->input->post('data')),
+            'titulo'      => $this->input->post('titulo'),
+            'evento'      => url_title(convert_accented_characters($this->input->post('titulo')), 'dash', TRUE),
+            'descricao'   => $this->input->post('descricao'),
+            'horarios'    => $this->input->post('horario'),
+            'programacao' => $this->input->post('programacao')
+        );
+        
+        $this->db->where('id', $this->input->post('idEvento'));
+        
+        return $this->db->update('eventos', $data);
+    }
+    
+    
+    /**
         * Método locolizaEvento()
         *  localiza o título do boletim 
         * 
