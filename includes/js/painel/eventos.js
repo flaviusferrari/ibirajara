@@ -31,6 +31,28 @@ $(document).ready(function() {
        $(window.document.location).attr('href', 'indexCode.php/administrator/eventos'); 
     });
     
+    
+    /**** BOTÃO ATUALIZAR ****/
+    $('#btnAtualizar').click(function() {
+        // Verifica se há dia selecionado
+        if($('#idEvento').val() == '')
+        {
+            $('#btnSaveModal').hide();
+            
+            $('#contentModal').html("Selecione um Evento válido!!");
+            
+            $('#myModal').modal('show');
+        }
+        else
+        {
+            // Direciona para a ação correta
+            $('#formulario').attr("action","indexCode.php/administrator/eventos/atualizar");
+
+            // Envia o Formulário
+            $('#formulario').submit();
+        }
+    });
+    
     // Localiza o Boletim desejado pelo título
     $('#titulo').autocomplete({
         source: function( request, response ) {

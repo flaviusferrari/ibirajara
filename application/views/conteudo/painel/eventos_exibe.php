@@ -22,7 +22,7 @@
                 <div class="col-md-2 form-group">
                     <label>Data</label>
                     <input name="data" id="data" class="form-control dtForm" value="<?php echo $data; ?>"> 
-                    <input type="hidden" name="idEvento" id="idEvento" value="">
+                    <input type="hidden" name="idEvento" id="idEvento" value="<?php echo $id; ?>">
                 </div>  
             </div>  
             
