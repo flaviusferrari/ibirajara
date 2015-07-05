@@ -83,6 +83,24 @@ class Eventos extends MY_Controller
      }
     
     
+    /**
+        * Método localizaBoletim()
+        *   verifica os dados do Boletim que está sendo digitada
+        * 
+        * @return boolean
+        */
+    public function LocalizaEvento()
+    {
+        $eventos = $this->Model->localizaEvento($this->input->post('termo'));
+        
+        
+        foreach ($eventos as $dado)
+        {
+            $data[] = array('value' => $dado['titulo'], 'valor' => $dado['id'],);
+        }        
+
+        echo json_encode($data);
+    }
     
 }
 

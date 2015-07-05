@@ -26,5 +26,28 @@ $(document).ready(function() {
     });
     
     
+    // Localiza o Boletim desejado pelo título
+    $('#titulo').autocomplete({
+        source: function( request, response ) {
+            $.ajax({
+                url: "indexCode.php/administrator/eventos/LocalizaEvento",
+                type: 'post',
+                dataType: "json",
+                data: {
+                    'termo': request.term
+                },
+                success: function( data ) {                    
+                    response( data );
+                }
+            });
+        },
+        minLength: 3,
+        select: function( event, ui ) {
+            var novaURL = 'indexCode.php/administrator/eventos/exibeEvento/'+ui.item.valor;
+            $(window.document.location).attr('href',novaURL);        
+        }
+    });
+    
+    
 });
 

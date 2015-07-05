@@ -23,4 +23,19 @@ class Eventos_model extends CI_Model
         return $this->db->insert('eventos', $data);
     }
     
+    
+    /**
+        * Método locolizaEvento()
+        *  localiza o título do boletim 
+        * 
+        */
+    public function localizaEvento($termo)
+    {
+        $this->db->select('id, titulo');
+        $this->db->like('titulo', $termo);
+        $query = $this->db->get('eventos');
+        
+        return $query->result_array();
+    }
+    
 }
