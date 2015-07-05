@@ -15,7 +15,7 @@ class Eventos extends CI_Controller
         parent::__construct();
         
         // DADOS
-        $this->dados['css'] = '';
+        $this->dados['css'] = 'eventos';
         $this->dados['js']  = '';
         $this->dados['conteudo'] = 'site/eventos_view';
         
