@@ -50,12 +50,18 @@
             
             <!-- HORÁRIOS / PROGRAMAÇÃO -->
             <div class="row">
+                <!-- Dia -->
+                <div class="col-md-4 form-group">
+                    <label>Dia</label>
+                    <input name="dia" id="dia" class="form-control" value="<?php echo $dia; ?>"> 
+                </div>  
+                
                 <div class="col-md-4 form-group">
                     <label>Horário</label>
                     <input name="horario" id="horario" class="form-control" value="<?php echo $horarios; ?>"> 
                 </div>  
                 
-                <div class="col-md-4 col-md-offset-2 form-group">
+                <div class="col-md-4 form-group">
                     <label>Programação</label>
                     <input name="programacao" id="programacao" class="form-control" value="<?php echo $programacao; ?>">  
                 </div>

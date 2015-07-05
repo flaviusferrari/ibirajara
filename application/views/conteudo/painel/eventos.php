@@ -54,13 +54,20 @@
             
             <!-- HORÁRIOS / PROGRAMAÇÃO -->
             <div class="row">
+                <!-- Dia -->
+                <div class="col-md-4 form-group">
+                    <label>Dia</label>
+                    <input name="dia" id="dia" class="form-control" value="<?php echo set_value('dia'); ?>">  
+                    <?php echo form_error('dia', '<div class="label label-danger">', '</div>'); ?>
+                </div>  
+                
                 <div class="col-md-4 form-group">
                     <label>Horário</label>
                     <input name="horario" id="horario" class="form-control" value="<?php echo set_value('horario'); ?>">  
                     <?php echo form_error('horario', '<div class="label label-danger">', '</div>'); ?>
                 </div>  
                 
-                <div class="col-md-4 col-md-offset-2 form-group">
+                <div class="col-md-4 form-group">
                     <label>Programação</label>
                     <input name="programacao" id="programacao" class="form-control" value="<?php echo set_value('programacao'); ?>">  
                     <?php echo form_error('programacao', '<div class="label label-danger">', '</div>'); ?>

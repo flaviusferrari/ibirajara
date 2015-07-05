@@ -16,6 +16,7 @@ class Eventos_model extends CI_Model
             'evento'      => url_title(convert_accented_characters($this->input->post('titulo')), 'dash', TRUE),
             'cartaz'      => url_title(convert_accented_characters($this->input->post('titulo')), 'dash', TRUE),
             'descricao'   => $this->input->post('descricao'),
+            'dia'         => $this->input->post('dia'),
             'horarios'    => $this->input->post('horario'),
             'programacao' => $this->input->post('programacao')
         );
@@ -35,6 +36,7 @@ class Eventos_model extends CI_Model
             'titulo'      => $this->input->post('titulo'),
             'evento'      => url_title(convert_accented_characters($this->input->post('titulo')), 'dash', TRUE),
             'descricao'   => $this->input->post('descricao'),
+            'dia'         => $this->input->post('dia'),
             'horarios'    => $this->input->post('horario'),
             'programacao' => $this->input->post('programacao')
         );
