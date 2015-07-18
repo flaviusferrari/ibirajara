@@ -11,7 +11,7 @@ class Programacao extends MY_Controller
         parent::__construct();
         
         $this->dados['css'] = 'administrator';    
-        $this->dados['js']  = 'programacao';
+        $this->dados['js']  = 'painel/programacao';
         
         // Carrega a validação dos formulários
         $this->load->library('form_validation');
