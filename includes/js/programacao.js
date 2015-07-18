@@ -7,10 +7,10 @@ $(document).ready(function() {
    
     // BOTÃO MÊS ANTERIOR
     $('#btnMesAnterior').click(function() {
-        mes = $('#mes_atual').val();
+        mes = $('#mes_atual').val() - 1;
         ano = $('#ano_atual').val();
         
-        link = 'indexCode.php/programacao/exibe/a/'+ano+'/'+mes;
+        link = 'indexCode.php/programacao/exibe/'+ano+'/'+mes;
         
         $(window.document.location).attr('href', link);
     });
