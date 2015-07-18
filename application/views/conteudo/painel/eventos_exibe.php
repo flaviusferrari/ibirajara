@@ -58,12 +58,12 @@
                 
                 <div class="col-md-4 form-group">
                     <label>Horário</label>
-                    <input name="horario" id="horario" class="form-control" value="<?php echo $horarios; ?>"> 
+                    <textarea name="horario" id="horario" class="form-control"><?php echo $horarios; ?></textarea> 
                 </div>  
                 
                 <div class="col-md-4 form-group">
                     <label>Programação</label>
-                    <input name="programacao" id="programacao" class="form-control" value="<?php echo $programacao; ?>">  
+                    <textarea name="programacao" id="programacao" class="form-control"><?php echo $programacao; ?></textarea>  
                 </div>
             </div>    
             

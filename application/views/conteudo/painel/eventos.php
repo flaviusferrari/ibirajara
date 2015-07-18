@@ -63,13 +63,13 @@
                 
                 <div class="col-md-4 form-group">
                     <label>Horário</label>
-                    <input name="horario" id="horario" class="form-control" value="<?php echo set_value('horario'); ?>">  
+                    <textarea id="horario" name="horario" class="form-control"><?php echo set_value('horario'); ?></textarea>
                     <?php echo form_error('horario', '<div class="label label-danger">', '</div>'); ?>
                 </div>  
                 
                 <div class="col-md-4 form-group">
                     <label>Programação</label>
-                    <input name="programacao" id="programacao" class="form-control" value="<?php echo set_value('programacao'); ?>">  
+                    <textarea id="programacao" name="programacao" class="form-control"><?php echo set_value('programacao'); ?></textarea>
                     <?php echo form_error('programacao', '<div class="label label-danger">', '</div>'); ?>
                 </div>
             </div>    
