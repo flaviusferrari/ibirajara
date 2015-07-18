@@ -49,8 +49,21 @@ unset($dados['mes'], $dados['ano']);
 <div class="row">
     <div class="col-md-12">
         <table class="table table-bordered">
+            <!-- MÊS  -->
             <thead>
-                <th class="bg-primary text-center" colspan="2"><?php echo $mes; ?> de <?php echo $ano; ?></th>
+                <th class="bg-primary">
+                    <div class="row">
+                        <div class="col-md-1">                            
+                            <button type="button" class="btn btn-info btn-sm" title="Mês Anterior"><strong><</strong></button>
+                        </div>
+                        <div class="col-md-2 col-md-offset-4">
+                            <span class="text-center"><?php echo $mes; ?> de <?php echo $ano; ?></span>
+                        </div>
+                        <div class="col-md-1 col-md-offset-4">                            
+                            <button type="button" class="btn btn-info btn-sm" title="Próximo Mês"><strong>></strong></button>
+                        </div>                        
+                    </div>
+                </th>
             </thead>
             
             <tbody>
