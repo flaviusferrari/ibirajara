@@ -60,7 +60,7 @@
                     <div class="panel-heading">Programação</div>
                     <!-- Panel Body -->
                     <div class="panel-body">
-                        <?php echo $evento['programacao']; ?>
+                        <?php echo nl2br($evento['programacao']); ?>
                     </div> <!-- /panel-body -->
                 </div>        
             </div>                                          
