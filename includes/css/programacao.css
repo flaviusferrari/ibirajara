@@ -1,0 +1,38 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 15/10/2014, 16:05:54
+    Author     : flavius
+*/
+
+.mes {padding: 5px 10px 10px 10px;}
+    .titMes {padding: 10px;text-align: center;font-weight: bold;background-color: blue;color: white;}
+
+    .week {}
+
+        .semana {border-bottom: 2px black dotted;background-color: #9FF;padding: 2px;cursor: pointer;}
+            .estudo {font-size: 12px;font-style: italic;}
+
+        .programaDia {display: block;border-bottom: 1px gray solid;}
+            .dia {display: table-cell;padding: 5px;background-color: #9F9;vertical-align: middle;}
+                .dtDia {font-family: Lucida Console, Monaco, monospace;font-size: 18px;}
+                
+            .fundo {display: table-cell;padding: 8px;background-color: #d8e4f1;width: 100%;}
+
+            
+
+
+
+
+
+
+
+
+
+/*Bordas*/
+.borda_baixo {
+    border-bottom: 1px gray solid;
+}

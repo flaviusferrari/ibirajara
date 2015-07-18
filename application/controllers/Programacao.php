@@ -18,7 +18,7 @@ class Programacao extends CI_Controller
         $this->load->library('tdate');
         
         // DADOS
-        $this->dados['css'] = 'videos';
+        $this->dados['css'] = 'programacao';
         $this->dados['js']  = 'programacao';
         $this->dados['conteudo'] = 'site/programacao_view';
         
