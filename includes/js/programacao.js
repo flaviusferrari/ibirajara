@@ -15,6 +15,15 @@ $(document).ready(function() {
         $(window.document.location).attr('href', link);
     });
     
+    // BOTÃO MÊS POSTERIOR
+    $('#btnMesPosterior').click(function() {
+        mes = parseInt($('#mes_atual').val()) + 1;
+        ano = $('#ano_atual').val();
+        
+        link = 'indexCode.php/programacao/exibe/'+ano+'/'+mes;
+        
+        $(window.document.location).attr('href', link);
+    });
     
 });
 
