@@ -55,4 +55,21 @@ class Eventos extends CI_Controller
         $this->load->view('site', $this->dados);
     }
     
+    
+    /**
+        *  Método exibe()
+        *   exibe o evento desejado
+        */
+    public function exibe_evento()
+    {
+        $nomeEvento = $this->uri->segment(3);
+        
+        // Busca os próximos Eventos 
+        $this->dados['evento'] = $this->Model->buscaDadosEventoNome($nomeEvento);
+        
+        $this->dados['conteudo'] = 'site/exibe_evento';
+        
+        $this->load->view('site', $this->dados);
+    }
+    
 }

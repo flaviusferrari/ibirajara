@@ -30,7 +30,6 @@ $(document).ready(function(){
     
     // Paga o ID do Evento e leva a página
     $('.wrapper').click(function() {
-        ano = $(this).children('input[name=ano]').val();
         arquivo = $(this).children('input[name=arquivo]').val();
         
         if (arquivo == '#')
@@ -38,7 +37,7 @@ $(document).ready(function(){
             return false;
         }
         
-        var novaURL = 'eventos/exibe/'+ano+'/'+arquivo;
+        var novaURL = 'indexCode.php/eventos/exibe_evento/'+arquivo;
         $(window.document.location).attr('href',novaURL);
     });
 });
