@@ -33,6 +33,17 @@ class Programacao extends CI_Controller
         */
     public function exibe()
     {
+        // Recebe os dados a serem pesquisados
+        $tempo = $this->uri->segment(3);
+        $ano   = $this->uri->segment(4);
+        $mes   = $this->uri->segment(5);
+        
+        
+        $this->dados['ano'] = $ano;
+        $this->dados['mes'] = $mes;
+        
+        
+        
         $this->load->view('site', $this->dados);
     }
 

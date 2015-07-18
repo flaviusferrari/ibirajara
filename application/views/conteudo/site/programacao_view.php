@@ -10,7 +10,7 @@
                         </div>
                         <div class="col-md-2 col-md-offset-4">
                             <span class="text-center"><?php echo $mes; ?> de <?php echo $ano; ?></span>
-                            <input type="hidden" id="mes_atual" value="<?php echo $mes_atual; ?>">
+                            <input type="hidden" id="mes_atual" value="<?php echo $mes; ?>">
                             <input type="hidden" id="ano_atual" value="<?php echo $ano; ?>">
                         </div>
                         <div class="col-md-1 col-md-offset-4">                            

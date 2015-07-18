@@ -12,7 +12,7 @@
     <script type="text/javascript" src="includes/js/jquery-ui.js"></script>
     <script type="text/javascript" src="includes/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="system/jquery/geral.js"></script>
-    <script type="text/javascript" src="template/jquery/<?php echo $js ?>.js"></script>
+    <script type="text/javascript" src="includes/js/<?php echo $js ?>.js"></script>
 
     <!-- Importa os arquivos CSS -->
     <link href="includes/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
