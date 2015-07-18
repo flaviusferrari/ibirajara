@@ -43,6 +43,5 @@ footer {border-top: 1px solid #555;}
 footer {background-color: #3366ff;}
 
 /**** CONTEÚDO ****/
-#conteudo {border-right: 1px solid #777;}
-    /* Sessões */
-    #conteudo .panel-heading {font-weight: bold;}
+/* Sessões */
+#conteudo .panel-heading {font-weight: bold;}
