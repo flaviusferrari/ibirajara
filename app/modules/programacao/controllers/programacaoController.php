@@ -39,8 +39,17 @@ class Programacao extends Controller
     public function index()
     {   
         // Verifica o Mes e o Ano corrente
-        $mes = date('m');
-        $ano = date('Y');
+        if ( isset($_POST['mes']) )
+        {
+            $mes = $_POST['mes'];
+            $ano = $_POST['ano'];
+        }
+        else
+        {
+            $mes = date('m');
+            $ano = date('Y');
+        }
+        
         
         // Busca a programação do mes e ano correspondente
         $dados = $this->model->localizarProgramacao($mes, $ano);
