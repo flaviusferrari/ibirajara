@@ -14,6 +14,9 @@ class Programacao extends CI_Controller
     {
         parent::__construct();
         
+        // BIBLIOTECAS
+        $this->load->library('tdate');
+        
         // DADOS
         $this->dados['css'] = 'videos';
         $this->dados['js']  = 'programacao';
@@ -41,7 +44,7 @@ class Programacao extends CI_Controller
         
         $this->dados['ano'] = $ano;
         $this->dados['mes'] = $mes;
-        
+        $this->dados['nome_mes'] = $this->tdate->getNomeMes($mes);
         
         
         $this->load->view('site', $this->dados);
