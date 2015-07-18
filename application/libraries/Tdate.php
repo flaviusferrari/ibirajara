@@ -57,10 +57,10 @@ class Tdate
             case 07:
                 $mes = 'JULHO';
                 break;
-            case 08:
+            case 8:
                 $mes = 'AGOSTO';
                 break;
-            case 09:
+            case 9:
                 $mes = 'SETEMBRO';
                 break;
             case 10:
