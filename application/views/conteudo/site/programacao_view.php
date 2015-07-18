@@ -22,7 +22,7 @@
                                     <input type="hidden" id="ano_atual" value="<?php echo $ano; ?>">
                                 </div>
                                 <div class="col-md-1 col-md-offset-4">                            
-                                    <button type="button" class="btn btn-info btn-sm" title="Próximo Mês"><strong>></strong></button>
+                                    <button type="button" id="btnMesPosterior" class="btn btn-info btn-sm" title="Próximo Mês"><strong>></strong></button>
                                 </div>                        
                             </div>
                         </th>
