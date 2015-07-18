@@ -22,6 +22,9 @@ class Programacao extends CI_Controller
         $this->dados['js']  = 'programacao';
         $this->dados['conteudo'] = 'site/programacao_view';
         
+        // MODEL
+        $this->load->model('programacao_model', 'Model');
+        
     }
 
     public function index()
@@ -40,7 +43,8 @@ class Programacao extends CI_Controller
         $ano = $this->uri->segment(3);
         $mes = $this->uri->segment(4);
         
-        
+        // Busca a programação do Mês 
+        $this->dados['programa'] = $this->Model->localizaProgramacao($mes, $ano);
         
         $this->dados['ano'] = $ano;
         $this->dados['mes'] = $mes;

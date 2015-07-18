@@ -27,7 +27,7 @@
                         <cite>Estudo de "O Evangelho segundo o Espiritismo"</cite></td>
                 </tr>
                 <?php 
-                foreach ($dados as $programacao): 
+                foreach ($programa as $programacao): 
                     $d = date('w', strtotime($programacao['data']));
 
                     if($d == 1)
@@ -60,7 +60,7 @@
                         <cite>&nbsp;</cite></td>
                 </tr>
                 <?php 
-                foreach ($dados as $programacao): 
+                foreach ($programa as $programacao): 
                     $d = date('w', strtotime($programacao['data']));
 
                     if($d == 2)
@@ -94,7 +94,7 @@
                 </tr>
                 
                 <?php 
-                foreach ($dados as $programacao): 
+                foreach ($programa as $programacao): 
                     $d = date('w', strtotime($programacao['data']));
 
                     if($d == 3)
@@ -128,7 +128,7 @@
                         <cite>Estudo de “O Livro dos Espíritos”</cite></td>
                 </tr>
                 <?php 
-                foreach ($dados as $programacao): 
+                foreach ($programa as $programacao): 
                     $d = date('w', strtotime($programacao['data']));
 
                     if($d == 5)
@@ -162,7 +162,7 @@
                         <cite>Tríplice Aspecto da Doutrina Espírita</cite></td>
                 </tr>
                 <?php 
-                foreach ($dados as $programacao): 
+                foreach ($programa as $programacao): 
                     $d = date('w', strtotime($programacao['data']));
 
                     if($d == 6)
