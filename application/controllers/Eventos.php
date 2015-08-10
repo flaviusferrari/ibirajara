@@ -29,14 +29,29 @@ class Eventos extends CI_Controller
 
     public function index()
     {
-        $config['base_url']   = base_url('indexCode.php/eventos');
+        $config['base_url']   = base_url('indexCode.php/eventos/index/');
         $config['total_rows'] = $this->Model->buscaEventosAnteriores()->num_rows();
         $config['per_page']   = 3;
         
+        // Configurando a aparencia
+        $config['full_tag_open']  = '<ul class="pagination">';
+        $config['full_tag_close'] = '</ul>';
+        $config['next_link']      = '<span aria-hidden="true">&raquo;</span>';
+        $config['next_tag_open']  = '<li>';
+        $config['next_tag_close'] = '</li>';
+        $config['prev_tag_open']  = '<li>';
+        $config['prev_tag_close'] = '</li>';
+        $config['prev_link']      = '<span aria-hidden="true">&laquo;</span>';
+        $config['cur_tag_open']   = '<li class="active"><a>';
+        $config['cur_tag_close']  = '</a></li>';
+        $config['num_tag_open']   = '<li>';
+        $config['num_tag_close']  = '</li>';
+        
         $qtd = $config['per_page'];
-        ( $this->uri->segment(2) != '' ) ? $inicio = $this->uri->segment(2) : $inicio = 0;
+        ( $this->uri->segment(3) != '' ) ? $inicio = $this->uri->segment(3) : $inicio = 0;
 
         $this->pagination->initialize($config);
+        $this->dados['pagination'] = $this->pagination->create_links();
         
         
         // Busca os próximos Eventos 
