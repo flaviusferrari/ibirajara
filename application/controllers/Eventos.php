@@ -20,7 +20,7 @@ class Eventos extends CI_Controller
         $this->dados['conteudo'] = 'site/eventos_view';
         
         // BIBLIOTECAS
-                
+        $this->load->library('pagination');
         
         // MODEL
         $this->load->model('eventos_model', 'Model');
@@ -29,11 +29,21 @@ class Eventos extends CI_Controller
 
     public function index()
     {
+        $config['base_url']   = base_url('indexCode.php/eventos');
+        $config['total_rows'] = $this->Model->buscaEventosAnteriores()->num_rows();
+        $config['per_page']   = 3;
+        
+        $qtd = $config['per_page'];
+        ( $this->uri->segment(2) != '' ) ? $inicio = $this->uri->segment(2) : $inicio = 0;
+
+        $this->pagination->initialize($config);
+        
+        
         // Busca os próximos Eventos 
         $this->dados['proximosEventos'] = $this->Model->buscaProximosEventos();
         
         // Busca os Eventos Anteriores
-        $this->dados['eventosAnteriores'] = $this->Model->buscaEventosAnteriores();        
+        $this->dados['eventosAnteriores'] = $this->Model->buscaEventosAnteriores($qtd, $inicio)->result_array();        
                 
         $this->load->view('site', $this->dados);
     }
