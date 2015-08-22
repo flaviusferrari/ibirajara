@@ -24,17 +24,6 @@
         </div>
     </div>
 
-    <!-- LIVROS -->
-    <div class="panel panel-primary">                        
-        <!-- Panel heading -->
-        <div class="panel-heading">Livro da Semana</div>                        
-        <!-- Panel Body -->
-        <div class="panel-body">
-            <img src="template/images/Nosso_lar_min.jpg">
-            <p>Nosso Lar </p>
-        </div> <!-- /panel-body -->                        
-    </div> <!-- / panel-primary -->
-
     <!-- AVISOS -->
     <div class="panel panel-primary">                        
         <!-- Panel heading -->
