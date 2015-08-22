@@ -16,6 +16,7 @@ class Avisos extends MY_Controller
         
         // Carrega as Bibliotecas necessárias
         $this->load->library('form_validation');
+        $this->load->helper('file');
         
         // Carrega o Model
         //$this->load->model('administrator_model');
@@ -32,6 +33,22 @@ class Avisos extends MY_Controller
     {   
         // Exibe o painel
         $this->load->view('layout', $this->dados);           
+    }
+    
+    
+    // ----------------------------------------------------------------
+    
+    public function gravaAviso()
+    {
+        $data = 'Some file data';
+        if ( ! write_file('./path/to/file.php', $data))
+        {
+                echo 'Unable to write the file';
+        }
+        else
+        {
+                echo 'File written!';
+        }
     }
     
     
