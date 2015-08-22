@@ -6,6 +6,9 @@
  */
 define('_SYSEXEC', 1);
 
+// Configura a timezone padrão a ser utilizada por todas as funções de data e hora em um script 
+date_default_timezone_set('America/Sao_Paulo');
+
 // Somente em produção
 //ini_set('display_errors', 'Off');
 
