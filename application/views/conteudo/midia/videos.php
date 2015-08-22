@@ -7,19 +7,36 @@
     <div class="panel-body">
         
         <blockquote>
-            <p class="lead">A vida é uma só... - Augusto Haanwinkel</p>
+            <p class="lead">75 Anos do C.E.I - Jejum - Larissa Chaves (S.E. Fraternidade)</p>
         </blockquote>
         
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
                 <!-- Vídeo principal -->
                 <div class="embed-responsive embed-responsive-4by3">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/1RjJC99E9A8?showinfo=0" frameborder="0" frameborder="0" allowfullscreen></iframe>
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/b2V7BoOLAXI?showinfo=0" frameborder="0" frameborder="0" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
         
         <hr>
+        
+        <div class="row">
+            <div class="col-md-4">                
+                <iframe style="width: 90%;" src="https://www.youtube.com/embed/_NZJI3p1Hvw?showinfo=0" frameborder="0" allowfullscreen></iframe>
+                <p class="lead">75 Anos do C.E.I - A Prece - Ricardo Sardinha </p>
+            </div>
+            
+            <div class="col-md-4">                
+                <iframe style="width: 90%;" src="https://www.youtube.com/embed/z6TkuqEVOMw?showinfo=0" frameborder="0" allowfullscreen></iframe>
+                <p class="lead">75 Anos do C.E.I - O Código Penal da Vida Futura - Darcy N. Moreira (CEERJ)</p>
+            </div>
+            
+            <div class="col-md-4">                
+                <iframe style="width: 90%;" src="https://www.youtube.com/embed/1RjJC99E9A8?showinfo=0" frameborder="0" allowfullscreen></iframe>
+                <p class="lead">A vida é uma só... - Augusto Haanwinkel</p>
+            </div>
+        </div>
         
         <div class="row">
             <div class="col-md-4">                
