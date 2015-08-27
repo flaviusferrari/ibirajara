@@ -23,6 +23,15 @@
             </div>
         </div>
     </div>
+    
+    <!-- MAPA -->
+    <div class="panel panel-primary">
+        <div class="panel-heading">Como Chegar</div>
+        
+        <div class="panel-body">
+            <div id="mapa"></div>
+        </div>
+    </div>
 
     <!-- AVISOS -->
     <div class="panel panel-primary">                        

@@ -11,6 +11,7 @@
     <script type="text/javascript" src="includes/js/jquery.js"></script>
     <script type="text/javascript" src="includes/js/jquery-ui.js"></script>
     <script type="text/javascript" src="includes/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="includes/js/mapa.js"></script>
     <script type="text/javascript" src="system/jquery/geral.js"></script>
     <script type="text/javascript" src="includes/js/<?php echo $js ?>.js"></script>
 
