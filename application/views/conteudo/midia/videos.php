@@ -7,19 +7,36 @@
     <div class="panel-body">
         
         <blockquote>
-            <p class="lead">75 Anos do C.E.I - Jejum - Larissa Chaves (S.E. Fraternidade)</p>
+            <p class="lead">75 Anos do C.E.I - Esperanças e Consolações - Marilucia Duarte</p>
         </blockquote>
         
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
                 <!-- Vídeo principal -->
                 <div class="embed-responsive embed-responsive-4by3">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/b2V7BoOLAXI?showinfo=0" frameborder="0" frameborder="0" allowfullscreen></iframe>
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/gcGoEBrqAzc?showinfo=0" frameborder="0" frameborder="0" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
         
         <hr>
+        
+        <div class="row">
+            <div class="col-md-4">                
+                <iframe style="width: 90%;" src="https://www.youtube.com/embed/88hmWTQCVTs?showinfo=0" frameborder="0" allowfullscreen></iframe>
+                <p class="lead">75 Anos do C.E.I - O Que Acontece para Além dos Estudos? - Denise Duarte </p>
+            </div>
+            
+            <div class="col-md-4">                
+                <iframe style="width: 90%;" src="https://www.youtube.com/embed/AMH0LaPIIF4?showinfo=0" frameborder="0" allowfullscreen></iframe>
+                <p class="lead">75 Anos do C.E.I - Prelúdio do Retorno... - Ricardo Bedirian</p>
+            </div>
+            
+            <div class="col-md-4">                
+                <iframe style="width: 90%;" src="https://www.youtube.com/embed/b2V7BoOLAXI?showinfo=0" frameborder="0" allowfullscreen></iframe>
+                <p class="lead">75 Anos do C.E.I - Jejum - Larissa Chaves (S.E. Fraternidade)</p>
+            </div>
+        </div>
         
         <div class="row">
             <div class="col-md-4">                
