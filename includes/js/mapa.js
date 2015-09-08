@@ -29,7 +29,7 @@ function initialize() {
   function loadScript() {
   var script = document.createElement('script');
   script.type = 'text/javascript';
-  script.src ='http://maps.googleapis.com/maps/api/js?key=AIzaSyAVB8Oz5PvgL-IJi1GChhIVA5p6M9KktmQ&sensor=true&callback=initialize';
+  script.src ='http://maps.googleapis.com/maps/api/js?key=AIzaSyCS0g7w8hF6_YpljSuPEAArnmUP2OZPMrk&sensor=true&callback=initialize';
  
   document.body.appendChild(script);
 }

@@ -26,10 +26,30 @@
     
     <!-- MAPA -->
     <div class="panel panel-primary">
-        <div class="panel-heading">Como Chegar</div>
+        <div class="panel-heading">Localização</div>
         
         <div class="panel-body">
-            <div id="mapa"></div>
+            <div id="map" style="height: 200px;"></div>
+            <script type="text/javascript">
+
+            var map;
+            function initMap() {
+              map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: -22.922288, lng: -43.250170},
+                zoom: 18
+              });
+               var marker = new google.maps.Marker({
+                position: {lat: -22.922288, lng: -43.250170},
+                map: map,
+                title: 'C. E. Ibirajara'
+              });
+
+            }
+
+            </script>
+            <script async defer
+              src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCS0g7w8hF6_YpljSuPEAArnmUP2OZPMrk&callback=initMap">
+            </script>
         </div>
     </div>
 
