@@ -40,8 +40,8 @@ class Avisos extends MY_Controller
     
     public function gravaAviso()
     {
-        $data = 'Some file data';
-        if ( ! write_file('./path/to/file.php', $data))
+        $data = 'Some file data New';
+        if ( ! write_file('./aviso.php', $data))
         {
                 echo 'Unable to write the file';
         }
