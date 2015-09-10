@@ -11,7 +11,7 @@ class Avisos extends MY_Controller
         parent::__construct();
         
         $this->dados['css']      = '';      
-        $this->dados['js']       = '';
+        $this->dados['js']       = 'painel/aviso';
         $this->dados['conteudo'] = 'painel/avisos';
         
         // Carrega as Bibliotecas necessárias
@@ -40,7 +40,7 @@ class Avisos extends MY_Controller
     
     public function gravaAviso()
     {
-        $data = 'Some file data New';
+        $data = $this->input->post('texto');
         if ( ! write_file('./aviso.php', $data))
         {
                 echo 'Unable to write the file';
