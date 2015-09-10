@@ -31,6 +31,8 @@ class Avisos extends MY_Controller
         */
     public function index()
     {   
+        $this->dados['aviso'] = file_get_contents('./aviso.php');
+        
         // Exibe o painel
         $this->load->view('layout', $this->dados);           
     }
