@@ -25,7 +25,11 @@ and open the template in the editor.
             
 
 
-
+#mapa{
+  width: 100%; 
+  height: 250px; 
+  border: 1px solid #ccc;
+}
 
 
 

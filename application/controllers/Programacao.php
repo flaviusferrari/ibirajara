@@ -29,6 +29,18 @@ class Programacao extends CI_Controller
 
     public function index()
     {        
+        // Recebe os dados a serem pesquisados
+        $ano = date('Y');
+        $mes = date('m');
+        
+        // Busca a programação do Mês 
+        $this->dados['programa'] = $this->Model->localizaProgramacao($mes, $ano);
+        
+        $this->dados['ano'] = $ano;
+        $this->dados['mes'] = $mes;
+        $this->dados['nome_mes'] = $this->tdate->getNomeMes($mes);
+        
+        
         $this->load->view('site', $this->dados);
     }
     
