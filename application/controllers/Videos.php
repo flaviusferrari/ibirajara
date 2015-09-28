@@ -24,7 +24,26 @@ class Videos extends CI_Controller
     public function index()
     {
         
+        
         $this->load->view('site', $this->dados);
+        
+        
+    }
+    
+    
+    public function exibe()
+    {
+        $page = $this->uri->segment(3);
+        
+        if($page == '1')
+        {
+            $this->load->view('site', $this->dados);
+        }
+        else
+        {
+            $this->dados['conteudo'] = 'midia/videos'.$page;
+            $this->load->view('site', $this->dados);
+        }
     }
 
     
