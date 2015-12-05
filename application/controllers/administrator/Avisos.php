@@ -63,5 +63,18 @@ class Avisos extends MY_Controller
         }
     }
     
+    // --------------------------------------------------------------------
+    
+    /**
+        *  MÉTODO exibeAviso()
+        * 
+        *  Exibe o aviso salvo
+        */
+    public function exibeAviso()
+    {
+        echo file_get_contents('./aviso.txt');
+    }
+    
+    
     
 }
