@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Eventos extends MY_Controller
+class Videos extends MY_Controller
 {
     // DADOS
     private $dados;
