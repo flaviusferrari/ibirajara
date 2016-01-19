@@ -78,6 +78,13 @@ class Videos extends MY_Controller
             } 
             else
             {
+                // Redimensiona a imagem
+                $config_lib['image_library'] = 'gd2';
+                $config_lib['source_image']  = './includes/images/videos/'.$config['file_name'] . strrchr($_FILES['cartaz']['name'], '.');
+                $config_lib['width']  = 350;
+
+                $this->load->library('image_lib', $config_lib);
+                
                 $this->Model->salvar();
 
                 $this->dados['conteudo']    = 'sucess';
