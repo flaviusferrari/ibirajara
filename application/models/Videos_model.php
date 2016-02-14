@@ -9,12 +9,14 @@ class Videos_model extends CI_Model
      * 
      *    Busca todos os vídeos salvos no Banco de Dados
      */
-    public function getVideos()
+    public function getVideos($qtd = 0, $inicio = 0)
     {
-        $this->db->order_by('dtVideo', 'DESC');
-        $query = $this->db->get('videos');
+        if($qtd > 0) $this->db->limit($qtd, $inicio);
         
-        return $query->result_array();
+        $this->db->order_by('dtVideo', 'DESC');
+        return $this->db->get('videos');
+        
+        //return $query->result_array();
     }
     
     // ---------------------------------------------------------------

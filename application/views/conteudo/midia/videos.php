@@ -38,9 +38,16 @@
             </div>-->
         <?php endforeach; ?>
         </div>
+        
+        <!-- PAGINAÇÃO -->
+        <nav>
+            <?php echo $pagination; ?>           
+        </nav>
 
     </div> <!-- /panel-body -->
 </div> <!-- / panel-primary -->
+
+
 
 
 <?php

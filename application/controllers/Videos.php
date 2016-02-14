@@ -20,6 +20,9 @@ class Videos extends CI_Controller
         $this->dados['js']  = '';
         $this->dados['conteudo'] = 'midia/videos';
         
+        // BIBLIOTECAS
+        $this->load->library('pagination');
+        
         // MODEL
         $this->load->model('videos_model', 'Model');
         
@@ -28,13 +31,50 @@ class Videos extends CI_Controller
     // ---------------------------------------------------------------
 
     public function index()
-    {        
-        // Busca os vídeos
-        $this->dados['videos'] = $this->Model->getVideos();
+    {    
+        $this->pageVideos();
         
         $this->dados['lastVideo'] = $this->Model->lastVideo();
         
         $this->load->view('site', $this->dados);
+    }
+    
+    // ----------------------------------------------------------------
+    
+    /**
+     *  MÉTODO PAGINA VIDEOS
+     * 
+     *    Efetua a paginação dos vídeos
+     */
+    public function pageVideos()
+    {        
+        $config['base_url']   = base_url('indexCode.php/videos/index/');
+        $config['total_rows'] = $this->Model->getVideos()->num_rows();
+        $config['per_page']   = 3;
+        
+        // Configurando a aparencia
+        $config['full_tag_open']  = '<ul class="pagination">';
+        $config['full_tag_close'] = '</ul>';
+        $config['next_link']      = '<span aria-hidden="true">&raquo;</span>';
+        $config['next_tag_open']  = '<li>';
+        $config['next_tag_close'] = '</li>';
+        $config['prev_tag_open']  = '<li>';
+        $config['prev_tag_close'] = '</li>';
+        $config['prev_link']      = '<span aria-hidden="true">&laquo;</span>';
+        $config['cur_tag_open']   = '<li class="active"><a>';
+        $config['cur_tag_close']  = '</a></li>';
+        $config['num_tag_open']   = '<li>';
+        $config['num_tag_close']  = '</li>';
+        
+        $qtd = $config['per_page'];
+        ( $this->uri->segment(3) != '' ) ? $inicio = $this->uri->segment(3) : $inicio = 0;
+
+        $this->pagination->initialize($config);
+        $this->dados['pagination'] = $this->pagination->create_links();
+        
+        // Busca os vídeos e retorna em forma de Array
+        $this->dados['videos'] = $this->Model->getVideos($qtd, $inicio)->result_array();     
+        
     }
 
     
