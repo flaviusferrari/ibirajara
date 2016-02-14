@@ -7,9 +7,10 @@ class Videos extends CI_Controller
     
     
     /**
-        * Método __construct()
-        *  método construtor da classe
-        */
+     * MÉTODO __CONSTRUCT
+     * 
+     *  Método construtor da classe
+     */
     public function __construct()
     {
         parent::__construct();
@@ -19,11 +20,15 @@ class Videos extends CI_Controller
         $this->dados['js']  = '';
         $this->dados['conteudo'] = 'midia/videos';
         
+        // MODEL
+        $this->load->model('videos_model', 'Model');
+        
     }
+    
+    // ---------------------------------------------------------------
 
     public function index()
-    {
-        
+    {        
         $this->load->view('site', $this->dados);
     }
 
