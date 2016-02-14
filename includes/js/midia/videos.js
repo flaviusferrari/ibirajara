@@ -5,10 +5,26 @@
  */
 
 
-$(document).load(function() {
+$(document).ready(function() {
    
     
-    
+    $('body').on('click', '.linkvideo', function(e) {
+        e.preventDefault();
+        
+        link = $(this).attr('href');
+        
+        $.ajax({
+            url: link,
+            type: 'POST',
+            data: 'tipo=endereco&value=' + $('#endereco').val(),
+            success: function (data) {
+                // Exibe os dados
+                $('#videos').html(data);
+            }
+        }); 
+        
+//        alert(link);
+    });
     
     
     

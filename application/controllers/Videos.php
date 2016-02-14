@@ -48,7 +48,7 @@ class Videos extends CI_Controller
      */
     public function pageVideos()
     {        
-        $config['base_url']   = base_url('indexCode.php/videos/index/');
+        $config['base_url']   = base_url('indexCode.php/videos/newVideos/');
         $config['total_rows'] = $this->Model->getVideos()->num_rows();
         $config['per_page']   = 3;
         
@@ -65,6 +65,7 @@ class Videos extends CI_Controller
         $config['cur_tag_close']  = '</a></li>';
         $config['num_tag_open']   = '<li>';
         $config['num_tag_close']  = '</li>';
+        $config['attributes'] = array('class' => 'linkvideo');
         
         $qtd = $config['per_page'];
         ( $this->uri->segment(3) != '' ) ? $inicio = $this->uri->segment(3) : $inicio = 0;
@@ -76,6 +77,21 @@ class Videos extends CI_Controller
         $this->dados['videos'] = $this->Model->getVideos($qtd, $inicio)->result_array();     
         
     }
+    
+    // ----------------------------------------------------------------
+    
+    /**
+     * Método novos vídeos
+     */
+    public function newVideos()
+    {
+        $this->pageVideos();
+        
+        $this->load->view('conteudo/midia/newVideos', $this->dados);
+        
+        //echo $this->dados['pagination'];
+    }
+    
 
     
 }

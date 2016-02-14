@@ -19,30 +19,21 @@
         </div>
         
         <hr>
-        <div class="row">
-        <?php foreach ($videos as $video): ?>
-        
-            <div class="col-md-4">
-                <img src="<?php echo base_url('includes/images/videos/'.$video['foto']); ?>" class="img-thumbnail">
-                <p class="lead"><?php echo $video['nome']; ?></p>
+        <div id="videos">
+            <div class="row" >
+            <?php foreach ($videos as $video): ?>
+                <div class="col-md-4">
+                    <img src="<?php echo base_url('includes/images/videos/'.$video['foto']); ?>" class="img-thumbnail">
+                    <p class="lead"><?php echo $video['nome']; ?></p>
+                </div>
+            <?php endforeach; ?>
             </div>
-            
-<!--            <div class="col-md-4">
-                <iframe style="width: 90%;" src="https://www.youtube.com/embed/axTd_DmsNNw?showinfo=0" frameborder="0" frameborder="0" allowfullscreen></iframe>
-                <p class="lead">Seminário Cláudio e Íris Sinotti - Parte 1</p>
-            </div>
-            
-            <div class="col-md-4">
-                <iframe style="width: 90%;" src="https://www.youtube.com/embed/yYmiOJKdpj0?showinfo=0" frameborder="0" allowfullscreen></iframe>
-                <p class="lead">Seminário Cláudio e Íris Sinotti - Parte 2</p>
-            </div>-->
-        <?php endforeach; ?>
+
+            <!-- PAGINAÇÃO -->
+            <nav>
+                <?php echo $pagination; ?>           
+            </nav>
         </div>
-        
-        <!-- PAGINAÇÃO -->
-        <nav>
-            <?php echo $pagination; ?>           
-        </nav>
 
     </div> <!-- /panel-body -->
 </div> <!-- / panel-primary -->
