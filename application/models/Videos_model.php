@@ -12,7 +12,9 @@ class Videos_model extends CI_Model
     public function getVideos()
     {
         $this->db->order_by('dtVideo', 'DESC');
-        return $this->db->get('videos');
+        $query = $this->db->get('videos');
+        
+        return $query->result_array();
     }
     
     
