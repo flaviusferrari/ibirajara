@@ -31,7 +31,7 @@ class Avisos extends MY_Controller
         */
     public function index()
     {   
-        $this->dados['aviso'] = file_get_contents('./aviso.php');
+        $this->dados['aviso'] = file_get_contents('./aviso.txt');
         
         // Exibe o painel
         $this->load->view('layout', $this->dados);           
@@ -43,15 +43,38 @@ class Avisos extends MY_Controller
     public function gravaAviso()
     {
         $data = $this->input->post('texto');
-        if ( ! write_file('./aviso.php', $data))
+        if ( ! write_file('./aviso.txt', $data))
         {
-                echo 'Unable to write the file';
+            $this->dados['conteudo'] = 'erro';
+
+            $this->dados['msn_content'] = 'Erro ao gravar arquivo!!';
+            $this->dados['msn_link']    = 'indexCode.php/administrator/avisos';
+
+            $this->load->view('layout', $this->dados);
         }
         else
         {
-                echo 'File written!';
+            $this->dados['conteudo'] = 'sucess';
+
+            $this->dados['msn_content'] = 'Aviso salvo com sucesso!!';
+            $this->dados['msn_link']    = 'indexCode.php/administrator/avisos';
+
+            $this->load->view('layout', $this->dados);
         }
     }
+    
+    // --------------------------------------------------------------------
+    
+    /**
+        *  MÉTODO exibeAviso()
+        * 
+        *  Exibe o aviso salvo
+        */
+    public function exibeAviso()
+    {
+        echo file_get_contents('./aviso.txt');
+    }
+    
     
     
 }

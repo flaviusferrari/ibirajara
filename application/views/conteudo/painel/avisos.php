@@ -4,17 +4,6 @@
     <!-- Panel Body -->
     <div class="panel-body">
         
-        <!-- BOTÕES -->
-        <div id="menuBotoes">
-            <a class="btn btn-primary" id="btnSalvar">Salvar</a>
-            <a class="btn btn-primary" id="btnNovo">Novo</a>
-            <a class="btn btn-primary" id="btnAtualizar">Atualizar</a>
-            <a class="btn btn-primary" id="btnLocalizar">Localizar</a>
-            <a class="btn btn-primary" id="btnExcluir">Excluir</a>                    
-        </div>  
-        
-        <br>
-        
         <form id="formulario" method="POST" autocomplete="off" action="">
             
             <!-- TEXTO -->
@@ -24,6 +13,11 @@
             </div>  
             
         </form>
+        
+        <!-- BOTÕES -->
+        <div id="menuBotoes">
+            <a class="btn btn-primary" id="btnSalvar">Salvar</a>               
+        </div>  
         
     </div>
 </div><!-- /panel-primary -->

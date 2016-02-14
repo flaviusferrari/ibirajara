@@ -21,4 +21,11 @@ $(document).ready(function() {
         monthNames: ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'],
         monthNamesShort: ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez']
     });
+    
+    /**
+        *   SIDEBAR AVISOS
+        *  
+        *   exibe o aviso salvo
+        */
+    $('#aviso_txt').load('indexCode.php/administrator/avisos/exibeAviso');
 });

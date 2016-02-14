@@ -58,9 +58,5 @@
         <!-- Panel heading -->
         <div class="panel-heading">Avisos</div>                        
         <!-- Panel Body -->
-        <div class="panel-body">
-            Estamos captando gêneros não perecíveis para o Centro Comunitário Jóias de Cristo.
-            Além de roupas, calçados, agasalhos e cobertores para a população de rua.
-            Fraldas descartáveis P ou M e lenços umidecidos para o Centro de Reintegração Social Bia Bedran.
-        </div> <!-- /panel-body -->                        
+        <div class="panel-body" id="aviso_txt"></div> <!-- /panel-body -->                        
     </div> <!-- / panel-primary -->
