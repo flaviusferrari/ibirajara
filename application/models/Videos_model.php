@@ -26,7 +26,8 @@ class Videos_model extends CI_Model
      */
     public function lastVideo()
     {
-        $this->db->select_max('dtVideo');
+        $this->db->order_by('dtVideo', 'DESC');
+        $this->db->limit(1);
         $query = $this->db->get('videos');
         
         return $query->row_array();

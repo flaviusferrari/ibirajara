@@ -29,6 +29,11 @@ class Videos extends CI_Controller
 
     public function index()
     {        
+        // Busca os vídeos
+        $this->dados['videos'] = $this->Model->getVideos();
+        
+        $this->dados['lastVideo'] = $this->Model->lastVideo();
+        
         $this->load->view('site', $this->dados);
     }
 
