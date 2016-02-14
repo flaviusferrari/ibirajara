@@ -17,7 +17,7 @@ class Videos extends CI_Controller
         
         // DADOS
         $this->dados['css'] = 'videos';
-        $this->dados['js']  = '';
+        $this->dados['js']  = 'midia/videos';
         $this->dados['conteudo'] = 'midia/videos';
         
         // BIBLIOTECAS
