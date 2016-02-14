@@ -92,6 +92,17 @@ class Videos extends CI_Controller
         //echo $this->dados['pagination'];
     }
     
+    // 
+    
+    /**
+     *  MÉTODO VIEW VIDEO
+     */
+    public function viewVideo()
+    {
+        $video['lastVideo'] = $this->Model->video($this->uri->segment(3));
+        
+        $this->load->view('conteudo/midia/viewVideo', $video);
+    }
 
     
 }

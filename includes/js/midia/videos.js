@@ -22,8 +22,24 @@ $(document).ready(function() {
                 $('#videos').html(data);
             }
         }); 
+    });
+    
+    
+    
+    $('body').on('click', '.idVideo', function(e) {
+        e.preventDefault();
         
-//        alert(link);
+        link = $(this).attr('href');
+        
+        $.ajax({
+            url: link,
+            type: 'POST',
+            data: '',
+            success: function (data) {
+                // Exibe os dados
+                $('#viewVideo').html(data);
+            }
+        }); 
     });
     
     

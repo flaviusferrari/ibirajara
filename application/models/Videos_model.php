@@ -35,5 +35,20 @@ class Videos_model extends CI_Model
         return $query->row_array();
     }
     
+    // ---------------------------------------------------------------
+    
+    /**
+     *  MÉTODO LAST VIDEO
+     * 
+     *    Obtém o último vídeo salvo
+     */
+    public function video($id)
+    {
+        $this->db->where('id', $id);
+        $query = $this->db->get('videos');
+        
+        return $query->row_array();
+    }
+    
     
 }
