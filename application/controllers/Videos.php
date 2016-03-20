@@ -30,35 +30,21 @@ class Videos extends CI_Controller
     
     // ---------------------------------------------------------------
 
+    /**
+     *  MÉTODO INDEX
+     * 
+     *   Exibe a página de Vídeos
+     */
     public function index()
     {    
         $this->pageVideos();
         
         $this->dados['lastVideo'] = $this->Model->lastVideo();
         
-        
         $this->load->view('site', $this->dados);
-        
-        
     }
     
-    
-    public function exibe()
-    {
-        $page = $this->uri->segment(3);
-        
-        if($page == '1')
-        {
-            $this->load->view('site', $this->dados);
-        }
-        else
-        {
-            $this->dados['conteudo'] = 'midia/videos'.$page;
-            $this->load->view('site', $this->dados);
-        }
-    }
-    
-    // ----------------------------------------------------------------
+    // ---------------------------------------------------------------
     
     /**
      *  MÉTODO PAGINA VIDEOS
@@ -100,21 +86,23 @@ class Videos extends CI_Controller
     // ----------------------------------------------------------------
     
     /**
-     * Método novos vídeos
+     * MÉTODO NOVOS VÍDEOS
+     * 
+     *   Exibe as miniaturas dos vídeos salvos junto com a paginação
      */
     public function newVideos()
     {
         $this->pageVideos();
         
         $this->load->view('conteudo/midia/newVideos', $this->dados);
-        
-        //echo $this->dados['pagination'];
     }
     
-    // 
+    // ----------------------------------------------------------------
     
     /**
      *  MÉTODO VIEW VIDEO
+     * 
+     *   Exibe o vídeo selecionado na DIV principal de Visualização
      */
     public function viewVideo()
     {
