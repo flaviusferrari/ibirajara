@@ -110,6 +110,21 @@ class Videos extends CI_Controller
         
         $this->load->view('conteudo/midia/viewVideo', $video);
     }
+    
+    // -------------------------------------------------------------------
+    
+    /**
+     * MÉTODO LAST VIDEO
+     * 
+     *   Busca o último vídeo no banco de Dados
+     */
+    public function lastVideo()
+    {
+        $dados['video'] = $this->Model->lastVideo();
+        
+        // Exibe o video
+        $this->load->view('conteudo/midia/ultimo_video', $dados);
+    }
 
     
 }

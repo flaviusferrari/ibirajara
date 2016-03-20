@@ -22,10 +22,21 @@ $(document).ready(function() {
         monthNamesShort: ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez']
     });
     
+    // ---------------------------------------------------------------
+    
     /**
-        *   SIDEBAR AVISOS
-        *  
-        *   exibe o aviso salvo
-        */
+     *   SIDEBAR AVISOS
+     *  
+     *   exibe o aviso salvo
+     */
     $('#aviso_txt').load('indexCode.php/administrator/avisos/exibeAviso');
+    
+    // ---------------------------------------------------------------
+    
+    /**
+     *  SIDEBAR ÚLTIMO VÍDEO
+     *  
+     *    Exibe o útltimo vídeo 
+     */
+    $('#lastVideo').load('indexCode.php/videos/lastVideo');
 });

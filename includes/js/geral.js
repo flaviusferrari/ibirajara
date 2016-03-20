@@ -19,11 +19,20 @@ $(document).ready(function() {
     // --------------------------------------------------------------
     
     /**
-        *   SIDEBAR AVISOS
-        *  
-        *   exibe o aviso salvo
-        */
+     *   SIDEBAR AVISOS
+     *  
+     *   exibe o aviso salvo
+     */
     $('#aviso_txt').load('indexCode.php/administrator/avisos/exibeAviso');
+    
+    // ---------------------------------------------------------------
+    
+    /**
+     *  SIDEBAR ÚLTIMO VÍDEO
+     *  
+     *    Exibe o útltimo vídeo 
+     */
+    $('#lastVideo').load('indexCode.php/videos/lastVideo');
     
     
 });
