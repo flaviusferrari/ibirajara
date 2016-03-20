@@ -55,7 +55,7 @@ class Videos extends CI_Controller
     {        
         $config['base_url']   = base_url('indexCode.php/videos/newVideos/');
         $config['total_rows'] = $this->Model->getVideos()->num_rows();
-        $config['per_page']   = 3;
+        $config['per_page']   = 6;
         
         // Configurando a aparencia
         $config['full_tag_open']  = '<ul class="pagination">';
