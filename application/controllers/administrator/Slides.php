@@ -12,7 +12,7 @@ class Slides extends MY_Controller
         
         $this->dados['css'] = '';      
         $this->dados['js']       = '';
-        $this->dados['conteudo'] = 'painel/cad_slide';
+        $this->dados['conteudo'] = 'painel/slides';
         
         // Carrega as Bibliotecas necessárias
         $this->load->library('form_validation');
