@@ -28,6 +28,8 @@ class Programacao_model extends CI_Model
         $this->db->where('data >=', $dtInicio);
         $this->db->where('data <=', $dtFim);
         
+        $this->db->order_by('data', 'ASC');
+        
         $query = $this->db->get('programacao');
         
         return $query->result_array();
