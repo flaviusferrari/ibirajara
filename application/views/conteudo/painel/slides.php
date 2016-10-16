@@ -20,7 +20,7 @@
         
         <br>
         
-        <form id="formulario" method="POST" autocomplete="off" action="">
+        <form id="formulario" method="POST" autocomplete="off" enctype="multipart/form-data" action="">
             
             <div class="row">
                 <!-- DATA INICIO -->
@@ -28,7 +28,6 @@
                     <label>Data Inicio:</label>
                     <input name="dtInicio" id="dtInicio" class="form-control dtForm" value="<?php echo set_value('dtInicio'); ?>">  
                     <?php echo form_error('dtInicio', '<div class="label label-danger">', '</div>'); ?>
-                    <input type="hidden" name="idBoletim" id="idBoletim" value="">
                 </div>  
                 <!-- DATA FIM -->
                 <div class="col-md-2 col-md-offset-1 form-group">
@@ -43,13 +42,14 @@
                 <label>Evento:</label>
                 <input name="titulo" id="titulo" class="form-control" value="<?php echo set_value('titulo'); ?>">
                 <?php echo form_error('titulo', '<div class="label label-danger">', '</div>'); ?>
+                <input type="hidden" name="evento" id="evento" value="">
             </div> 
             
-            <!-- CITAÇÃO -->
+            <!-- IMAGEM -->
              <div class="form-group">
                 <label>Imagem:</label>
-                <input name="citacao" class="form-control" value="<?php echo set_value('citacao'); ?>" type="text">
-                <?php echo form_error('citacao', '<div class="label label-danger">', '</div>'); ?>
+                <input type="file" name="foto" id="foto" value="<?php echo set_value('foto'); ?>">
+                <?php echo form_error('foto', '<div class="label label-danger">', '</div>'); ?>
              </div>
         </form>
     </div>
