@@ -14,11 +14,13 @@ class Slideshow extends CI_Controller
      */
     public function __construct()
     {
-        parent::__construct();       
+        parent::__construct();   
         
+        // BIBLIOTECAS
+        $this->load->library('timage');        
         
         // MODEL
-        //$this->load->model('slideshow_model', 'Model');
+        $this->load->model('slideshow_model', 'Model');
         
     }
     
@@ -31,8 +33,12 @@ class Slideshow extends CI_Controller
      */
     public function index()
     {    
+        // Busca os Slides cadastrados
+        $dados['slides'] = $this->Model->getSlides();
+        
+        
         // Exibe a página
-        $this->load->view('conteudo/site/slideshow');
+        $this->load->view('conteudo/site/slideshow', $dados);
     }
     
     

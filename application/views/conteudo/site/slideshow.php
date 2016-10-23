@@ -19,29 +19,13 @@
                 <img src="template/images/slideshow/a-gratidao-como-roteiro.png" alt="..." class="center-block">
                 <input type="hidden" name="arquivo" value="a-gratidao-como-roteiro-de-vida">
             </div> 
-              
-<!--            <div class="item wrapper">
-                <img src="template/images/slideshow/filho-de-deus-e-nos.png" alt="..." class="center-block">
-                <input type="hidden" name="arquivo" value="seminario-o-filho-de-deus-e-nos-da-agonia-a-ressurreicao">
-            </div>
-              
-            <div class="item wrapper">
-                <img src="template/images/slideshow/introducao-ao-espiritismo.jpg" alt="..." class="center-block">
-                <input type="hidden" name="arquivo" value="#">
-            </div>  -->
-              
             
-
-            <!-- BANNER EMPADÃO -->
-<!--            <div class="item wrapper">
-                <img src="template/images/slideshow/banner-empadao.jpg" alt="..." class="center-block">
+            <?php foreach ($slides as $dado): ?>
+            <div class="item wrapper">
+                <img src="<?php echo base_url('includes/images/fotos/'. $this->timage->getImagem($dado['idImage'])); ?>" alt="..." class="center-block">
                 <input type="hidden" name="arquivo" value="#">
             </div>
-
-            <div class="item wrapper">
-                <img src="template/images/slideshow/reuniao-comemorativa-75-anos-cei.png" alt="..." class="center-block">
-                <input type="hidden" name="arquivo" value="reuniao-comemorativa-75-anos-cei">
-            </div>-->
+            <?php endforeach;  ?>
               
           </div>
 
