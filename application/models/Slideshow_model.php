@@ -10,6 +10,9 @@ class Slideshow_model extends CI_Model
     public function getSlides()
     {
         $this->db->where('dtFinal >=', date('Y-m-d'));
+        $this->db->where('dtInicio <=', date('Y-m-d'));
+        
+        $this->db->order_by('dtFinal');
         
         $query = $this->db->get('slides');
         
