@@ -42,7 +42,7 @@
                 <label>Evento:</label>
                 <input name="titulo" id="titulo" class="form-control" value="<?php echo set_value('titulo'); ?>">
                 <?php echo form_error('titulo', '<div class="label label-danger">', '</div>'); ?>
-                <input type="hidden" name="evento" id="evento" value="">
+                <input type="hidden" name="idEvento" id="idEvento" value="">
             </div> 
             
             <!-- IMAGEM -->

@@ -16,6 +16,22 @@ class Slideshow_model extends CI_Model
         return $query->result_array();
     }
     
+    // ------------------------------------------------------------
+    
+    /**
+     * Verifica o nome do evento
+     */
+    public function getEvento($idEvento)
+    {
+        $this->db->select('evento');
+        $this->db->where('id', $idEvento);
+        
+        $query = $this->db->get('eventos');
+        
+        $evento = $query->row_array();
+        
+        return $evento['evento'];
+    }
     
     
     

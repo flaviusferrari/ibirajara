@@ -15,11 +15,13 @@
           <!-- Wrapper for slides -->
           <div class="carousel-inner" role="listbox">
               
-           <?php foreach ($slides as $dado): ?>
-            <div class="item wrapper">
+            <?php $i = 0; ?>
+            <?php foreach ($slides as $dado): ?>
+            <div class="item wrapper <?php echo ($i == 0)? 'active' : ''; ?>">
                 <img src="<?php echo base_url('includes/images/fotos/'. $this->timage->getImagem($dado['idImage'])); ?>" alt="..." class="center-block">
-                <input type="hidden" name="arquivo" value="<?php echo ( $dado['evento'] != 0 )? $dado['evento']: '#' ?>">
+                <input type="hidden" name="arquivo" value="<?php echo ( $dado['evento'] != 0 )? $this->Model->getEvento($dado['evento']): '#' ?>">
             </div>
+            <?php $i++; ?>
             <?php endforeach;  ?>
               
           </div>
