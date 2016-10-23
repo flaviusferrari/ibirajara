@@ -10,3 +10,6 @@
 
 -- 16/10/2016 --
 ALTER TABLE `slides` CHANGE `idEvento` `evento` VARCHAR(150) NULL DEFAULT NULL;
+
+-- 23/10/2016 -- Alterada a tabela slides
+ALTER TABLE slides CHANGE COLUMN evento evento INT(11) NULL;
