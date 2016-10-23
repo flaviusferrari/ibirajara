@@ -40,4 +40,11 @@ $(document).ready(function(){
         var novaURL = 'indexCode.php/eventos/exibe_evento/'+arquivo;
         $(window.document.location).attr('href',novaURL);
     });
+    
+    // --------------------------------------------------------------
+    
+    /**
+     * Exibe o conteúdo SlideShow
+     */
+    $('#slideshow').load('indexCode.php/slideshow');
 });
