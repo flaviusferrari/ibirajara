@@ -16,8 +16,6 @@ class Index extends Controller
         
         $this->menu = $this->view->getInclude('menu');
         
-        $this->slideshow = $this->view->getInclude('slideshow');
-        
         $this->controller = $controller;
         
         // exibe a programação do dia
@@ -73,7 +71,6 @@ class Index extends Controller
         //define os parâmetros da classe
         $tags = array(
                     'LIBRARIES' => $this->view->setLibraries($this->controller),
-                    'SLIDESHOW' => $this->slideshow,
                     'MENU'      => $this->menu,
                     'SUB_MENU'  => $this->view->getInclude('sub'),
                     'PROGRAMA'  => $this->program,
