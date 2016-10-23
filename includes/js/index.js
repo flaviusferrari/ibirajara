@@ -29,7 +29,7 @@ $(document).ready(function(){
     
     
     // Paga o ID do Evento e leva a página
-    $('.wrapper').click(function() {
+    $('body').on('click', '.wrapper', function() {
         arquivo = $(this).children('input[name=arquivo]').val();
         
         if (arquivo == '#')
