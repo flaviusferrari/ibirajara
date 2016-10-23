@@ -6,7 +6,7 @@
         <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
           <!-- Indicators -->
           <ol class="carousel-indicators">
-            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <!--<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>-->
 <!--            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
             <li data-target="#carousel-example-generic" data-slide-to="2" ></li>-->
             <!--<li data-target="#carousel-example-generic" data-slide-to="3"></li>-->
@@ -15,15 +15,10 @@
           <!-- Wrapper for slides -->
           <div class="carousel-inner" role="listbox">
               
-            <div class="item active wrapper">
-                <img src="template/images/slideshow/a-gratidao-como-roteiro.png" alt="..." class="center-block">
-                <input type="hidden" name="arquivo" value="a-gratidao-como-roteiro-de-vida">
-            </div> 
-            
-            <?php foreach ($slides as $dado): ?>
+           <?php foreach ($slides as $dado): ?>
             <div class="item wrapper">
                 <img src="<?php echo base_url('includes/images/fotos/'. $this->timage->getImagem($dado['idImage'])); ?>" alt="..." class="center-block">
-                <input type="hidden" name="arquivo" value="#">
+                <input type="hidden" name="arquivo" value="<?php echo ( $dado['evento'] != 0 )? $dado['evento']: '#' ?>">
             </div>
             <?php endforeach;  ?>
               
