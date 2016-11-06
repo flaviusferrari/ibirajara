@@ -1,0 +1,61 @@
+Versão 0.6
+Publicação: 06 de Novembro de 2016
+
+==== NEW ====
+- SlideShow sendo buscado via Ajax no CI;
+- Formulário de Cadastro de slides no Painel;
+- Biblioteca Timage;
+
+==== UPDATE ====
+- Ordenação da Programação por Data;
+- Ajustes Diversos;
+
+// ---------------------------------------------------------------------------
+
+Versão 0.5
+
+Publicação: 14 de Fevereiro de 2016
+
+==== NEW =====
+- Exibindo o aviso salvo na Sidebar;
+
+==== UPDATE =====
+- Painel de Controle -> Avisos: exibindo mensagem de confirmação da gravação;
+- Painel de Controle -> Avisos: ajustes no layout do formulário;
+
+==== BUG ====
+
+// ----------------------------------------------------------------------------
+
+Versão 0.4.2
+
+Publicação: 20 de Setembro de 2015
+
+==== NEW =====
+- Cadastro de Avisos;
+- Google Maps;
+
+==== UPDATE ====
+- Movido o Módulo Programação para o CodeIgniter;
+- Paginação dos Eventos Anteriores;
+- Caixa de Localização no Site;
+
+==== BUG ====
+- Removido a Sidebar: Livro da Semana;
+
+//-----------------------------------------------------------------------------
+
+Versão 0.4.1
+
+Data Publicação: 19 de Julho de 2015
+
+==== NEW =====
+- Criação do Changelog;
+
+==== UPDATE ====
+- Programação do Mês navegando pelos meses;
+- Layout: removida a barra lateral que dividia o conteúdo da sidebar;
+
+==== BUG ====
+- Removida a linha divisória do Conteúdo e do Sidebar;
+- Remoção de arquivos obsoletos;
