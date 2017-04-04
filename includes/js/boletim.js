@@ -11,6 +11,7 @@ $(document).ready(function() {
         $('#formulario').submit();
     });
     
+    // ---------------------------------------------------------
     
     // Localiza o Boletim desejado pelo título
     $('#titulo').autocomplete({
@@ -32,6 +33,31 @@ $(document).ready(function() {
             var novaURL = 'indexCode.php/administrator/boletim/exibeBoletim/'+ui.item.valor;
             $(window.document.location).attr('href',novaURL);        
         }
+    });
+    
+    // ---------------------------------------------------------
+    
+    // BOTÃO LOCALIZAR
+    $('#btnLocalizar').click(function() {
+        $(window.document.location).attr('href', 'indexCode.php/administrator/boletim/localizar/');         
+    });
+    
+    // ---------------------------------------------------------
+    
+    // BOTÃO LOCALIZAR BOLETIM
+    $('#localizaBoletim').click(function(e) {
+        e.preventDefault();
+        
+        var formdata = $("#formulario").serialize();
+        
+        $.ajax({
+            url: "indexCode.php/administrator/boletim/localizar",
+            type: 'post',
+            data: formdata,
+            success: function( data ) {                    
+                $('#listagem').html(data);
+            }
+        });
     });
     
 });

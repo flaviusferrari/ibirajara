@@ -16,23 +16,26 @@ class Boletim extends MY_Controller
         
         // Carrega as Bibliotecas necessárias
         $this->load->library('form_validation');
+        $this->load->library('tdate');
         
         // Carrega o Model
         $this->load->model('administrator_model');
     }    
     
+    // ---------------------------------------------------------
     
-    /** 
-        * Metdo index()
-        *   Verifica se o Usuário se logou, caso não tenha feito o login,
-         *  encaminha para a página de logon
-        */
+    /**
+     * Metdo index()
+     *   Verifica se o Usuário se logou, caso não tenha feito o login,
+     *  encaminha para a página de logon
+     */
     public function index()
     {   
         // Exibe o painel
         $this->load->view('layout', $this->dados);           
     }
     
+    // ---------------------------------------------------------
     
     public function salvarBoletim()
      {
@@ -60,13 +63,14 @@ class Boletim extends MY_Controller
         }
      }
      
+     // ---------------------------------------------------------
      
-    /**
-        * Método localizaBoletim()
-        *   verifica os dados do Boletim que está sendo digitada
-        * 
-        * @return boolean
-        */
+     /**
+     * Método localizaBoletim()
+     *   verifica os dados do Boletim que está sendo digitada
+     * 
+     * @return boolean
+     */
     public function LocalizaBoletim()
     {
         $boletins = $this->administrator_model->localiza_boletim($this->input->post('termo'));
@@ -80,11 +84,12 @@ class Boletim extends MY_Controller
         echo json_encode($data);
     }
     
+    // ---------------------------------------------------------
     
     /**
-        * Método exibeBoletim()
-        *   exibe a Empresa
-        */
+     * Método exibeBoletim()
+     *   exibe a Empresa
+     */
     public function exibeBoletim()
     {
         // Recebe o ID do Boletim
@@ -106,14 +111,15 @@ class Boletim extends MY_Controller
         $this->load->view('layout', $dados);
     }
     
+    // ---------------------------------------------------------
     
     /**
-        *  Método atualizarBoletim()
-        *   atualiza os dados do Boletim
-        * 
-        * 
-        * 
-        */
+     *  Método atualizarBoletim()
+     *   atualiza os dados do Boletim
+     * 
+     * 
+     * 
+     */
     public function atualizarBoletim()
      {
         // Salva os parâmetros no objeto
@@ -126,6 +132,31 @@ class Boletim extends MY_Controller
         // Verifica o Resultado da gravação
         // e imprime a resposta
         $this->view->verificaGravacao($atualizaBoletim, 'boletim'); 
+     }
+     
+     // --------------------------------------------------------
+     
+     /**
+      * MÉTODO LOCALIZAR
+      * 
+      *   Exibe um formulário para a procura dos útlimos boletins salvos
+      */
+     public function localizar()
+     {
+         if ($_POST)
+         {
+             $this->load->model('administrator/boletim_model', 'boletimModel');
+             
+            $dados['boletim'] = $this->boletimModel->localizaBoletim();
+            
+            $this->load->view('conteudo/painel/boletim/lista_boletim', $dados);
+         }
+         else
+         {
+            $this->dados['conteudo'] = 'painel/boletim/form_localizar';
+            // Exibe a página
+            $this->load->view('layout', $this->dados);
+         }
      }
     
 }
