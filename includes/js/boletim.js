@@ -60,5 +60,16 @@ $(document).ready(function() {
         });
     });
     
+    // ----------------------------------------------------------
+    
+    /**
+     * SIDEBAR
+     * 
+     *  Exibe o Conteúdo da Sidebar
+     */
+    // Coloca o título
+    $('#tituloSidebar').html('Próximos Boletins');
+    $('#conteudoSidebar').load('indexCode.php/administrator/sidebar/proximosBoletins');
+    
 });
 
