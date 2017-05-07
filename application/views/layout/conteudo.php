@@ -2,7 +2,7 @@
 
 <!-- CONTEÚDO -->
 <div class="wrapper" role="main">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div id="conteudo" class="col-xs-12 col-sm-8 col-md-9">
                 <?php $this->load->view('conteudo/'.$conteudo); ?>
