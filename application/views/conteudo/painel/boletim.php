@@ -1,12 +1,8 @@
-<!-- TÍTULO DA SESSÃO -->
-<div class="panel panel-default sessao">
-    <div class="panel-body">
-        <span>Cadastra Boletim</span>
-    </div>
-</div>
 
-<div id="adm">    
-    <div class="padding">
+<div class="panel panel-primary">
+    <div class="panel-heading">Cadastra Boletim</div>
+
+<div class="panel-body" id="adm"> 
         
         <!-- BOTÕES -->
         <div id="menuBotoes">
