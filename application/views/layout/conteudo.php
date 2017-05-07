@@ -9,11 +9,14 @@
             </div><!-- div conteudo -->	
 
             <div id="sidebar" class="col-xs-12 col-sm-4 col-md-3">
-                <?php $this->load->view('conteudo/sidebar/sidebar_panel'); ?>
+                <?php 
+                $sidebar = (isset($sidebar))? $sidebar : 'sidebar_panel';
+                $this->load->view('conteudo/sidebar/'.$sidebar); 
+                ?>
             </div>
-        </div><!-- div row container -->
-    </div><!-- div container -->
-</div><!-- div wrapper -->	
+        </div>
+    </div>
+</div>
 
 <br>
 
