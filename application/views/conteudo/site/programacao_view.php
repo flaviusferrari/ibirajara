@@ -50,7 +50,13 @@
                                         <!-- Tema -->
                                         <span>
                                             <span style="color: #006; font-weight: bold;">Tema:</span>
-                                            <?php echo $programacao['tema']; ?>
+                                            <?php 
+                                                echo $programacao['tema']; 
+                                                if (!empty($programacao['subsidio']))
+                                                {
+                                                    echo ' (<small>'.$programacao['subsidio'].'</small>)';
+                                                }
+                                            ?>
                                         </span>
                                         <br>
                                         <!-- Expositor -->
@@ -83,7 +89,13 @@
                                         <!-- Tema -->
                                         <span class="tema">
                                             <span style="color: #006; font-weight: bold;">Tema:</span>
-                                            <?php echo $programacao['tema']; ?>
+                                            <?php 
+                                                echo $programacao['tema']; 
+                                                if (!empty($programacao['subsidio']))
+                                                {
+                                                    echo ' (<small>'.$programacao['subsidio'].'</small>)';
+                                                }
+                                            ?>
                                         </span>
                                         <br>
                                         <!-- Expositor -->
@@ -117,7 +129,13 @@
                                         <!-- Tema -->
                                         <span class="tema">
                                             <span style="color: #006; font-weight: bold;">Tema:</span>
-                                            <?php echo $programacao['tema']; ?>
+                                            <?php 
+                                                echo $programacao['tema']; 
+                                                if (!empty($programacao['subsidio']))
+                                                {
+                                                    echo ' (<small>'.$programacao['subsidio'].'</small>)';
+                                                }
+                                            ?>
                                         </span>
                                         <br>
                                         <!-- Expositor -->
@@ -132,8 +150,11 @@
 
                         <!-- SEXTA -->
                         <tr>
-                            <td class="bg-info" colspan="2"><strong>SEXTAS - 19h30min</strong><br>
-                                <cite>Estudo de “O Livro dos Espíritos”</cite></td>
+                            <td class="bg-info" colspan="2">
+                                <strong>SEXTAS - 19h30min</strong>
+                                <br>
+                                <cite>Estudo de “O Livro dos Espíritos”</cite>
+                            </td>
                         </tr>
                         <?php 
                         foreach ($programa as $programacao): 
@@ -147,11 +168,17 @@
                                         <!-- Dia -->
                                         <span class="dtDia"><?php echo date('d', strtotime($programacao['data'])); ?></span>
                                     </td>
-                                    <td>
+                                    <td class="" data-idprog="<?php echo $programacao['id']; ?>">
                                         <!-- Tema -->
                                         <span class="tema">
                                             <span style="color: #006; font-weight: bold;">Tema:</span>
-                                            <?php echo $programacao['tema']; ?>
+                                            <?php 
+                                                echo $programacao['tema']; 
+                                                if (!empty($programacao['subsidio']))
+                                                {
+                                                    echo ' (<small>'.$programacao['subsidio'].'</small>)';
+                                                }
+                                            ?>
                                         </span>
                                         <br>
                                         <!-- Expositor -->
@@ -185,7 +212,13 @@
                                         <!-- Tema -->
                                         <span class="tema">
                                             <span style="color: #006; font-weight: bold;">Tema:</span>
-                                            <?php echo $programacao['tema']; ?>
+                                            <?php 
+                                                echo $programacao['tema']; 
+                                                if (!empty($programacao['subsidio']))
+                                                {
+                                                    echo ' (<small>'.$programacao['subsidio'].'</small>)';
+                                                }
+                                            ?>
                                         </span>
                                         <br>
                                         <!-- Expositor -->
