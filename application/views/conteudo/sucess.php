@@ -10,7 +10,7 @@
         </div>
         <!-- Rodapé -->
         <div class="panel-footer">
-            <a type="button" href="<?php echo $msn_link; ?>" class="btn btn-success">Success</a>
+            <a type="button" href="<?php echo $msn_link; ?>" class="btn btn-success">OK</a>
         </div>
       </div>
   </div>
