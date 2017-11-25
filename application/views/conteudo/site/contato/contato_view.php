@@ -7,7 +7,7 @@
        
         <div class="padding">
         
-            <form id="formulario" class="form-horizontal" method="POST" autocomplete="off" action="contato/enviaEmail">
+            <form id="formulario" class="form-horizontal" method="POST" autocomplete="off" action="<?php echo base_url('contato/enviaEmail'); ?>">
                 
                 <!-- AREA -->
                 <div class="form-group">
@@ -15,9 +15,9 @@
                     <div class="col-sm-10">
                         <select name="area" class="form-control">
                             <option value="">-- Selecione uma área --</option>
-                            <option value="suporte@ffctechnologies.com.br">Assuntos Doutrinários</option>
-                            <option value="flavius@ffctechnologies.com.br">Apse</option>
-                            <option value="consultoria@ffctechnologies.com.br">Divulgação</option>
+                            <option value="aad">Assuntos Doutrinários</option>
+                            <option value="apse">Apse</option>
+                            <option value="divulgacao">Divulgação</option>
                         </select>
                     </div>
                 </div>   
