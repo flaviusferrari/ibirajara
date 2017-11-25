@@ -58,8 +58,8 @@ class Contato extends CI_Controller
             // Envia o e-mail
             $this->load->library('email');
 
-            $this->email->from('no-replay@ceibirajara.org.br', 'C.E. Ibirajara');
-            $mailto = $this->input->post('area').'@ceibirajara.org.br';
+            $this->email->from($this->input->post('email'), $this->input->post('nome'));
+            $mailto =  $this->input->post('area').'@ceibirajara.org.br';
             $this->email->to($mailto);
             $this->email->subject($this->input->post('assunto'));
 

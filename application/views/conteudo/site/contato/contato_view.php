@@ -18,6 +18,7 @@
                             <option value="aad" <?php echo  set_select('area', 'aad'); ?>>Assuntos Doutrinários</option>
                             <option value="apse" <?php echo  set_select('area', 'apse'); ?>>Apse</option>
                             <option value="divulgacao" <?php echo  set_select('area', 'divulgacao'); ?>>Divulgação</option>
+                            <option value="mediunidade" <?php echo  set_select('area', 'mediunidade'); ?>>Mediunidade</option>
                         </select>
                         <?php echo form_error('area', '<div class="label label-danger">', '</div>'); ?>
                     </div>
@@ -54,7 +55,7 @@
                 <div class="form-group">
                     <label class="col-sm-2 control-label">Mensagem</label>  
                     <div class="col-sm-10">
-                        <textarea name="msnMail" class="form-control"> </textarea>
+                        <textarea name="mensagem" class="form-control"><?php echo set_value('mensagem'); ?></textarea>
                     </div>   
                 </div>  
 
