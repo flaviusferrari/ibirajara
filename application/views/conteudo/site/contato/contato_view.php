@@ -15,10 +15,11 @@
                     <div class="col-sm-10">
                         <select name="area" class="form-control">
                             <option value="">-- Selecione uma área --</option>
-                            <option value="aad">Assuntos Doutrinários</option>
-                            <option value="apse">Apse</option>
-                            <option value="divulgacao">Divulgação</option>
+                            <option value="aad" <?php echo  set_select('area', 'aad'); ?>>Assuntos Doutrinários</option>
+                            <option value="apse" <?php echo  set_select('area', 'apse'); ?>>Apse</option>
+                            <option value="divulgacao" <?php echo  set_select('area', 'divulgacao'); ?>>Divulgação</option>
                         </select>
+                        <?php echo form_error('area', '<div class="label label-danger">', '</div>'); ?>
                     </div>
                 </div>   
                 
@@ -26,7 +27,8 @@
                 <div class="form-group">
                     <label class="col-sm-2 control-label">Nome</label>
                     <div class="col-sm-10">
-                        <input name="nome" id="nome" class="form-control" value="">
+                        <input name="nome" id="nome" class="form-control" value="<?php echo set_value('nome'); ?>">
+                        <?php echo form_error('nome', '<div class="label label-danger">', '</div>'); ?>
                     </div>            
                 </div>            
 
@@ -34,7 +36,8 @@
                 <div class="form-group">
                     <label class="col-sm-2 control-label">Assunto</label>  
                     <div class="col-sm-10">
-                        <input name="assunto" id="assunto" class="form-control" value="">
+                        <input name="assunto" id="assunto" class="form-control" value="<?php echo set_value('assunto'); ?>">
+                        <?php echo form_error('assunto', '<div class="label label-danger">', '</div>'); ?>
                     </div>   
                 </div>
 
@@ -42,7 +45,8 @@
                 <div class="form-group">
                     <label class="col-sm-2 control-label">E-mail</label>  
                     <div class="col-sm-10">
-                        <input name="email" class="form-control" value="">
+                        <input name="email" class="form-control" value="<?php echo set_value('email'); ?>">
+                        <?php echo form_error('email', '<div class="label label-danger">', '</div>'); ?>
                     </div>   
                 </div>  
 
