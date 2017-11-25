@@ -1,4 +1,11 @@
-<div id="contato">    
+<!-- CONTENT -->
+<div class="panel panel-primary">
+    <!-- Panel heading -->
+    <div class="panel-heading">Eventos</div>
+    <!-- Panel Body -->
+    <div class="panel-body">
+        
+        <div id="contato">    
     <div class="padding">
         <p style="text-align: center;">
             <img src="system/images/em_construcao.gif">
@@ -71,3 +78,10 @@
         </form>-->
     </div>
 </div>
+        
+        
+        
+        
+        
+    </div> <!-- /panel-body -->
+</div> <!-- / panel-primary -->
