@@ -4,84 +4,63 @@
     <div class="panel-heading">Eventos</div>
     <!-- Panel Body -->
     <div class="panel-body">
+       
+        <div class="padding">
         
-        <div id="contato">    
-    <div class="padding">
-        <p style="text-align: center;">
-            <img src="system/images/em_construcao.gif">
-        </p>
-        
-<!--        <form id="formulario" method="POST" autocomplete="off" action="contato/enviaEmail">
-            <div class="tableBlock">
-                 ÁREA 
-                <span class="tableCell">
-                    <label class="txtCampos">
-                        Área:
-                    </label>
-                    <br>
-                    <select name="area">
-                        <option value="suporte@ffctechnologies.com.br">Assuntos Doutrinários</option>
-                        <option value="flavius@ffctechnologies.com.br">Apse</option>
-                        <option value="consultoria@ffctechnologies.com.br">Divulgação</option>
-                    </select>
-                </span>   
-            </div>
-            
-            <div class="tableBlock">
-                 NOME 
-                <span class="tableCell">
-                    <label class="txtCampos">
-                        Nome:
-                    </label>
-                    <br>
-                    <input name="nome" id="nome" style="width: 300px;" value="">
-                </span>                
-            </div>            
-                        
-            <div class="tableBlock">
-                 ASSUNTO 
-                <span class="tableCell">
-                    <label class="txtCampos">
-                        Assunto:
-                    </label>
-                    <br>
-                    <input name="assunto" id="assunto" style="width: 300px;" value="">
-                </span>   
-            </div>
-            
-            <div class="tableBlock">
-                 E-MAIL 
-                <span class="tableCell">
-                    <label class="txtCampos">
-                        E-mail:
-                    </label>
-                    <br>
-                    <input name="email" style="width: 300px;" value="">
-                </span>   
-            </div>  
-            
-            <div class="tableBlock">
-                 MENSAGEM 
-                <span class="tableCell">
-                    <label class="txtCampos">
-                        Mensagem:
-                    </label>
-                    <br>
-                    <textarea name="msnMail" style="width: 300px; height: 100px;"> </textarea>
-                </span>   
-            </div>  
-            
-            <br>
-            <a class="botao" id="btnEnviar">
-                Enviar
-            </a>
-        </form>-->
-    </div>
-</div>
-        
-        
-        
-        
-        
+            <form id="formulario" class="form-horizontal" method="POST" autocomplete="off" action="contato/enviaEmail">
+                
+                <!-- AREA -->
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Área</label>
+                    <div class="col-sm-10">
+                        <select name="area" class="form-control">
+                            <option value="">-- Selecione uma área --</option>
+                            <option value="suporte@ffctechnologies.com.br">Assuntos Doutrinários</option>
+                            <option value="flavius@ffctechnologies.com.br">Apse</option>
+                            <option value="consultoria@ffctechnologies.com.br">Divulgação</option>
+                        </select>
+                    </div>
+                </div>   
+                
+                <!-- NOME -->
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Nome</label>
+                    <div class="col-sm-10">
+                        <input name="nome" id="nome" class="form-control" value="">
+                    </div>            
+                </div>            
+
+                <!-- ASSUNTO -->
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Assunto</label>  
+                    <div class="col-sm-10">
+                        <input name="assunto" id="assunto" class="form-control" value="">
+                    </div>   
+                </div>
+
+                <!-- E-MAIL -->
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">E-mail</label>  
+                    <div class="col-sm-10">
+                        <input name="email" class="form-control" value="">
+                    </div>   
+                </div>  
+
+                <!-- MENSAGEM -->
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Mensagem</label>  
+                    <div class="col-sm-10">
+                        <textarea name="msnMail" class="form-control"> </textarea>
+                    </div>   
+                </div>  
+
+                <!-- BOTÃO -->
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" id="btnEnviar" class="btn btn-default">Enviar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div> <!-- /panel-body -->
 </div> <!-- / panel-primary -->
