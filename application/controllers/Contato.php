@@ -40,7 +40,8 @@ class Contato extends CI_Controller
     /**
      * MÉTODO ENVIA EMAIL
      * 
-     * 
+     *  - Verifica o preenchimento dos campos
+     *  - Envia o E-mail
      */
     public function enviaEmail()
     {
@@ -65,8 +66,10 @@ class Contato extends CI_Controller
 
             // Dados da Mensagem
             $data = array(
-                'mail' => $this->input->post('email'),
-                'nome' => $this->input->post('nome')
+                'mail'    => $this->input->post('email'),
+                'nome'    => $this->input->post('nome'),
+                'assunto' => $this->input->post('assunto'),
+                'mensagem' => $this->input->post('mensagem')
             );
 
             $msn = $this->load->view('mails/mail_contato_area.php', $data, TRUE);
@@ -76,13 +79,16 @@ class Contato extends CI_Controller
             if($this->email->send())
             {
                 // Exibe Mensagem de Sucesso
-                echo 'Email enviado...';
+                $this->dados['conteudo'] = 'site/contato/email_enviado';
             }
             else
             {
                 // Exibe Mensagem de Erro
-                echo 'Erro ao enviar email';
+                $this->dados['conteudo'] = 'site/contato/erro_enviando_email';
             }
+            
+            // Exibe a página
+            $this->load->view('site', $this->dados);
         }
     }
     

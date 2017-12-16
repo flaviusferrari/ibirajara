@@ -32,7 +32,7 @@
                 <td>
                     <p>
                         <font size="2" color="#4D4D4D" face="Arial, Helvetica, sans-serif">
-                            <i><?php echo $mensagem; ?></i>
+                            <i><?php echo nl2br($mensagem); ?></i>
                         </font>
                     </p>
                 </td>

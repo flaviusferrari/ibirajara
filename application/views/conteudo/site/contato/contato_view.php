@@ -1,7 +1,7 @@
 <!-- CONTENT -->
 <div class="panel panel-primary">
     <!-- Panel heading -->
-    <div class="panel-heading">Eventos</div>
+    <div class="panel-heading">Contato</div>
     <!-- Panel Body -->
     <div class="panel-body">
        
@@ -55,7 +55,7 @@
                 <div class="form-group">
                     <label class="col-sm-2 control-label">Mensagem</label>  
                     <div class="col-sm-10">
-                        <textarea name="mensagem" class="form-control" rows="20"><?php echo set_value('mensagem'); ?></textarea>
+                        <textarea name="mensagem" class="form-control" rows="16"><?php echo set_value('mensagem'); ?></textarea>
                     </div>   
                 </div>  
 
