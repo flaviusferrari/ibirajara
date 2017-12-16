@@ -14,9 +14,9 @@
                     <label class="col-sm-2 control-label">Área</label>
                     <div class="col-sm-10">
                         <select name="area" class="form-control">
-                            <option value="">-- Selecione uma área --</option>
+                            <option value="">-- Selecione a área desejada --</option>
                             <option value="aad" <?php echo  set_select('area', 'aad'); ?>>Assuntos Doutrinários</option>
-                            <option value="apse" <?php echo  set_select('area', 'apse'); ?>>Apse</option>
+                            <option value="apse" <?php echo  set_select('area', 'apse'); ?>>Área de Promoção Social</option>
                             <option value="divulgacao" <?php echo  set_select('area', 'divulgacao'); ?>>Divulgação</option>
                             <option value="mediunidade" <?php echo  set_select('area', 'mediunidade'); ?>>Mediunidade</option>
                         </select>
@@ -55,7 +55,7 @@
                 <div class="form-group">
                     <label class="col-sm-2 control-label">Mensagem</label>  
                     <div class="col-sm-10">
-                        <textarea name="mensagem" class="form-control"><?php echo set_value('mensagem'); ?></textarea>
+                        <textarea name="mensagem" class="form-control" rows="20"><?php echo set_value('mensagem'); ?></textarea>
                     </div>   
                 </div>  
 
