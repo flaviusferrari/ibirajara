@@ -15,10 +15,11 @@
                     <div class="col-sm-10">
                         <select name="area" class="form-control">
                             <option value="">-- Selecione a área desejada --</option>
-                            <option value="aad" <?php echo  set_select('area', 'aad'); ?>>Assuntos Doutrinários</option>
-                            <option value="apse" <?php echo  set_select('area', 'apse'); ?>>Área de Promoção Social</option>
+                            <option value="aee" <?php echo  set_select('area', 'aee'); ?>>Área de Estudos Espíritas</option>
+                            <option value="pif" <?php echo  set_select('area', 'pif'); ?>>Promoção Integral da Família</option>
                             <option value="divulgacao" <?php echo  set_select('area', 'divulgacao'); ?>>Divulgação</option>
                             <option value="mediunidade" <?php echo  set_select('area', 'mediunidade'); ?>>Mediunidade</option>
+                            <option value="evangelizar" <?php echo set_select('area', 'evangelizar'); ?>>Evangelização da Família</option>
                         </select>
                         <?php echo form_error('area', '<div class="label label-danger">', '</div>'); ?>
                     </div>
