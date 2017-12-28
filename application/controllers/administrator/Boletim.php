@@ -88,8 +88,9 @@ class Boletim extends MY_Controller
     // ---------------------------------------------------------
     
     /**
-     * Método exibeBoletim()
-     *   exibe a Empresa
+     * MÉTODO EXIBE BOLETIM
+     * 
+     *  Exibe os dados do Boletim
      */
     public function exibeBoletim()
     {
@@ -158,7 +159,7 @@ class Boletim extends MY_Controller
      {
          if ($_POST)
          {
-             $this->load->model('administrator/boletim_model', 'boletimModel');
+            $this->load->model('administrator/boletim_model', 'boletimModel');
              
             $dados['boletim'] = $this->boletimModel->localizaBoletim();
             
