@@ -96,5 +96,17 @@ class Slides extends MY_Controller
         }
     }
     
+    // --------------------------------------------------------------
+    
+    /**
+     * MÉTODO LOCALIZA SLIDES
+     * 
+     *  Localiza os Slides que estão em vigor
+     */
+    public function localizaSlide()
+    {
+        echo 'Loclizando os slides....';
+    }
+    
     
 }

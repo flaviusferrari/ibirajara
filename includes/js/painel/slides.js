@@ -33,4 +33,36 @@ $(document).ready(function() {
         }
     });
     
+    // ------------------------------------------------------------
+    
+    /**
+     * BOTÃO LOCALIZAR
+     * 
+     *  Localiza e exibe o Slide
+     */
+    $('#btnLocalizar').click(function() {
+        
+        if($('#dtInicio').val() == '')
+        {
+            $('#btnSaveModal').hide();            
+            $('#contentModal').html("Selecione uma data de início!");            
+            $('#myModal').modal('show');
+            return false;
+        }
+        
+        var formdata = $("#formulario").serialize();
+
+        $.ajax({
+            url: 'indexCode.php/administrator/slides/localizaSlide',
+            type: 'POST',
+            data: formdata,
+            success: function (data) {
+                // Exibe os dados
+                $('#contentModal').html(data);
+                $('#myModal').modal('show');
+            }
+        });
+        
+    });
+    
 });
