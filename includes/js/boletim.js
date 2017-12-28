@@ -38,6 +38,17 @@ $(document).ready(function() {
     // ---------------------------------------------------------
     
     /**
+     * BOTÃO NOVO
+     * 
+     *  Carrega o formulário vazio
+     */
+    $('#btnNovo').click(function() {
+        $(window.document.location).attr('href', 'indexCode.php/administrator/boletim');
+    });    
+    
+    // ---------------------------------------------------------
+    
+    /**
      * BOTÃO ATUALIZAR
      * 
      *  Atualiza os dados do Boletim
