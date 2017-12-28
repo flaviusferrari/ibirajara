@@ -34,7 +34,34 @@ class Boletim_model extends CI_Model
         return $query->result_array();
     }
     
+    // ----------------------------------------------------------------
     
+    /*
+     * MÉTODO ATUALIZAR
+     * 
+     *  Atualiza os dados do boletim
+     */
+    public function atualizar()
+    {
+        $dtInicio = str_replace('/', '-', $this->input->post('dtInicio'));
+        $dtFim    = str_replace('/', '-', $this->input->post('dtFim'));
+        
+        $dtInicio = date('Y-m-d', strtotime($dtInicio));
+        $dtFim    = date('Y-m-d', strtotime($dtFim));
+        
+         $data = array(
+            'dtInicio' => $dtInicio,
+            'dtFim'    => $dtFim,
+            'titulo'   => $this->input->post('titulo'),
+            'citacao'  => $this->input->post('citacao'),
+            'texto'    => $this->input->post('texto'),
+            'livro'    => $this->input->post('livro')             
+        );
+         
+        $this->db->where('id', $this->input->post('idBoletim'));
+
+        return $this->db->update('boletim', $data);
+    }
     
     
 }

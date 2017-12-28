@@ -116,23 +116,35 @@ class Boletim extends MY_Controller
     
     /**
      *  Método atualizarBoletim()
+     * 
      *   atualiza os dados do Boletim
-     * 
-     * 
-     * 
      */
-    public function atualizarBoletim()
+    public function atualizar()
      {
-        // Salva os parâmetros no objeto
-        $this->setBoletimParam();
+        $this->load->model('administrator/boletim_model', 'boletimModel');
         
-        $this->model->setTablename('boletim');
+        // Efetua a validação dos dados
+        $this->form_validation->set_rules('dtInicio', 'Data Inicio', 'required');
+        $this->form_validation->set_rules('dtFim', 'Data Fim', 'required');
+        $this->form_validation->set_rules('titulo', 'Título', 'required');
+        $this->form_validation->set_rules('citacao', 'Citação', 'required');
+        $this->form_validation->set_rules('texto', 'Texto', 'required');
+        $this->form_validation->set_rules('livro', 'Livro', 'required');
         
-        $atualizaBoletim = $this->model->atualizaBoletim($this->program);
-        
-        // Verifica o Resultado da gravação
-        // e imprime a resposta
-        $this->view->verificaGravacao($atualizaBoletim, 'boletim'); 
+        if ($this->form_validation->run() === FALSE)
+        {
+            $this->load->view('layout', $this->dados);
+        }
+        else
+        {
+            $this->boletimModel->atualizar();
+            
+            $this->dados['conteudo']    = 'sucess';
+            $this->dados['msn_content'] = 'Boletim atualizado com sucesso!!!';
+            $this->dados['msn_link']    = 'indexCode.php/administrator/boletim/exibeBoletim/'.$this->input->post('idBoletim');
+            
+            $this->load->view('layout', $this->dados);
+        }
      }
      
      // --------------------------------------------------------

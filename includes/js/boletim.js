@@ -37,6 +37,20 @@ $(document).ready(function() {
     
     // ---------------------------------------------------------
     
+    /**
+     * BOTÃO ATUALIZAR
+     * 
+     *  Atualiza os dados do Boletim
+     */
+    $('#btnAtualizar').click(function(e) {
+        e.preventDefault();
+        
+        $('#formulario').attr('action', 'indexCode.php/administrator/boletim/atualizar');
+        $('#formulario').submit();
+    });
+    
+    // ---------------------------------------------------------
+    
     // BOTÃO LOCALIZAR
     $('#btnLocalizar').click(function() {
         $(window.document.location).attr('href', 'indexCode.php/administrator/boletim/localizar/');         

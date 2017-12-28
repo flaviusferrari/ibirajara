@@ -26,7 +26,7 @@
                 <div class="col-md-2 form-group">
                     <label>Data Inicio:</label>
                     <input name="dtInicio" id="dtInicio" class="form-control dtForm" value="<?php echo $dtInicio; ?>">  
-                    <input type="hidden" name="idBoletim" id="idBoletim" value="">
+                    <input type="hidden" name="idBoletim" id="idBoletim" value="<?php echo $id; ?>">
                 </div>  
                 <!-- DATA FIM -->
                 <div class="col-md-2 col-md-offset-1 form-group">
