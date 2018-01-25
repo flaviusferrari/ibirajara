@@ -62,7 +62,21 @@ $(document).ready(function() {
                 $('#myModal').modal('show');
             }
         });
+    });
+    
+    // -------------------------------------------------------
+    
+    $('#myModal').on('click', '.addEvento', function (e) {
+        e.preventDefault();
         
+        var data = $(this).attr('data-idslide');
+        alert(data);
+//        var res = data.split(';'); 
+//        
+//        $('#categoria').val(res[1]);
+//        $('#idCategoria').val(res[0]);
+//        
+//        $('#myModal').modal('hide');
     });
     
 });

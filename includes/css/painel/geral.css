@@ -38,3 +38,6 @@ body {background-color: #ebebeb;}
 
 /**** MENSAGEM ****/
 .msn-body {font-family: 'Ubuntu', sans-serif;font-weight: 500;font-size: 16px;}
+
+/** CURSOR **/
+.pointer {cursor: pointer;}

@@ -5,7 +5,7 @@
         <th>Data Fim</th>
     </thead>
     <?php foreach ($slides as $campo): ?>
-    <tr>                   
+    <tr class="addEvento pointer" data-idslide="<?php echo $campo['id']; ?>">                   
         <td><?php echo $campo['titulo']; ?></td>
         <td><?php echo $this->tdate->setDateBr($campo['dtInicio']); ?></td>
         <td><?php echo $this->tdate->setDateBr($campo['dtFinal']); ?></td>        

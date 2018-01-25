@@ -45,3 +45,6 @@ footer {background-color: #3366ff;}
 /**** CONTEÚDO ****/
 /* Sessões */
 #conteudo .panel-heading {font-weight: bold;}
+
+/** CURSOR **/
+.pointer {cursor: pointer;}
