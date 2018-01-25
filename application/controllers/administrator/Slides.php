@@ -105,7 +105,17 @@ class Slides extends MY_Controller
      */
     public function localizaSlide()
     {
-        echo 'Loclizando os slides....';
+        $dados['slides'] = $this->Model->localizar();
+        
+        if (!empty($dados['slides']))
+        {
+            echo $this->load->view('conteudo/painel/slides/lista_slides', $dados, TRUE);
+        }
+        else
+        {
+            echo 'Não foi encontrado nenhum Slide!!';
+        }
+        
     }
     
     
