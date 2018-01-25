@@ -41,6 +41,12 @@ class Slide_model extends CI_Model
             $this->db->where('dtFinal <= ', $this->tdate->setDateBd($this->input->post('dtFim')));
         }
         
+        // Verifica se foi enviado parte do Título
+        if (!empty($this->input->post('titulo')))
+        {
+            $this->db->like('titulo', $this->input->post('titulo'));
+        }
+        
         $query = $this->db->get('slides');
         
         return $query->result_array();

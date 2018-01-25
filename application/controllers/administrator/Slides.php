@@ -115,7 +115,6 @@ class Slides extends MY_Controller
         {
             echo 'Não foi encontrado nenhum Slide!!';
         }
-        
     }
     
     

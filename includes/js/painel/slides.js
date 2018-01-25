@@ -42,10 +42,10 @@ $(document).ready(function() {
      */
     $('#btnLocalizar').click(function() {
         
-        if($('#dtInicio').val() == '' && $('#dtFim').val() == '')
+        if($('#dtInicio').val() == '' && $('#dtFim').val() == '' && $('#titulo').val() == '')
         {
             $('#btnSaveModal').hide();            
-            $('#contentModal').html("Selecione uma data!");            
+            $('#contentModal').html("Selecione uma data ou parte do título!");            
             $('#myModal').modal('show');
             return false;
         }
