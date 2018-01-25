@@ -8,7 +8,9 @@
  * Created: 16/10/2016
  */
 
-/*** Versão 0.6 ***/
+
+-- 25/01/2018 -- Inserindo um campo de título na tabela Slide
+ALTER TABLE slides ADD titulo VARCHAR(255) NOT NULL AFTER id;
 -- 16/10/2016 --
 ALTER TABLE `slides` CHANGE `idEvento` `evento` VARCHAR(150) NULL DEFAULT NULL;
 

@@ -13,7 +13,7 @@ $(document).ready(function() {
     /**
      * Localiza o Evento desejado pelo título
      */ 
-    $('#titulo').autocomplete({
+    $('#tituloEvento').autocomplete({
         source: function( request, response ) {
             $.ajax({
                 url: "indexCode.php/administrator/eventos/LocalizaEvento",

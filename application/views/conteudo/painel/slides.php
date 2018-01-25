@@ -33,13 +33,19 @@
                         <input name="dtFim" id="dtFim" class="form-control dtForm" value="<?php echo set_value('dtFim'); ?>">  
                         <?php echo form_error('dtFim', '<div class="label label-danger">', '</div>'); ?>
                     </div>
-                </div>            
-
+                </div>
+                
                 <!-- TÍTULO -->
                 <div class="form-group">
+                    <label>Título:</label>
+                    <input name="titulo" id="titulo" class="form-control" value="<?php echo set_value('titulo'); ?>">                    
+                </div> 
+
+                <!-- TÍTULO EVENTO -->
+                <div class="form-group">
                     <label>Evento:</label>
-                    <input name="titulo" id="titulo" class="form-control" value="<?php echo set_value('titulo'); ?>">
-                    <?php echo form_error('titulo', '<div class="label label-danger">', '</div>'); ?>
+                    <input name="tituloEvento" id="tituloEvento" class="form-control" value="<?php echo set_value('tituloEvento'); ?>">
+                    <?php echo form_error('tituloEvento', '<div class="label label-danger">', '</div>'); ?>
                     <input type="hidden" name="idEvento" id="idEvento" value="">
                 </div> 
 

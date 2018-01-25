@@ -11,6 +11,7 @@ class Slide_model extends CI_Model
     {
         $data = array(
             'idImage'  => $idImagem,
+            'titulo'   => $this->input->post('titulo'),
             'evento'   => (empty($this->input->post('idEvento')))? '0': $this->input->post('idEvento'),
             'dtInicio' => $this->tdate->setDateBd($this->input->post('dtInicio')),
             'dtFinal'  => $this->tdate->setDateBd($this->input->post('dtFim'))
