@@ -117,5 +117,17 @@ class Slides extends MY_Controller
         }
     }
     
+    // ------------------------------------------------------------
+    
+    /**
+     * MÉTODO EXIBE
+     * 
+     *  Exibe os dados do Slide
+     */
+    public function exibe()
+    {
+        echo 'Exibindo...';
+    }
+    
     
 }

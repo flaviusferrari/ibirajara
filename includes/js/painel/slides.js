@@ -70,13 +70,9 @@ $(document).ready(function() {
         e.preventDefault();
         
         var data = $(this).attr('data-idslide');
-        alert(data);
-//        var res = data.split(';'); 
-//        
-//        $('#categoria').val(res[1]);
-//        $('#idCategoria').val(res[0]);
-//        
-//        $('#myModal').modal('hide');
+        
+        var novaURL = 'indexCode.php/administrator/slides/exibe/'+data;
+        $(window.document.location).attr('href',novaURL);    
     });
     
 });
