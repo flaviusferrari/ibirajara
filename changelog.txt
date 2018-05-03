@@ -1,3 +1,10 @@
+Versão 0.7
+
+==== UPDATE ====
+- Painel/Boletim: Atualizando o Boletim;
+
+
+
 Versão 0.6
 Publicação: 06 de Novembro de 2016
 

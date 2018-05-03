@@ -126,7 +126,11 @@ class Slides extends MY_Controller
      */
     public function exibe()
     {
-        echo 'Exibindo...';
+        $this->dados['slide'] = $this->Model->exibir($this->uri->segment(4));
+        
+        $this->dados['conteudo'] = 'painel/slides/slides_form_exibe';
+        
+        $this->load->view('layout', $this->dados);
     }
     
     

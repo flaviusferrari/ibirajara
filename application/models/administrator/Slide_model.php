@@ -52,6 +52,38 @@ class Slide_model extends CI_Model
         return $query->result_array();
     }
     
+    // ----------------------------------------------------------------
+    
+    /**
+     * MÉTODO EXIBIR
+     * 
+     *  Busca os dados do Slide desejado para poder exibir na tela
+     */
+    public function exibir($idSlide)
+    {
+        // Efetua a consulta
+        $this->db->where('id', $idSlide);
+        $query = $this->db->get('slides');
+        
+        return $query->row_array();
+    }
+    
+    // -----------------------------------------------------------------
+    
+    /**
+     * MÉTODO RETORNA NOME EVENTO
+     * 
+     */
+    public function retornaNomeEvento($idEvento)
+    {
+        $this->db->select('titulo');
+        $this->db->where('id', $idEvento);
+        $query = $this->db->get('eventos');
+        
+        $result = $query->row_array();
+        
+        return $result['titulo'];
+    }
     
 }
 
