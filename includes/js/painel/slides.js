@@ -36,6 +36,30 @@ $(document).ready(function() {
     // ------------------------------------------------------------
     
     /**
+     * BOTÃO ATUALIZAR
+     * 
+     *  Atualiza os dados do Slide
+     */
+    $('#btnAtualizar').click(function() {
+        
+        var formdata = $("#formulario").serialize();
+
+        $.ajax({
+            url: 'indexCode.php/administrator/slides/atualizar',
+            type: 'POST',
+            data: formdata,
+            success: function (data) {
+                // Exibe os dados
+                $('#contentModal').html(data);
+                $('#myModal').modal('show');
+            }
+        });
+        
+    });
+    
+    // ------------------------------------------------------------
+    
+    /**
      * BOTÃO LOCALIZAR
      * 
      *  Localiza e exibe o Slide

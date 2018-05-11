@@ -19,6 +19,7 @@
             <br>
 
             <form id="formulario" method="POST" autocomplete="off" enctype="multipart/form-data" action="">
+                <input type="hidden" name="idSlide" value="<?php echo $slide['id']; ?>">
 
                 <div class="row">
                     <!-- DATA INICIO -->

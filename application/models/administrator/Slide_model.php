@@ -82,6 +82,27 @@ class Slide_model extends CI_Model
     // -----------------------------------------------------------------
     
     /**
+     * MÉTODO ATUALIZAR
+     * 
+     * 
+     */
+    public function atualizar()
+    {
+        $data = array(
+            'titulo'   => $this->input->post('titulo'),
+            'evento'   => (empty($this->input->post('idEvento')))? '0': $this->input->post('idEvento'),
+            'dtInicio' => $this->tdate->setDateBd($this->input->post('dtInicio')),
+            'dtFinal'  => $this->tdate->setDateBd($this->input->post('dtFim'))
+        );
+        
+        $this->db->where('id', $this->input->post('idSlide'));
+
+        return $this->db->update('slides', $data);
+    }
+
+    // -----------------------------------------------------------------
+    
+    /**
      * MÉTODO RETORNA NOME EVENTO
      * 
      */

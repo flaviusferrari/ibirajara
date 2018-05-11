@@ -1,9 +1,11 @@
-Versão 0.7 (18min)
+Versão 0.7 (64min)
+Publicação: 
 
 ==== UPDATE ====
 - Painel/Boletim: Atualizando o Boletim;
 - Painel/Slides: Exibindo os dados do Slide;
 - Painel/Slides: Exibindo a Imagem do Slide;
+- Painel/Slides: Atualizando os dados do Slide;
 
 
 ********************************************************************************

@@ -133,5 +133,24 @@ class Slides extends MY_Controller
         $this->load->view('layout', $this->dados);
     }
     
+    // ---------------------------------------------------------------
+    
+    /**
+     * MÉTODO ATUALIZAR
+     * 
+     *  Atualiza os dados do Slide no Banco de Dados
+     */
+    public function atualizar()
+    {
+         if ($this->Model->atualizar())
+         {
+             echo 'Slide Atualizado com Sucesso.';
+         }
+         else
+         {
+             echo 'Não foi possível atualizar';
+         }
+    }
+    
     
 }
