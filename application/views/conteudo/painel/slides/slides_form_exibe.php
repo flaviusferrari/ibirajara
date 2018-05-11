@@ -49,7 +49,7 @@
                 <!-- IMAGEM -->
                  <div class="form-group">
                     <label>Imagem:</label>
-                    <input type="file" name="foto" id="foto" value="<?php echo set_value('foto'); ?>">
+                    <img src="<?php echo base_url('includes/images/fotos/'.$slide['imgName'].'.'.$slide['type']); ?>" class="img-responsive" title="Clique na Imagem para mudar">
                  </div>
             </form>
         </div>

@@ -75,4 +75,15 @@ $(document).ready(function() {
         $(window.document.location).attr('href',novaURL);    
     });
     
+    // -----------------------------------------------------------
+    
+    /**
+     * BOTÃO NOVO
+     * 
+     *  Exibe o formulário para cadastro
+     */
+    $('#btnNovo').click(function() {
+        $(window.document.location).attr('href', 'indexCode.php/administrator/slides');    
+    });
+    
 });

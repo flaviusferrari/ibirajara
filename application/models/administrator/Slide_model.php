@@ -62,8 +62,19 @@ class Slide_model extends CI_Model
     public function exibir($idSlide)
     {
         // Efetua a consulta
-        $this->db->where('id', $idSlide);
-        $query = $this->db->get('slides');
+        $this->db->select(
+                'slides.*,'
+                . 'images.imgName,'
+                . 'type.type'                
+            );
+        
+        $this->db->where('slides.id', $idSlide);
+        
+        $this->db->from('slides');
+        $this->db->join('images', 'images.id = slides.idImage', 'inner');
+        $this->db->join('type', 'type.id = images.idType', 'inner');        
+        
+        $query = $this->db->get();
         
         return $query->row_array();
     }
