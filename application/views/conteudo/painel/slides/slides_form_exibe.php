@@ -34,11 +34,22 @@
                     </div>
                 </div>
                 
-                <!-- TÍTULO -->
-                <div class="form-group">
-                    <label>Título:</label>
-                    <input name="titulo" id="titulo" class="form-control" value="<?php echo $slide['titulo']; ?>">                    
-                </div> 
+                <div class="row">
+                    <!-- TÍTULO -->
+                    <div class="col-md-8 form-group">
+                        <label>Título:</label>
+                        <input name="titulo" id="titulo" class="form-control" value="<?php echo $slide['titulo']; ?>">                    
+                    </div> 
+                    <!-- PRIORIDADE -->
+                    <div class="col-md-2 form-group">
+                        <label>Prioridade:</label>
+                        <select class="form-control" name="prioridade">
+                            <option value="1">Alta</option>
+                            <option value="2">Média</option>
+                            <option value="3">Baixa</option>
+                        </select>                            
+                    </div> 
+                </div>
 
                 <!-- TÍTULO EVENTO -->
                 <div class="form-group">
