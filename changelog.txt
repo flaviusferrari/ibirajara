@@ -1,4 +1,4 @@
-Versão 0.7 (64min)
+Versão 0.7 (100min)
 Publicação: 
 
 ==== UPDATE ====
@@ -6,6 +6,7 @@ Publicação:
 - Painel/Slides: Exibindo os dados do Slide;
 - Painel/Slides: Exibindo a Imagem do Slide;
 - Painel/Slides: Atualizando os dados do Slide;
+- Painel/Slides: Inserida a prioridade do Slide;
 
 
 ********************************************************************************
