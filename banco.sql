@@ -8,6 +8,10 @@
  * Created: 16/10/2016
  */
 
+-- VERSÃO 0.7
+-- Insere uma coluna de prioridade
+ALTER TABLE `slides` ADD COLUMN `prioridade` INT(1) NULL DEFAULT 0 AFTER `evento`;
+
 
 -- 25/01/2018 -- Inserindo um campo de título na tabela Slide
 ALTER TABLE slides ADD titulo VARCHAR(255) NOT NULL AFTER id;
