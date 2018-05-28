@@ -44,9 +44,9 @@
                     <div class="col-md-2 form-group">
                         <label>Prioridade:</label>
                         <select class="form-control" name="prioridade">
-                            <option value="1">Alta</option>
-                            <option value="2">Média</option>
-                            <option value="3">Baixa</option>
+                            <option value="1" <?php echo ($slide['prioridade'] == 1)? 'selected':''; ?>>Alta</option>
+                            <option value="2" <?php echo ($slide['prioridade'] == 2)? 'selected':''; ?>>Média</option>
+                            <option value="3" <?php echo ($slide['prioridade'] == 3)? 'selected':''; ?>>Baixa</option>
                         </select>                            
                     </div> 
                 </div>
