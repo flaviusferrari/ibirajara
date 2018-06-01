@@ -88,6 +88,19 @@ $(document).ready(function() {
     // ----------------------------------------------------------
     
     /**
+     * BOTÃO CADASTRO
+     * 
+     *  Retorna para o formulário de Cadastro
+     */
+    $('#btnCadastraBoletim').click(function(e) {
+        e.preventDefault();
+        
+        $(window.document.location).attr('href', 'indexCode.php/administrator/boletim/');
+    });
+    
+    // ----------------------------------------------------------
+    
+    /**
      * SIDEBAR
      * 
      *  Exibe o Conteúdo da Sidebar

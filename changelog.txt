@@ -1,3 +1,10 @@
+Versão 0.8 ()
+Publicação: 
+- Painel/Boletim: Ajustes no Layout;
+
+
+********************************************************************************
+
 Versão 0.7 (100min)
 Publicação: 28 de Maio de 2018
 

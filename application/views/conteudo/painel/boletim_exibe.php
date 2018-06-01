@@ -49,7 +49,7 @@
                 <!-- TEXTO -->
                 <div class="form-group">
                     <label>Texto:</label>
-                    <textarea name="texto" class="form-control" rows="5"><?php echo $texto; ?></textarea>
+                    <textarea name="texto" class="form-control" rows="15"><?php echo $texto; ?></textarea>
                 </div>  
 
                 <!-- LIVRO -->

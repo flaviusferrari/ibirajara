@@ -50,7 +50,7 @@
             <!-- TEXTO -->
             <div class="form-group">
                 <label>Texto:</label>
-                <textarea name="texto" class="form-control" rows="5"><?php echo set_value('texto'); ?></textarea>
+                <textarea name="texto" class="form-control" rows="15"><?php echo set_value('texto'); ?></textarea>
                 <?php echo form_error('texto', '<div class="label label-danger">', '</div>'); ?>
             </div>  
             
