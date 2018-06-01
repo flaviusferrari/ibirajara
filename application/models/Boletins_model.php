@@ -15,6 +15,7 @@ class Boletins_model extends CI_Model
      */
     public function localizaBoletim()
     {
+        $this->db->select('id, dtInicio, titulo, numero');
         //$this->db->orderby('');
         
         $query = $this->db->get('boletim');

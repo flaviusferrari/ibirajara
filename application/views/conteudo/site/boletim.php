@@ -7,7 +7,7 @@
             <div class="col-md-12">
                 <p>Nosso Boletim Informativo Esperança </p>                
                 
-                <table class="table table-condensed"> 
+                <table class="table table-condensed table-hover"> 
                     <thead> 
                         <tr> 
                             <th>Data</th> 
@@ -22,7 +22,10 @@
                             <td><?php echo $campo['dtInicio']; ?></td> 
                             <td><?php echo $campo['titulo']; ?></td> 
                             <td><?php echo $campo['numero']; ?></td> 
-                            <td>@mdo</td> 
+                            <td>
+                                <span class="glyphicon glyphicon-file" aria-hidden="true" title="Visualizar Mensagem"></span>
+                                <span class="glyphicon glyphicon-print" aria-hidden="true" title="Imprimir Boletim"></span>
+                            </td> 
                         </tr> 
                         <?php endforeach; ?>
                     </tbody> 
