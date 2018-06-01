@@ -1,7 +1,7 @@
 Versão 0.8 ()
 Publicação: 
 - Painel/Boletim: Ajustes no Layout;
-
+- Atualizada a página do Atendimento Espiritual para o CI;
 
 ********************************************************************************
 
