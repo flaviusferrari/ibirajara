@@ -1,7 +1,13 @@
-Versão 0.8 ()
+Versão 0.8 (53min)
 Publicação: 
+
+==== NEW ====
+- Inserido o Sub-Menu 'Boletins';
+
+==== UPDATE ====
 - Painel/Boletim: Ajustes no Layout;
 - Atualizada a página do Atendimento Espiritual para o CI;
+
 
 ********************************************************************************
 

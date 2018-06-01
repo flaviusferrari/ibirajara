@@ -18,12 +18,17 @@ class Boletim extends CI_Controller
         $this->dados['css'] = 'contatos';
         $this->dados['js']  = 'contato';
         $this->dados['conteudo'] = 'site/boletim';
+        
+        // MODEL
+        $this->load->model('boletins_model', 'Model');
     }
     
     // --------------------------------------------------------------
 
     public function index()
     {
+        $this->dados['boletins'] = $this->Model->localizaBoletim();
+        
         // Exibe a página
         $this->load->view('site', $this->dados);
     }
