@@ -31,6 +31,12 @@
                     <input name="dtFim" id="dtFim" class="form-control dtForm" value="<?php echo set_value('dtFim'); ?>">  
                     <?php echo form_error('dtFim', '<div class="label label-danger">', '</div>'); ?>
                 </div>
+                <!-- NÚMERO -->
+                <div class="col-md-2 col-md-offset-1 form-group">
+                    <label>Número:</label>
+                    <input name="numero" id="numero" class="form-control dtForm" value="<?php echo set_value('numero'); ?>">  
+                    <?php echo form_error('numero', '<div class="label label-danger">', '</div>'); ?>
+                </div>
             </div>            
             
             <!-- TÍTULO -->
