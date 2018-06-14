@@ -109,5 +109,20 @@ $(document).ready(function() {
     $('#tituloSidebar').html('Próximos Boletins');
     $('#conteudoSidebar').load('indexCode.php/administrator/sidebar/proximosBoletins');
     
+    // -----------------------------------------------------------
+    
+    /**
+     * CLASS IDBOLETIM
+     * 
+     *  Exibe o boletim 
+     */
+    $('#listagem').on('click', '.idBoletim', function(e) {
+        e.preventDefault();
+        
+        // Exibe o Boletim 
+        var novaURL = 'indexCode.php/administrator/boletim/exibeBoletim/'+ $(this).attr('data-idboletim');
+        $(window.document.location).attr('href',novaURL);
+    });
+    
 });
 

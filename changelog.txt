@@ -1,4 +1,4 @@
-Versão 0.8 (60min)
+Versão 0.8 (77min)
 Publicação: 
 
 ==== NEW ====
@@ -7,6 +7,7 @@ Publicação:
 ==== UPDATE ====
 - Painel/Boletim: Ajustes no Layout;
 - Atualizada a página do Atendimento Espiritual para o CI;
+- Painel/Boletim/Localizar: Exibindo o boletim ao clicar no resultado da busca;
 
 
 ********************************************************************************

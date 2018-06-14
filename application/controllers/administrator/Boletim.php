@@ -11,7 +11,7 @@ class Boletim extends MY_Controller
         parent::__construct();
         
         $this->dados['css']      = 'administrator';      
-        $this->dados['js']       = 'boletim';
+        $this->dados['js']       = 'painel/boletim';
         $this->dados['conteudo'] = 'painel/boletim';
         $this->dados['sidebar']  = 'boletim';
         
