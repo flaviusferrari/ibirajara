@@ -11,6 +11,7 @@
 -- VERSÃO 0.8
 -- Insere a coluna numero na tabela Boletim
 ALTER TABLE `boletim` ADD COLUMN `numero` INT(6) NULL AFTER `livro`;
+ALTER TABLE `boletim` ADD `arquivo` VARCHAR(100) NULL AFTER `numero`;
 
 -- VERSÃO 0.7
 -- Insere uma coluna de prioridade
