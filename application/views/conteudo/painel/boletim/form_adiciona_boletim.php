@@ -1,3 +1,5 @@
+    
+<form id="formAddBoletim" enctype="multipart/form-data" method="post" action="">
     <!-- Titulo -->
     <div class="row">
         <div class="col-md-12 form-group">
@@ -22,3 +24,5 @@
             <button class="btn btn-sm btn-primary pull-right" id="btnAdicionaBoletim">Adicionar</button>
         </div>        
     </div>
+</form>
+    

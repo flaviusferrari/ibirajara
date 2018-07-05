@@ -105,25 +105,60 @@ $(document).ready(function() {
      * 
      *  Exibe uma janela Modal para efetuar o Upload do Boletim 
      */
-    $('#btnAddBoletim').click(function(e) {
+    $('#btnAddBoletim').click(function (e) {
         e.preventDefault();
-        
+
         $.ajax({
-           url : 'indexCode.php/administrator/boletim/formAddBoletim',
-           type : 'POST',
-           data : {
-               'idBoletim': $('#idBoletim').val()
-           },
-           success: function(data){               
-               // Mensagem de Sucesso
-               $('.modal-title').html('Adicionar Boletim PDF');
-               $('.modal-footer').hide();
-               $('#contentModal').html(data);
-               $('#myModal').modal('show');            
-               return false;
-           }           
+            url: 'indexCode.php/administrator/boletim/formAddBoletim',
+            type: 'POST',
+            data: {
+                'idBoletim': $('#idBoletim').val()
+            },
+            success: function (data) {
+                // Mensagem de Sucesso
+                $('.modal-title').html('Adicionar Boletim PDF');
+                $('.modal-footer').hide();
+                $('#contentModal').html(data);
+                $('#myModal').modal('show');
+                return false;
+            }
         });
     });
+    
+    // ----------------------------------------------------------
+    
+    /**
+     * ADICIONAR BOLETIM PDF
+     * 
+     *  Adiciona o arquivo PDF
+     */
+    // Envia os dados do Boletim
+    $('#myModal').on('click', '#btnAdicionaBoletim', function(e) {
+        e.preventDefault();
+        
+        $('#formAddBoletim').submit();
+    });
+    
+    $('#myModal').on('submit', '#formAddBoletim', function(e) {
+        e.preventDefault();
+        
+        var dados = new FormData(this);
+        var url = "profile/logomarca/salvaLogomarca";
+        $.ajax({
+            url: url,
+            type: 'POST',
+            data: dados,
+            mimeType: "multipart/form-data",
+            contentType: false,
+            cache: false,
+            processData: false,
+            success: function (data, textStatus, jqXHR)
+            {
+                // Em caso de sucesso faz isto...
+                $('#tab_content').html(data);
+            }
+        });
+     });
     
     // ----------------------------------------------------------
     
