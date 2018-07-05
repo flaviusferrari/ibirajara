@@ -112,11 +112,12 @@ $(document).ready(function() {
            url : 'indexCode.php/administrator/boletim/formAddBoletim',
            type : 'POST',
            data : {
-               
+               'idBoletim': $('#idBoletim').val()
            },
            success: function(data){               
                // Mensagem de Sucesso
-               $('#btnSaveModal').html('Insere Boletim').show();
+               $('.modal-title').html('Adicionar Boletim PDF');
+               $('.modal-footer').hide();
                $('#contentModal').html(data);
                $('#myModal').modal('show');            
                return false;

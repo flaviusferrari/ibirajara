@@ -23,8 +23,7 @@
                     <!-- DATA INICIO -->
                     <div class="col-md-2 form-group">
                         <label>Data Inicio:</label>
-                        <input name="dtInicio" id="dtInicio" class="form-control dtForm" value="<?php echo $dtInicio; ?>">  
-                        <input type="hidden" name="idBoletim" id="idBoletim" value="<?php echo $id; ?>">
+                        <input name="dtInicio" id="dtInicio" class="form-control dtForm" value="<?php echo $dtInicio; ?>">                          
                     </div>  
                     <!-- DATA FIM -->
                     <div class="col-md-2 col-md-offset-1 form-group">
@@ -43,7 +42,8 @@
                 <!-- TÍTULO -->
                 <div class="form-group">
                     <label>Título:</label>
-                    <input name="titulo" id="titulo" class="form-control" value="<?php echo $titulo; ?>">                
+                    <input name="titulo" id="titulo" class="form-control" value="<?php echo $titulo; ?>">   
+                    <input type="hidden" name="idBoletim" id="idBoletim" value="<?php echo $id; ?>">
                 </div> 
 
                 <!-- CITAÇÃO -->

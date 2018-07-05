@@ -181,8 +181,11 @@ class Boletim extends MY_Controller
       *  Exibe o formulário para adicionar o Boletim
       */
      public function formAddBoletim()
-     {
-         $this->load->view('conteudo/painel/boletim/form_adiciona_boletim');
-     }
+    {
+        // Localiza os dados do Boletim
+        $dados['boletim'] = $this->administrator_model->buscaDadosBoletim($this->input->post('idBoletim'));
+
+        $this->load->view('conteudo/painel/boletim/form_adiciona_boletim', $dados);
+    }
     
 }
