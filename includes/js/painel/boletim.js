@@ -101,6 +101,32 @@ $(document).ready(function() {
     // ----------------------------------------------------------
     
     /**
+     * BOTÃO ADICIONA BOLETIM
+     * 
+     *  Exibe uma janela Modal para efetuar o Upload do Boletim 
+     */
+    $('#btnAddBoletim').click(function(e) {
+        e.preventDefault();
+        
+        $.ajax({
+           url : 'indexCode.php/administrator/boletim/formAddBoletim',
+           type : 'POST',
+           data : {
+               
+           },
+           success: function(data){               
+               // Mensagem de Sucesso
+               $('#btnSaveModal').html('Insere Boletim').show();
+               $('#contentModal').html(data);
+               $('#myModal').modal('show');            
+               return false;
+           }           
+        });
+    });
+    
+    // ----------------------------------------------------------
+    
+    /**
      * SIDEBAR
      * 
      *  Exibe o Conteúdo da Sidebar

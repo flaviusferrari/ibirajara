@@ -104,7 +104,7 @@ class Boletim extends MY_Controller
         $boletim['dtFim'] = date('d/m/Y', strtotime($boletim['dtFim']));
         
         // Insere o arquivo a ser exibido
-        $this->dados['conteudo'] = 'painel/boletim_exibe';
+        $this->dados['conteudo'] = 'painel/boletim/boletim_exibe';
         
         // Mescla os arrays
         $dados = array_merge($this->dados, $boletim);
@@ -171,6 +171,18 @@ class Boletim extends MY_Controller
             // Exibe a página
             $this->load->view('layout', $this->dados);
          }
+     }
+     
+     // ------------------------------------------------------------
+     
+     /**
+      * MÉTODO FORM ADICIONA BOLETIM
+      * 
+      *  Exibe o formulário para adicionar o Boletim
+      */
+     public function formAddBoletim()
+     {
+         $this->load->view('conteudo/painel/boletim/form_adiciona_boletim');
      }
     
 }

@@ -7,15 +7,15 @@
         <div class="padding">
 
             <!-- BOTÕES -->
-            <div id="menuBotoes">
-                <a class="btn btn-primary" id="btnSalvar">Salvar</a>
-                <a class="btn btn-primary" id="btnNovo">Novo</a>
-                <a class="btn btn-primary" id="btnAtualizar">Atualizar</a>
-                <a class="btn btn-primary" id="btnLocalizar">Localizar</a>
-                <a class="btn btn-primary" id="btnExcluir">Excluir</a>                    
-            </div>     
-
-            <br>
+            <div class="row" id="menuBotoes">
+                <div class="col-md-12 form-group">
+                    <a class="btn btn-primary" id="btnSalvar">Salvar</a>
+                    <a class="btn btn-primary" id="btnNovo">Novo</a>
+                    <a class="btn btn-primary" id="btnAtualizar">Atualizar</a>
+                    <a class="btn btn-primary" id="btnLocalizar">Localizar</a>
+                    <a class="btn btn-primary" id="btnExcluir">Excluir</a>    
+                </div>       
+            </div>
 
             <form id="formulario" method="POST" autocomplete="off" action="">
 
@@ -64,6 +64,12 @@
                     <input name="livro" class="form-control"  value="<?php echo $livro; ?>">
                 </div>  
             </form>
+            
+            <div class="row">
+                <div class="col-md-2 form-group">
+                    <a class="btn btn-primary" id="btnAddBoletim">Adiciona Boletim</a>
+                </div>                
+            </div>
         </div>
     </div>
 </div>
