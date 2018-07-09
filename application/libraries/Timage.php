@@ -30,10 +30,10 @@ class Timage
      * 
      * @param type $fileName
      */
-    public function loadUpload($fileName)
+    public function loadUpload($fileName, $type = 'gif|jpg|png', $path = 'fotos/')
     {
-        $config['upload_path']   = './includes/images/fotos/';
-        $config['allowed_types'] = 'gif|jpg|png';
+        $config['upload_path']   = './includes/images/'. $path;
+        $config['allowed_types'] = $type;
         $config['overwrite']     = TRUE;
         $config['file_name']     = $fileName;
 
