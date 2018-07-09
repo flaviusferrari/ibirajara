@@ -63,6 +63,23 @@ class Boletim_model extends CI_Model
         return $this->db->update('boletim', $data);
     }
     
+    // ------------------------------------------------------------------------
+    
+    /**
+     * MÉTODO UPDATE BOLETIM PDF
+     * 
+     * 
+     */
+    public function updateBoletimPdf($idBoletim, $arquivo)
+    {
+        $data = array(
+            'arquivo' => $arquivo             
+        );
+         
+        $this->db->where('id', $idBoletim);
+
+        return $this->db->update('boletim', $data);        
+    }
     
 }
 

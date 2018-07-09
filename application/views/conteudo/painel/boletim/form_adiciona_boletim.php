@@ -2,10 +2,15 @@
 <form id="formAddBoletim" enctype="multipart/form-data" method="post" action="">
     <!-- Titulo -->
     <div class="row">
-        <div class="col-md-12 form-group">
+        <div class="col-md-8 form-group">
             <label class="">Título</label>
             <input name="titulo" class="form-control" type="text" readonly="true" value="<?php echo $boletim['titulo']; ?>">
             <input type="hidden" name="idBoletim" id="idBoletim" value="<?php echo $boletim['id']; ?>">
+        </div>
+        
+        <div class="col-md-4 form-group">
+            <label>Número</label>
+            <input name="numeroboletim" class="form-control" type="text" readonly="true" value="<?php echo $boletim['numero']; ?>">
         </div>
     </div>
     

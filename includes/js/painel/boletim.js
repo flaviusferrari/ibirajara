@@ -143,7 +143,7 @@ $(document).ready(function() {
         e.preventDefault();
         
         var dados = new FormData(this);
-        var url = "profile/logomarca/salvaLogomarca";
+        var url = "indexCode.php/administrator/boletim/salvaPdf";
         $.ajax({
             url: url,
             type: 'POST',
@@ -155,7 +155,7 @@ $(document).ready(function() {
             success: function (data, textStatus, jqXHR)
             {
                 // Em caso de sucesso faz isto...
-                $('#tab_content').html(data);
+                $('#contentModal').html(data);
             }
         });
      });

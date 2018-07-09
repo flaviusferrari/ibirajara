@@ -170,5 +170,52 @@ class Boletim extends MY_Controller {
 
         $this->load->view('conteudo/painel/boletim/form_adiciona_boletim', $dados);
     }
+    
+    // -------------------------------------------------------------------------
+    
+    /**
+     * MÉTODO SALVA PDF
+     * 
+     *  Adiciona o arquivo PDF do Boletim
+     */
+    public function salvaPdf()
+    {        
+        $this->load->library('timage');
+        
+        // Gera o nome do boletim
+        $fileName = 'boletim'.$this->input->post('numeroboletim');
+
+        // Pega o tipo do arquivo
+        $type = strrchr($_FILES['foto']['name'], '.');
+
+        // Inicializa a biblioteca de envio 
+        $this->timage->loadUpload($fileName, 'pdf', 'boletins/');
+
+        // Verifica se a imagem foi enviada
+        if ( ! $this->timage->uploadImage('foto'))
+        {
+            $error = $this->timage->getErrorUpload();
+
+            echo $error['error'];
+        }
+        else
+        {    
+            $nomeArquivo = $fileName.$type;
+            
+            // Salva os dados da logo no Banco
+            $this->load->model('administrator/boletim_model', 'BoletimModel');
+            
+            if ($this->BoletimModel->updateBoletimPdf($this->input->post('idBoletim'), $nomeArquivo))
+            {
+                echo '<span class="text-green">Boletim inserido com sucesso!!</span>';
+            }
+            else
+            {
+                echo '<span class="text-red">Boletim não foi salvo!!</span>';
+            }
+            
+        }
+        
+    }
 
 }
