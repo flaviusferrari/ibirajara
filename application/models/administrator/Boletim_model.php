@@ -59,7 +59,8 @@ class Boletim_model extends CI_Model
             'titulo'   => $this->input->post('titulo'),
             'citacao'  => $this->input->post('citacao'),
             'texto'    => $this->input->post('texto'),
-            'livro'    => $this->input->post('livro')             
+            'livro'    => $this->input->post('livro'),
+            'numero'   => $this->input->post('numero')
         );
 
         return $this->db->insert('boletim', $data);
@@ -117,7 +118,8 @@ class Boletim_model extends CI_Model
             'titulo'   => $this->input->post('titulo'),
             'citacao'  => $this->input->post('citacao'),
             'texto'    => $this->input->post('texto'),
-            'livro'    => $this->input->post('livro')             
+            'livro'    => $this->input->post('livro'),
+            'numero'   => $this->input->post('numero')
         );
          
         $this->db->where('id', $this->input->post('idBoletim'));

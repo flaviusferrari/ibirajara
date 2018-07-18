@@ -34,7 +34,7 @@
                 <!-- NÚMERO -->
                 <div class="col-md-2 col-md-offset-1 form-group">
                     <label>Número:</label>
-                    <input name="numero" id="numero" class="form-control dtForm" value="<?php echo set_value('numero'); ?>">  
+                    <input name="numero" id="numero" class="form-control" value="<?php echo set_value('numero'); ?>">  
                     <?php echo form_error('numero', '<div class="label label-danger">', '</div>'); ?>
                 </div>
             </div>            

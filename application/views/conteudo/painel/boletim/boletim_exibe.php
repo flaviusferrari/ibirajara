@@ -9,7 +9,7 @@
             <!-- BOTÕES -->
             <div class="row" id="menuBotoes">
                 <div class="col-md-12 form-group">
-                    <a class="btn btn-primary" id="btnSalvar">Salvar</a>
+                    <a class="btn btn-primary disabled" id="btnSalvar">Salvar</a>
                     <a class="btn btn-primary" id="btnNovo">Novo</a>
                     <a class="btn btn-primary" id="btnAtualizar">Atualizar</a>
                     <a class="btn btn-primary" id="btnLocalizar">Localizar</a>
@@ -34,7 +34,7 @@
                     <!-- NÚMERO -->
                     <div class="col-md-2 col-md-offset-1 form-group">
                         <label>Número:</label>
-                        <input name="numero" id="numero" class="form-control dtForm" value="<?php echo $numero; ?>">  
+                        <input name="numero" id="numero" class="form-control" value="<?php echo $numero; ?>">  
                         <?php echo form_error('numero', '<div class="label label-danger">', '</div>'); ?>
                     </div>
                 </div>            
