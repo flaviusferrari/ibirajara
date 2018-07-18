@@ -19,7 +19,7 @@ class Boletim extends MY_Controller {
         $this->load->library('tdate');
 
         // Carrega o Model
-        $this->load->model('administrator_model');
+        $this->load->model('administrator/boletim_model', 'Model');
     }
 
     // ---------------------------------------------------------
@@ -49,7 +49,7 @@ class Boletim extends MY_Controller {
         {
             $this->load->view('layout', $this->dados);
         } else {
-            $this->administrator_model->salvar_boletim();
+            $this->Model->salvar_boletim();
 
             $this->dados['conteudo'] = 'sucess';
             $this->dados['msn_content'] = 'Boletim salvo com sucesso!!!';
@@ -68,7 +68,7 @@ class Boletim extends MY_Controller {
      * @return boolean
      */
     public function LocalizaBoletim() {
-        $boletins = $this->administrator_model->localiza_boletim($this->input->post('termo'));
+        $boletins = $this->Model->localiza_boletim($this->input->post('termo'));
 
 
         foreach ($boletins as $boletim) {
@@ -89,7 +89,7 @@ class Boletim extends MY_Controller {
         // Recebe o ID do Boletim
         $idBoletim = $this->uri->segment(4);
 
-        $boletim = $this->administrator_model->buscaDadosBoletim($idBoletim);
+        $boletim = $this->Model->buscaDadosBoletim($idBoletim);
 
         // Ajusta as datas do Boletim
         $boletim['dtInicio'] = date('d/m/Y', strtotime($boletim['dtInicio']));
@@ -145,9 +145,7 @@ class Boletim extends MY_Controller {
      */
     public function localizar() {
         if ($_POST) {
-            $this->load->model('administrator/boletim_model', 'boletimModel');
-
-            $dados['boletim'] = $this->boletimModel->localizaBoletim();
+            $dados['boletim'] = $this->Model->localizaBoletim();
 
             $this->load->view('conteudo/painel/boletim/lista_boletim', $dados);
         } else {
@@ -166,7 +164,7 @@ class Boletim extends MY_Controller {
      */
     public function formAddBoletim() {
         // Localiza os dados do Boletim
-        $dados['boletim'] = $this->administrator_model->buscaDadosBoletim($this->input->post('idBoletim'));
+        $dados['boletim'] = $this->Model->buscaDadosBoletim($this->input->post('idBoletim'));
 
         $this->load->view('conteudo/painel/boletim/form_adiciona_boletim', $dados);
     }

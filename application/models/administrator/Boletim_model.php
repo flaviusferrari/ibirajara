@@ -8,7 +8,10 @@
 
 class Boletim_model extends CI_Model 
 {
-    
+    /**
+     * 
+     * @return type
+     */
     public function localizaBoletim()
     {
         // Verifica se foi enciada alguma Data Inicial
@@ -34,9 +37,68 @@ class Boletim_model extends CI_Model
         return $query->result_array();
     }
     
+    // ------------------------------------------------------------------------
+    
+    /**
+     * MÉTODO SALVAR BOLETIM
+     * 
+     *  Efetua a gravação do Boletim no Banco de Dados
+     * @return type
+     */
+    public function salvar_boletim()
+    {
+        $dtInicio = str_replace('/', '-', $this->input->post('dtInicio'));
+        $dtFim    = str_replace('/', '-', $this->input->post('dtFim'));
+        
+        $dtInicio = date('Y-m-d', strtotime($dtInicio));
+        $dtFim    = date('Y-m-d', strtotime($dtFim));
+        
+         $data = array(
+            'dtInicio' => $dtInicio,
+            'dtFim'    => $dtFim,
+            'titulo'   => $this->input->post('titulo'),
+            'citacao'  => $this->input->post('citacao'),
+            'texto'    => $this->input->post('texto'),
+            'livro'    => $this->input->post('livro')             
+        );
+
+        return $this->db->insert('boletim', $data);
+    }
+    
+    // -------------------------------------------------------------------------
+    
+    /**
+     *  MÉTODO BUSCA DADOS BOLETIM 
+     * 
+     *  Busca os dados do boletim
+     */
+    public function buscaDadosBoletim($id)
+    {
+        // Efetua a consulta
+        $this->db->where('id', $id);
+        $query = $this->db->get('boletim');
+        
+        return $query->row_array();
+    }
+    
+    // -------------------------------------------------------------------------
+    
+    /**
+     * MÉTODO LOCALIZA BOLETM 
+     * 
+     *  Localiza o título do boletim 
+     */
+    public function localiza_boletim($termo)
+    {
+        $sql = "SELECT id, titulo FROM boletim WHERE titulo LIKE '%$termo%'";
+        
+        $query = $this->db->query($sql);
+        return $query->result_array();
+    }
+    
     // ----------------------------------------------------------------
     
-    /*
+    /**
      * MÉTODO ATUALIZAR
      * 
      *  Atualiza os dados do boletim
