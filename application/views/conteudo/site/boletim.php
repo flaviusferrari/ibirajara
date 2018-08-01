@@ -23,7 +23,7 @@
                             <td><?php echo $campo['numero']; ?></td> 
                             <td><?php echo $campo['titulo']; ?></td>                             
                             <td>
-                                <span class="glyphicon glyphicon-file" aria-hidden="true" title="Visualizar Mensagem"></span>
+                                <span class="glyphicon glyphicon-file vizualizaMensagem" aria-hidden="true" data-idBoletim="<?php echo $campo['id']; ?>" title="Visualizar Mensagem"></span>
                                 <span class="glyphicon glyphicon-print" aria-hidden="true" title="Imprimir Boletim"></span>
                             </td> 
                         </tr> 

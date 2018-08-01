@@ -36,4 +36,16 @@ class Boletim extends CI_Controller
         $this->load->view('site', $this->dados);
     }
     
+    // -------------------------------------------------------------------
+    
+    /**
+     * MÉTODO EXIBE MENSAGEM
+     * 
+     *  Retorna a Mensagem do Boletim escolhido
+     */
+    public function exibeMensagem()
+    {
+        echo 'Essa é a mensagem do Boletim '. $this->input->post('idBoletim');
+    }
+    
 }

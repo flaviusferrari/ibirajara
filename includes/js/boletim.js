@@ -5,6 +5,9 @@
  */
 $(document).ready(function() {   
     
+    /**
+     * Torna o ícone em opções azul
+     */
     $('.glyphicon').hover(
         function () {
             $(this).addClass("text-primary");
@@ -14,6 +17,30 @@ $(document).ready(function() {
         }
     );
 
+    // ---------------------------------------------------------------------
+    
+    /**
+     * 
+     */
+    $('.vizualizaMensagem').click(function() {
+        
+        $.ajax({
+           url : 'indexCode.php/boletim/exibeMensagem',
+           type : 'POST',
+           data : {
+               'idBoletim': $(this).attr('data-idBoletim')
+           },
+           success: function(data){               
+               $('#btnSaveModal').hide();
+               $('.modal-title').html('Mensagem do Boletim');
+               $('#contentModal').html(data);
+               $('#myModal').modal('show');
+               return false;
+           }           
+        });
+        
+        
+    });
 
 
 });
