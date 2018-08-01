@@ -16,7 +16,7 @@ class Boletim extends CI_Controller
         
         // DADOS
         $this->dados['css'] = 'contatos';
-        $this->dados['js']  = '';
+        $this->dados['js']  = 'boletim';
         $this->dados['conteudo'] = 'site/boletim';
         
         // BIBLIOTECAS
