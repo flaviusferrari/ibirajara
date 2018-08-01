@@ -23,4 +23,22 @@ class Boletins_model extends CI_Model
         return $query->result_array();
     }
     
+    // ---------------------------------------------------------------
+    
+    /**
+     * MÉTODO BUSCA DADOS BOLETIM
+     * 
+     *  Busca os dados do Boletim desejado
+     */
+    public function buscaDadosBoletim($idBoletim)
+    {
+        $this->db->select('titulo, citacao, texto, livro');
+        
+        $this->db->where('id', $idBoletim);
+        
+        $query = $this->db->get('boletim');
+        
+        return $query->row_array();
+    }
+    
 }

@@ -45,7 +45,9 @@ class Boletim extends CI_Controller
      */
     public function exibeMensagem()
     {
-        echo 'Essa é a mensagem do Boletim '. $this->input->post('idBoletim');
+        $dados['boletim'] = $this->Model->buscaDadosBoletim($this->input->post('idBoletim'));
+        
+        $this->load->view('conteudo/site/boletim/mensagem_boletim', $dados);
     }
     
 }
