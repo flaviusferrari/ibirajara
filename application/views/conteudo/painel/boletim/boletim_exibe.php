@@ -67,7 +67,12 @@
             
             <div class="row">
                 <div class="col-md-2 form-group">
-                    <a class="btn btn-primary" id="btnAddBoletim">Adiciona Boletim</a>
+                    <?php if (empty($arquivo)): ?>
+                        <a class="btn btn-primary" id="btnAddBoletim">Adiciona Boletim</a>
+                    <?php else: ?>
+                        <a class="btn btn-danger" id="btnAddBoletim">Modifica Boletim</a>
+                    <?php endif; ?>
+                    
                 </div>                
             </div>
         </div>
