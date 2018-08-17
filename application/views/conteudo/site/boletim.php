@@ -4,9 +4,13 @@
     <!-- BODY -->
     <div class="panel-body">       
         <div class="row">
-            <div class="col-md-12">
-                <p>Nosso Boletim Informativo Esperança </p>                
-                
+            <div class="col-md-12 form-group">                
+                <img src="<?php echo base_url('includes/images/capa_boletim.png'); ?>" class=" img img-responsive" title="Boletim Informativo Esperança">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-12 table-responsive form-group">
                 <table class="table table-condensed table-hover"> 
                     <thead> 
                         <tr> 
