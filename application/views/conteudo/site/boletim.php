@@ -28,7 +28,9 @@
                             <td><?php echo $campo['titulo']; ?></td>                             
                             <td>
                                 <span class="glyphicon glyphicon-file vizualizaMensagem" aria-hidden="true" data-idBoletim="<?php echo $campo['id']; ?>" title="Visualizar Mensagem"></span>
-                                <span class="glyphicon glyphicon-print" aria-hidden="true" title="Imprimir Boletim"></span>
+                                <?php if (!empty($campo['arquivo'])): ?>
+                                    <span class="glyphicon glyphicon-print exibeBoletimPdf" data-numBoletim="<?php echo $campo['arquivo']; ?>" aria-hidden="true" title="Imprimir Boletim"></span>
+                                <?php endif; ?>                                
                             </td> 
                         </tr> 
                         <?php endforeach; ?>

@@ -41,6 +41,16 @@ $(document).ready(function() {
         
         
     });
+    
+    // -------------------------------------------------------------
+    
+    $('.exibeBoletimPdf').click(function() {
+        
+        link = './includes/images/boletins/'+$(this).attr('data-numBoletim');
+        
+        $(window.document.location).attr('href', link);
+        
+    });
 
 
 });
