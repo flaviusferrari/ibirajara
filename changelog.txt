@@ -1,5 +1,5 @@
 Versão 0.8 (335min)
-Publicação: 
+Publicação: 19 de Agosto de 2018
 
 ==== NEW ====
 - Inserido o Sub-Menu 'Boletins';
