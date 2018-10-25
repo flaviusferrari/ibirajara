@@ -3,7 +3,11 @@
         <!-- Editora -->
         <div class="col-md-12 form-group">
             <label>Nome do Autor</label>
-            <input name="citacao" class="form-control" value="" type="text">
+            <input name="nomeAutor" id="nomeAutorModal" class="form-control" value="<?php echo set_value('nomeAutor'); ?>" type="text">
+        
+            <?php if (isset($msn)): ?>
+                <div class="label <?php echo 'label-'.$label; ?>"><?php echo $msn; ?></div>
+            <?php endif; ?>
         </div>
     </div>
     

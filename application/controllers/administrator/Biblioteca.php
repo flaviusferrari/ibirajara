@@ -19,7 +19,7 @@ class Biblioteca extends MY_Controller
         $this->load->library('form_validation');
         
         // Carrega o Model
-        $this->load->model('administrator_model');
+        $this->load->model('administrator/biblioteca_model', 'Model');
     }    
     
     // --------------------------------------------------------------------
@@ -45,6 +45,30 @@ class Biblioteca extends MY_Controller
     public function exibeFormCadAutor()
     {
         $this->load->view('conteudo/painel/biblioteca/formCadastraAutor');
+    }
+    
+    // --------------------------------------------------------------------
+    
+    /**
+     * MÉTODO CADASTRA AUTOR
+     * 
+     * 
+     */
+    public function cadastraAutor()
+    {
+        if ($this->Model->cadastraAutor())
+        {
+            $dados['label'] = 'success';
+            $dados['msn'] = 'Autor cadastrado com Sucesso!';
+        }
+        else
+        {
+            $dados['label'] = 'danger';
+            $dados['msn'] = 'Autor não encontrado.';
+        }
+        
+        // Exibe o Formulário
+        $this->load->view('conteudo/painel/biblioteca/formCadastraAutor', $dados);
     }
     
     

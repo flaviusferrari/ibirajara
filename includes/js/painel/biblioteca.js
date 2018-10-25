@@ -27,6 +27,28 @@ $(document).ready(function() {
             }
         });
    });
+   
+   // --------------------------------------------------------------------
+   
+   /**
+    * 
+    */
+   $('#myModal').on('click', '#btnCadAutorModal', function(e) {
+       e.preventDefault();
+       
+       $.ajax({
+            url: "indexCode.php/administrator/biblioteca/cadastraAutor",
+            type: 'post',
+            data: {
+                'nomeAutor': $('#nomeAutorModal').val()
+            },
+            success: function( data ) {                    
+                // Exibe a Modal
+                $('#contentModal').html(data);
+            }
+        });
+       
+   });
     
     
 });
