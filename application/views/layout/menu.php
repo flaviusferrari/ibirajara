@@ -16,7 +16,7 @@
             <ul class="nav navbar-nav">
                 <!-- Cadastros -->
                 <li class="dropdown">
-                    <a class="dropdown-toggle" href="#" data-toggle="dropdown">Cadastros<b class="caret"></b></a>
+                    <a class="dropdown-toggle" href="#" data-toggle="dropdown">Cadastros <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li><a href="<?php echo base_url('indexCode.php/administrator/programacao'); ?>">Programação</a></li>
                         <li><a href="<?php echo base_url('indexCode.php/administrator/boletim'); ?>">Boletim</a></li>
@@ -24,6 +24,12 @@
                         <li><a href="<?php echo base_url('indexCode.php/administrator/avisos'); ?>">Avisos</a></li>
                         <li><a href="<?php echo base_url('indexCode.php/administrator/videos'); ?>">Videos</a></li>
                         <li><a href="<?php echo base_url('indexCode.php/administrator/slides'); ?>">Slides</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" href="#" data-toggle="dropdown">Biblioteca <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="<?php echo base_url('indexCode.php/administrator/biblioteca/cadastro'); ?>">Cadastro</a></li>
                     </ul>
                 </li>
                 <li><a href="<?php echo base_url('indexCode.php/login/logout') ?>">Sair</a></li>
