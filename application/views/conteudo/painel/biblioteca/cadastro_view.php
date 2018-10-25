@@ -30,9 +30,10 @@
                 <div class="col-md-6 form-group">
                     <label>Autor:</label>
                     <div class="input-group">
-                        <input name="dtInicio" id="dtInicio" class="form-control" value="<?php echo set_value('dtInicio'); ?>">  
+                        <input name="autor" id="autor" class="form-control" value="<?php echo set_value('autor'); ?>" readonly="true">  
+                        <input name="idAutor" id="idAutor" type="hidden" value="">
                         <span class="input-group-btn">
-                            <button id="btnCadastraAutor" class="btn btn-default" type="button" title="Cadastrar Autor"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button>
+                            <button id="btnCadastraAutor" class="btn btn-default" type="button" title="Localiza Autor"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
                         </span>
                     </div>
                     <?php echo form_error('dtInicio', '<div class="label label-danger">', '</div>'); ?>

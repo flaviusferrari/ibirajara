@@ -31,7 +31,7 @@ $(document).ready(function() {
    // --------------------------------------------------------------------
    
    /**
-    * 
+    *  Efetua o cadastro do Autor no Banco
     */
    $('#myModal').on('click', '#btnCadAutorModal', function(e) {
        e.preventDefault();
@@ -47,7 +47,29 @@ $(document).ready(function() {
                 $('#contentModal').html(data);
             }
         });
+   });
+   
+   // ---------------------------------------------------------------------
+   
+   /**
+    * MÉTODO LOCALIZA AUTOR
+    * 
+    *  Busca o Autor que está sendo digitado 
+    */
+   $('#myModal').on('click', '#btnLocAutorModal', function(e) {
+       e.preventDefault();
        
+       $.ajax({
+            url: "indexCode.php/administrator/biblioteca/localizaAutor",
+            type: 'post',
+            data: {
+                'nomeAutor': $('#nomeAutorModal').val()
+            },
+            success: function( data ) {                    
+                // Exibe a Modal
+                $('#contentModal').html(data);
+            }
+        });
    });
     
     

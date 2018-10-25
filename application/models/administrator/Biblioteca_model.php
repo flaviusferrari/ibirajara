@@ -21,5 +21,19 @@ class Biblioteca_model extends CI_Model
         return $this->db->insert('autor', $dados);
     }
     
+    // -----------------------------------------------------------------
+    
+    /**
+     * MÉTODO LOCALIZA AUTOR
+     * 
+     *  Localiza o autor no Banco de Dados
+     */
+    public function localizaAutor($termo)
+    {
+        $this->db->like('nome', $termo); 
+        $query = $this->db->get('autor');
+        return $query->result_array();
+    }
+    
     
 }

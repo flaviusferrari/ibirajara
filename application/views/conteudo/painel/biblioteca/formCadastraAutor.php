@@ -11,10 +11,26 @@
         </div>
     </div>
     
+    <?php if (isset($autor)): ?>
+    <table class="table table-condensed table-hover">
+        <thead>
+            <th>Nome</th>
+        </thead>
+        <tbody>
+            <?php foreach ($autor as $dado): ?>
+            <tr>
+                <td><?php echo $dado['nome']; ?></td>
+            </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
+    <?php endif; ?>    
+    
     <hr>
     
     <div class="row">
         <div class="col-md-12 form-group">
+            <a class="btn btn-sm btn-success" id="btnLocAutorModal">Localizar</a>
             <a class="btn btn-sm btn-primary" id="btnCadAutorModal">Cadastrar</a>
         </div>
     </div>

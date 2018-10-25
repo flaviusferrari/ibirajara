@@ -71,6 +71,20 @@ class Biblioteca extends MY_Controller
         $this->load->view('conteudo/painel/biblioteca/formCadastraAutor', $dados);
     }
     
+    // ---------------------------------------------------------------------
+    
+    /**
+     * MÉTODO LOCALIZA AUTOR
+     * 
+     *  Busca no banco de Dados o autor
+     */
+    public function localizaAutor() 
+    {
+        $dados['autor'] = $this->Model->localizaAutor($this->input->post('nomeAutor'));
+        
+        $this->load->view('conteudo/painel/biblioteca/formCadastraAutor', $dados);
+    }
+    
     
     
 }
