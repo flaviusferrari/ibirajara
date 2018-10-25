@@ -71,6 +71,25 @@ $(document).ready(function() {
             }
         });
    });
+   
+   // ----------------------------------------------------------------------
+   
+   /**
+    * MÉTODO ADICIONA AUTOR
+    * 
+    *  Adiciona o autor escolhido ao formulário de cadastro.
+    */
+   $('#myModal').on('click', '.addAutor', function (e) {
+        e.preventDefault();
+        
+        var data = $(this).attr('data-autor');
+        var res = data.split(';'); 
+        
+        $('#autor').val(res[1]);
+        $('#idAutor').val(res[0]);
+        
+        $('#myModal').modal('hide');
+    });
     
     
 });

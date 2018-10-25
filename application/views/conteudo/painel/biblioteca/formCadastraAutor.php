@@ -13,13 +13,10 @@
     
     <?php if (isset($autor)): ?>
     <table class="table table-condensed table-hover">
-        <thead>
-            <th>Nome</th>
-        </thead>
         <tbody>
             <?php foreach ($autor as $dado): ?>
             <tr>
-                <td><?php echo $dado['nome']; ?></td>
+                <td><a href="#" class="addAutor" data-autor="<?php echo $dado['id'].';'.$dado['nome']; ?>"><?php echo $dado['nome']; ?></a></td>
             </tr>
             <?php endforeach; ?>
         </tbody>
