@@ -8,6 +8,10 @@
  * Created: 16/10/2016
  */
 
+-- VERSÃO 0.9
+-- Criação da Tabela Autor
+CREATE TABLE `ibirajara`.`autor` ( `id` INT(11) NOT NULL AUTO_INCREMENT , `nome` VARCHAR(155) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+
 -- VERSÃO 0.8
 -- Insere a coluna numero na tabela Boletim
 ALTER TABLE `boletim` ADD COLUMN `numero` INT(6) NULL AFTER `livro`;

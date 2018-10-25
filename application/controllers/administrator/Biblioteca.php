@@ -12,7 +12,8 @@ class Biblioteca extends MY_Controller
     {
         parent::__construct();
         
-        $this->dados['css'] = 'administrator';        
+        $this->dados['css'] = 'administrator';  
+        $this->dados['js']  = 'painel/biblioteca';
         
         // Carrega a validação dos formulários
         $this->load->library('form_validation');
@@ -28,11 +29,22 @@ class Biblioteca extends MY_Controller
      * 
      */
     public function cadastro()
-    {
-        $this->dados['js']  = '';
+    {        
         $this->dados['conteudo'] = 'painel/biblioteca/cadastro_view';
         
         $this->load->view('layout', $this->dados);   
+    }
+    
+    // ---------------------------------------------------------------------
+    
+    /**
+     * MÉTODO EXIBE FORM CAD AUTOR
+     * 
+     *  Exibe o Formulário para cadastrar o Autor
+     */
+    public function exibeFormCadAutor()
+    {
+        $this->load->view('conteudo/painel/biblioteca/formCadastraAutor');
     }
     
     

@@ -29,7 +29,12 @@
                 <!-- Autor -->
                 <div class="col-md-6 form-group">
                     <label>Autor:</label>
-                    <input name="dtInicio" id="dtInicio" class="form-control" value="<?php echo set_value('dtInicio'); ?>">  
+                    <div class="input-group">
+                        <input name="dtInicio" id="dtInicio" class="form-control" value="<?php echo set_value('dtInicio'); ?>">  
+                        <span class="input-group-btn">
+                            <button id="btnCadastraAutor" class="btn btn-default" type="button" title="Cadastrar Autor"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button>
+                        </span>
+                    </div>
                     <?php echo form_error('dtInicio', '<div class="label label-danger">', '</div>'); ?>
                 </div>  
                 <!-- Espírito -->
