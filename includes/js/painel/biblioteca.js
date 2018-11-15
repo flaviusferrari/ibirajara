@@ -269,5 +269,17 @@ $(document).ready(function() {
         $('#myModal').modal('hide');
     });
     
+    // --------------------------------------------------------------------
+    
+    /**
+     * BOTÃO SALVAR
+     * 
+     *  Envia os dados do Formulário para serem salvos no Banco de Dados
+     */
+    $('#btnSalvar').click(function () {
+        $('#formulario').attr('action', 'indexCode.php/administrator/biblioteca/salvar');
+        $('#formulario').submit();
+    });
+    
     
 });

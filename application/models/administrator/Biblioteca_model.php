@@ -10,6 +10,27 @@ class Biblioteca_model extends CI_Model
 {
     
     /**
+     * MÉTODO SALVAR
+     * 
+     *  Efetua a gravação do Livro no Banco de Dados
+     * @return type
+     */
+    public function salvar()
+    {        
+        $data = array(
+            'titulo'     => $this->input->post('titulo'),
+            'idAutor'    => $this->input->post('idAutor'),
+            'idEspirito' => $this->input->post('idEspirito'),
+            'idEditora'  => $this->input->post('idEditora'),
+            'resenha'    => $this->input->post('texto')
+        );
+
+        return $this->db->insert('livros', $data);
+    }
+    
+    // -----------------------------------------------------------------
+    
+    /**
      * 
      */
     public function cadastraAutor()
