@@ -180,5 +180,94 @@ $(document).ready(function() {
         $('#myModal').modal('hide');
     });
     
+    // --------------------------------------------------------------------
+    
+    /**
+    * BOTÃO CADASTRA EDITORA
+    * 
+    *  Exibe uma janela Modal para cadastrar a editora
+    */ 
+   $('#btnCadEditora').click(function(e) {
+        e.preventDefault();
+        
+        $.ajax({
+            url: "indexCode.php/administrator/biblioteca/exibeFormCadEditora",
+            type: 'post',
+            success: function( data ) {                    
+                // Exibe a Modal
+                $('.modal-title').html('Localizar Editora');
+                $('.modal-footer').hide();
+                $('#contentModal').html(data);
+                $('#myModal').modal('show');
+                return false;
+            }
+        });
+   });
+   
+   // ----------------------------------------------------------------------
+   
+   /**
+    * BOTÃO CAD EDITORA MODAL
+    * 
+    *  Efetua o cadastro do Espírito no Banco
+    */
+   $('#myModal').on('click', '#btnCadEditoraModal', function(e) {
+       e.preventDefault();
+       
+       $.ajax({
+            url: "indexCode.php/administrator/biblioteca/cadastraEditora",
+            type: 'post',
+            data: {
+                'nomeEditora': $('#nomeEditoraModal').val()
+            },
+            success: function( data ) {                    
+                // Exibe a Modal
+                $('#contentModal').html(data);
+            }
+        });
+   });
+   
+   // ---------------------------------------------------------------------
+   
+   /**
+    * MÉTODO LOCALIZA EDITORA
+    * 
+    *  Busca o Editora que está sendo digitado 
+    */
+   $('#myModal').on('click', '#btnLocEditoraModal', function(e) {
+       e.preventDefault();
+       
+       $.ajax({
+            url: "indexCode.php/administrator/biblioteca/localizaEditora",
+            type: 'post',
+            data: {
+                'nomeEditora': $('#nomeEditoraModal').val()
+            },
+            success: function( data ) {                    
+                // Exibe a Modal
+                $('#contentModal').html(data);
+            }
+        });
+   });
+   
+   // ----------------------------------------------------------------------
+   
+   /**
+    * MÉTODO ADICIONA EDITORA
+    * 
+    *  Adiciona o Editora escolhido ao formulário de cadastro.
+    */
+   $('#myModal').on('click', '.addEditora', function (e) {
+        e.preventDefault();
+        
+        var data = $(this).attr('data-editora');
+        var res = data.split(';'); 
+        
+        $('#editora').val(res[1]);
+        $('#idEditora').val(res[0]);
+        
+        $('#myModal').modal('hide');
+    });
+    
     
 });

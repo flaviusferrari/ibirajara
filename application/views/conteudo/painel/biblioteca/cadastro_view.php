@@ -59,8 +59,16 @@
                 <!-- Editora -->
                 <div class="col-md-6 form-group">
                     <label>Editora:</label>
-                    <input name="citacao" class="form-control" value="<?php echo set_value('citacao'); ?>" type="text">
-                    <?php echo form_error('citacao', '<div class="label label-danger">', '</div>'); ?>
+                    <div class="input-group">
+                        <input type="text" name="editora" id="editora" class="form-control" value="<?php echo set_value('editora'); ?>" readonly="true">
+                        <input type="hidden" name="idEditora" id="idEditora" value="">
+                        <span class="input-group-btn">
+                            <button type="button" id="btnCadEditora" class="btn btn-default" title="Localiza Editora">
+                                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                            </button>
+                        </span>
+                    </div>
+                    <?php echo form_error('editora', '<div class="label label-danger">', '</div>'); ?>
                 </div>
             </div>
 

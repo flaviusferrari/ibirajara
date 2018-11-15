@@ -135,6 +135,56 @@ class Biblioteca extends MY_Controller
         $this->load->view('conteudo/painel/biblioteca/formCadastraEspirito', $dados);
     }
     
+    // ---------------------------------------------------------------------
+    
+    /**
+     * MÉTODO EXIBE FORM CAD EDITORA
+     * 
+     *  Exibe o Formulário para cadastrar o Autor
+     */
+    public function exibeFormCadEditora()
+    {
+        $this->load->view('conteudo/painel/biblioteca/formCadastraEditora');
+    }
+    
+    // --------------------------------------------------------------------
+    
+    /**
+     * MÉTODO CADASTRA EDITORA
+     * 
+     *  Cadastra o Editora no Banco de Dados
+     */
+    public function cadastraEditora()
+    {
+        if ($this->Model->cadastraEditora())
+        {
+            $dados['label'] = 'success';
+            $dados['msn'] = 'Editora cadastrada com Sucesso!';
+        }
+        else
+        {
+            $dados['label'] = 'danger';
+            $dados['msn'] = 'Editora não encontrada.';
+        }
+        
+        // Exibe o Formulário
+        $this->load->view('conteudo/painel/biblioteca/formCadastraEditora', $dados);
+    }
+    
+    // ---------------------------------------------------------------------
+    
+    /**
+     * MÉTODO LOCALIZA EDITORA
+     * 
+     *  Busca no banco de Dados a Editora
+     */
+    public function localizaEditora() 
+    {
+        $dados['editora'] = $this->Model->localizaEditora($this->input->post('nomeEditora'));
+        
+        $this->load->view('conteudo/painel/biblioteca/formCadastraEditora', $dados);
+    }
+    
     
     
 }

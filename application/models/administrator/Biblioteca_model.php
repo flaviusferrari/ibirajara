@@ -65,5 +65,35 @@ class Biblioteca_model extends CI_Model
         return $query->result_array();
     }
     
+    // -------------------------------------------------------------------
+    
+    /**
+     * MÉTODO CADASTRA EDITORA
+     * 
+     *  Cadastra o Editora no Banco de Dados
+     */
+    public function cadastraEditora()
+    {
+        $dados = array(
+            'nome' => $this->input->post('nomeEditora')
+        );
+        
+        return $this->db->insert('editora', $dados);
+    }
+    
+    // -----------------------------------------------------------------
+    
+    /**
+     * MÉTODO LOCALIZA EDITORA
+     * 
+     *  Localiza A Editora no Banco de Dados
+     */
+    public function localizaEditora($termo)
+    {
+        $this->db->like('nome', $termo); 
+        $query = $this->db->get('editora');
+        return $query->result_array();
+    }
+    
     
 }

@@ -27,8 +27,8 @@
     
     <div class="row">
         <div class="col-md-12 form-group">
-            <a class="btn btn-sm btn-success" id="btnLocEspiritoModal">Localizar</a>
             <a class="btn btn-sm btn-primary" id="btnCadEspiritoModal">Cadastrar</a>
+            <a class="btn btn-sm btn-success" id="btnLocEspiritoModal">Localizar</a>
         </div>
     </div>
     
