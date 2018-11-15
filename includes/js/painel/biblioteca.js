@@ -291,5 +291,32 @@ $(document).ready(function() {
         $(window.document.location).attr('href', 'indexCode.php/administrator/biblioteca/cadastro');
     });
     
+    // --------------------------------------------------------------------
+    
+    /**
+     * Localiza o Livro pelo título
+     * 
+     */
+    $('#titulo').autocomplete({
+        source: function( request, response ) {
+            $.ajax({
+                url: "indexCode.php/administrator/biblioteca/localizaLivroTitulo",
+                type: 'post',
+                dataType: "json",
+                data: {
+                    'termo': request.term
+                },
+                success: function( data ) {                    
+                    response( data );
+                }
+            });
+        },
+        minLength: 3,
+        select: function( event, ui ) {
+            var novaURL = 'indexCode.php/administrator/biblioteca/exibe/'+ui.item.valor;
+            $(window.document.location).attr('href',novaURL);        
+        }
+    });
+    
     
 });

@@ -239,6 +239,25 @@ class Biblioteca extends MY_Controller
         $this->load->view('conteudo/painel/biblioteca/formCadastraEditora', $dados);
     }
     
+    // ---------------------------------------------------------------------
+    
+    /**
+     * MÉTODO LOCALIZA LIVRO TITULO
+     * 
+     *  Busca o livro pelo título digitado
+     */
+    public function localizaLivroTitulo() 
+    {
+        $livros = $this->Model->localizaLivroTitulo($this->input->post('termo'));
+
+        foreach ($livros as $campo) 
+        {
+            $data[] = array('value' => $campo['titulo'], 'valor' => $campo['id'],);
+        }
+
+        echo json_encode($data);
+    }
+    
     
     
 }

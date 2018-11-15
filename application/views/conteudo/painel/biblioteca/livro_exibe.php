@@ -8,10 +8,10 @@
         <!-- BOTÕES -->
         <div class="row">
             <div id="menuBotoes" class="col-md-12 form-group">
-                <a class="btn btn-primary" id="btnSalvar">Salvar</a>
+                <a class="btn btn-primary disabled" id="btnSalvar">Salvar</a>
                 <a class="btn btn-primary" id="btnNovo">Novo</a>
                 <a class="btn btn-primary disabled" id="btnAtualizar">Atualizar</a>
-                <a class="btn btn-primary" id="btnLocalizar">Localizar</a>
+                <a class="btn btn-primary disabled" id="btnLocalizar">Localizar</a>
                 <a class="btn btn-primary disabled" id="btnExcluir">Excluir</a>                    
             </div>     
         </div>

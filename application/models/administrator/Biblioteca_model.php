@@ -170,5 +170,22 @@ class Biblioteca_model extends CI_Model
         return $query->result_array();
     }
     
+    // -------------------------------------------------------------------------
+    
+    /**
+     * MÉTODO LOCALIZA LIVRO TITULO 
+     * 
+     *  Localiza o título do boletim 
+     */
+    public function localizaLivroTitulo($termo)
+    {
+        $this->db->select('id, titulo');
+        $this->db->like('titulo', $termo);
+        
+        $query = $this->db->get('livros');
+        
+        return $query->result_array();
+    }
+    
     
 }
