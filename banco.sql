@@ -13,6 +13,15 @@
 CREATE TABLE `autor` ( `id` INT(11) NOT NULL AUTO_INCREMENT , `nome` VARCHAR(155) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
 CREATE TABLE `espirito` ( `id` INT(11) NOT NULL AUTO_INCREMENT , `nome` VARCHAR(150) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
 CREATE TABLE `editora` ( `id` INT(11) NOT NULL AUTO_INCREMENT , `nome` VARCHAR(150) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+CREATE TABLE `livros` ( 
+    `id` INT(11) NOT NULL AUTO_INCREMENT , 
+    `titulo` VARCHAR(255) NOT NULL , 
+    `idAutor` INT(11) NULL , 
+    `idEspirito` INT(11) NULL , 
+    `idEditora` INT(11) NOT NULL , 
+    `resenha` TEXT NULL , 
+    PRIMARY KEY (`id`)
+) ENGINE = InnoDB;
 
 -- VERSÃO 0.8
 -- Insere a coluna numero na tabela Boletim
