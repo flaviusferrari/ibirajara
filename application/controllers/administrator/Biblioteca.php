@@ -57,15 +57,38 @@ class Biblioteca extends MY_Controller
 //            $this->load->view('layout', $this->dados);
 //        } else {
             $this->Model->salvar();
+            
+            // Pega o ID 
+            $idLivro = $this->Model->getUltimoLivro();
 
             $this->dados['conteudo']    = 'sucess';
             $this->dados['msn_content'] = 'Livro Cadastrado com sucesso!!!';
-            $this->dados['msn_link']    = 'indexCode.php/administrator/biblioteca/cadastro';
+            $this->dados['msn_link']    = 'indexCode.php/administrator/biblioteca/exibe/' . $idLivro;
 
             $this->load->view('layout', $this->dados);
 //        }
     }
 
+    // ---------------------------------------------------------------------
+    
+    /**
+     * MÉTODO EXIBE
+     * 
+     *  Exibe os dados do Livro
+     */
+    public function exibe() {
+        // Recebe o ID do Boletim
+        $idLivro = $this->uri->segment(4);
+
+        $this->dados['livro'] = $this->Model->buscaDadosLivro($idLivro);
+
+        // Insere o arquivo a ser exibido
+        $this->dados['conteudo'] = 'painel/biblioteca/livro_exibe';
+
+        // Exibe a página
+        $this->load->view('layout', $this->dados);
+    }
+    
     // ---------------------------------------------------------------------
     
     /**

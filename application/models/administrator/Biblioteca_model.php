@@ -28,6 +28,60 @@ class Biblioteca_model extends CI_Model
         return $this->db->insert('livros', $data);
     }
     
+    // -------------------------------------------------------
+    
+    /**
+     *  MÉTODO GET ULTIMO LIVRO
+     * 
+     *  Recupera o número do último livro salvo
+     */
+    public function getUltimoLivro()
+    {
+        $this->db->select_max('id');
+        
+        $query = $this->db->get('livros');
+        
+        // Recebe o último ID cadastrado
+        $id = $query->row_array();
+        
+        // Retorna a consulta
+        return $id['id'];
+    }
+    
+    // -----------------------------------------------------------------
+    
+    /**
+     *  MÉTODO BUSCA DADOS LIVRO
+     * 
+     *  Busca os dados do livro
+     */
+    public function buscaDadosLivro($id)
+    {
+        $this->db->select(
+                  'livros.id, '
+                . 'livros.titulo, '
+                . 'livros.idAutor, '
+                . 'livros.resenha, '
+                . 'autor.nome as autor, '
+                . 'espirito.nome as espirito, '
+                . 'espirito.id as idEspirito, '
+                . 'editora.id as idEditora, '
+                . 'editora.nome as editora'
+            );
+        
+        // Efetua a consulta
+        $this->db->where('livros.id', $id);
+        
+        $this->db->from('livros');
+        $this->db->join('autor', 'autor.id = livros.idAutor', 'inner');
+        $this->db->join('espirito', 'espirito.id = livros.idEspirito', 'inner');
+        $this->db->join('editora', 'editora.id = livros.idEditora', 'inner');
+        
+        $query = $this->db->get();
+        
+        return $query->row_array();
+    }
+    
     // -----------------------------------------------------------------
     
     /**
