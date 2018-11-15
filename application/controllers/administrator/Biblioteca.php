@@ -85,6 +85,56 @@ class Biblioteca extends MY_Controller
         $this->load->view('conteudo/painel/biblioteca/formCadastraAutor', $dados);
     }
     
+    // ---------------------------------------------------------------------
+    
+    /**
+     * MÉTODO EXIBE FORM CAD ESPIRITO
+     * 
+     *  Exibe o Formulário para cadastrar o Autor
+     */
+    public function exibeFormCadEspirito()
+    {
+        $this->load->view('conteudo/painel/biblioteca/formCadastraEspirito');
+    }
+    
+    // --------------------------------------------------------------------
+    
+    /**
+     * MÉTODO CADASTRA ESPIRITO
+     * 
+     *  Cadastra o Espírito no Banco de Dados
+     */
+    public function cadastraEspirito()
+    {
+        if ($this->Model->cadastraEspirito())
+        {
+            $dados['label'] = 'success';
+            $dados['msn'] = 'Espírito cadastrado com Sucesso!';
+        }
+        else
+        {
+            $dados['label'] = 'danger';
+            $dados['msn'] = 'Espírito não encontrado.';
+        }
+        
+        // Exibe o Formulário
+        $this->load->view('conteudo/painel/biblioteca/formCadastraEspirito', $dados);
+    }
+    
+    // ---------------------------------------------------------------------
+    
+    /**
+     * MÉTODO LOCALIZA ESPÍRITO
+     * 
+     *  Busca no banco de Dados o espírito
+     */
+    public function localizaEspirito() 
+    {
+        $dados['espirito'] = $this->Model->localizaEspirito($this->input->post('nomeEspirito'));
+        
+        $this->load->view('conteudo/painel/biblioteca/formCadastraEspirito', $dados);
+    }
+    
     
     
 }

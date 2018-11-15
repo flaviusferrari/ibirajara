@@ -38,11 +38,20 @@
                     </div>
                     <?php echo form_error('dtInicio', '<div class="label label-danger">', '</div>'); ?>
                 </div>  
+                
                 <!-- Espírito -->
                 <div class="col-md-6 form-group">
                     <label>Espírito:</label>
-                    <input name="dtFim" id="dtFim" class="form-control" value="<?php echo set_value('dtFim'); ?>">  
-                    <?php echo form_error('dtFim', '<div class="label label-danger">', '</div>'); ?>
+                    <div class="input-group">
+                        <input name="espirito" id="espirito" class="form-control" value="<?php echo set_value('espirito'); ?>" readonly="true">  
+                        <input type="hidden" name="idEspirito" id="idEspirito" value="">
+                        <span class="input-group-btn">
+                            <button type="button" id="btnCadEspirito" class="btn btn-default" title="Localiza Espírito">
+                                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                            </button>
+                        </span>
+                    </div>
+                    <?php echo form_error('espirito', '<div class="label label-danger">', '</div>'); ?>
                 </div>                
             </div>    
 

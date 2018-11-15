@@ -91,5 +91,94 @@ $(document).ready(function() {
         $('#myModal').modal('hide');
     });
     
+    // --------------------------------------------------------------------
+    
+    /**
+    * BOTÃO CADASTRA ESPÍRITO
+    * 
+    *  Exibe uma janela Modal para cadastrar o espírito
+    */ 
+   $('#btnCadEspirito').click(function(e) {
+        e.preventDefault();
+        
+        $.ajax({
+            url: "indexCode.php/administrator/biblioteca/exibeFormCadEspirito",
+            type: 'post',
+            success: function( data ) {                    
+                // Exibe a Modal
+                $('.modal-title').html('Localizar Espírito');
+                $('.modal-footer').hide();
+                $('#contentModal').html(data);
+                $('#myModal').modal('show');
+                return false;
+            }
+        });
+   });
+   
+   // ----------------------------------------------------------------------
+   
+   /**
+    * BOTÃO CAD ESPIRITO MODAL
+    * 
+    *  Efetua o cadastro do Espírito no Banco
+    */
+   $('#myModal').on('click', '#btnCadEspiritoModal', function(e) {
+       e.preventDefault();
+       
+       $.ajax({
+            url: "indexCode.php/administrator/biblioteca/cadastraEspirito",
+            type: 'post',
+            data: {
+                'nomeEspirito': $('#nomeEspiritoModal').val()
+            },
+            success: function( data ) {                    
+                // Exibe a Modal
+                $('#contentModal').html(data);
+            }
+        });
+   });
+   
+   // ---------------------------------------------------------------------
+   
+   /**
+    * MÉTODO LOCALIZA ESPIRITO
+    * 
+    *  Busca o Espírito que está sendo digitado 
+    */
+   $('#myModal').on('click', '#btnLocEspiritoModal', function(e) {
+       e.preventDefault();
+       
+       $.ajax({
+            url: "indexCode.php/administrator/biblioteca/localizaEspirito",
+            type: 'post',
+            data: {
+                'nomeEspirito': $('#nomeEspiritoModal').val()
+            },
+            success: function( data ) {                    
+                // Exibe a Modal
+                $('#contentModal').html(data);
+            }
+        });
+   });
+   
+   // ----------------------------------------------------------------------
+   
+   /**
+    * MÉTODO ADICIONA ESPÍRITO
+    * 
+    *  Adiciona o espirito escolhido ao formulário de cadastro.
+    */
+   $('#myModal').on('click', '.addEspirito', function (e) {
+        e.preventDefault();
+        
+        var data = $(this).attr('data-espirito');
+        var res = data.split(';'); 
+        
+        $('#espirito').val(res[1]);
+        $('#idEspirito').val(res[0]);
+        
+        $('#myModal').modal('hide');
+    });
+    
     
 });
