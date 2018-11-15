@@ -281,5 +281,15 @@ $(document).ready(function() {
         $('#formulario').submit();
     });
     
+    // --------------------------------------------------------------------
+    
+    /**
+     * BOTÃO NOVO
+     * 
+     */
+    $('#btnNovo').click(function () {
+        $(window.document.location).attr('href', 'indexCode.php/administrator/biblioteca/cadastro');
+    });
+    
     
 });

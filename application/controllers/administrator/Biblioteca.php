@@ -45,17 +45,17 @@ class Biblioteca extends MY_Controller
     public function salvar()
     {
         // Efetua a validação dos dados
-//        $this->form_validation->set_rules('dtInicio', 'Data Inicio', 'required');
-//        $this->form_validation->set_rules('dtFim', 'Data Fim', 'required');
-//        $this->form_validation->set_rules('titulo', 'Título', 'required');
-//        $this->form_validation->set_rules('citacao', 'Citação', 'required');
-//        $this->form_validation->set_rules('texto', 'Texto', 'required');
-//        $this->form_validation->set_rules('livro', 'Livro', 'required');
+        $this->form_validation->set_rules('titulo', 'Título', 'required');
+        $this->form_validation->set_rules('idAutor', 'Autor', 'required');
+        $this->form_validation->set_rules('idEditora', 'Editora', 'required');
 
-//        if ($this->form_validation->run() === FALSE)
-//        {
-//            $this->load->view('layout', $this->dados);
-//        } else {
+        if ($this->form_validation->run() === FALSE)
+        {
+            $this->dados['conteudo'] = 'painel/biblioteca/cadastro_view';
+            $this->load->view('layout', $this->dados);
+        } 
+        else 
+        {
             $this->Model->salvar();
             
             // Pega o ID 
@@ -66,7 +66,7 @@ class Biblioteca extends MY_Controller
             $this->dados['msn_link']    = 'indexCode.php/administrator/biblioteca/exibe/' . $idLivro;
 
             $this->load->view('layout', $this->dados);
-//        }
+        }
     }
 
     // ---------------------------------------------------------------------

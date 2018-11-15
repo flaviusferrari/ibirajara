@@ -31,12 +31,12 @@
                     <label>Autor:</label>
                     <div class="input-group">
                         <input name="autor" id="autor" class="form-control" value="<?php echo set_value('autor'); ?>" readonly="true">  
-                        <input name="idAutor" id="idAutor" type="hidden" value="">
+                        <input name="idAutor" id="idAutor" type="hidden" value="<?php echo set_value('idAutor'); ?>">
                         <span class="input-group-btn">
                             <button id="btnCadastraAutor" class="btn btn-default" type="button" title="Localiza Autor"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
                         </span>
                     </div>
-                    <?php echo form_error('dtInicio', '<div class="label label-danger">', '</div>'); ?>
+                    <?php echo form_error('idAutor', '<div class="label label-danger">', '</div>'); ?>
                 </div>  
                 
                 <!-- Espírito -->
@@ -44,14 +44,13 @@
                     <label>Espírito:</label>
                     <div class="input-group">
                         <input name="espirito" id="espirito" class="form-control" value="<?php echo set_value('espirito'); ?>" readonly="true">  
-                        <input type="hidden" name="idEspirito" id="idEspirito" value="">
+                        <input type="hidden" name="idEspirito" id="idEspirito" value="<?php echo set_value('idEspirito'); ?>">
                         <span class="input-group-btn">
                             <button type="button" id="btnCadEspirito" class="btn btn-default" title="Localiza Espírito">
                                 <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
                             </button>
                         </span>
                     </div>
-                    <?php echo form_error('espirito', '<div class="label label-danger">', '</div>'); ?>
                 </div>                
             </div>    
 
@@ -61,14 +60,14 @@
                     <label>Editora:</label>
                     <div class="input-group">
                         <input type="text" name="editora" id="editora" class="form-control" value="<?php echo set_value('editora'); ?>" readonly="true">
-                        <input type="hidden" name="idEditora" id="idEditora" value="">
+                        <input type="hidden" name="idEditora" id="idEditora" value="<?php echo set_value('idEditora'); ?>">
                         <span class="input-group-btn">
                             <button type="button" id="btnCadEditora" class="btn btn-default" title="Localiza Editora">
                                 <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
                             </button>
                         </span>
                     </div>
-                    <?php echo form_error('editora', '<div class="label label-danger">', '</div>'); ?>
+                    <?php echo form_error('idEditora', '<div class="label label-danger">', '</div>'); ?>
                 </div>
             </div>
 
