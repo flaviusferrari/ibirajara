@@ -1,5 +1,5 @@
 Versão 0.9 (223min)
-Publicação: 
+Publicação: 24 de Novembro de 2018
 
 ==== NEW ====
 - Painel/Cadastro de Livros;
