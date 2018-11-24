@@ -110,6 +110,20 @@ class Biblioteca_model extends CI_Model
         return $query->result_array();
     }
     
+    // -----------------------------------------------------------------
+    
+    /**
+     * MÉTODO VERIFICA AUTOR
+     * 
+     *  Localiza o autor no Banco de Dados
+     */
+    public function verificaAutor($termo)
+    {
+        $this->db->where('nome', $termo); 
+        $query = $this->db->get('autor');
+        return $query->result_array();
+    }
+    
     // -------------------------------------------------------------------
     
     /**

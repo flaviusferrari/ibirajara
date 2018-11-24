@@ -109,7 +109,7 @@ class Biblioteca extends MY_Controller
      * 
      */
     public function cadastraAutor()
-    {
+    {        
         if ($this->Model->cadastraAutor())
         {
             $dados['label'] = 'success';
@@ -135,6 +135,14 @@ class Biblioteca extends MY_Controller
     public function localizaAutor() 
     {
         $dados['autor'] = $this->Model->localizaAutor($this->input->post('nomeAutor'));
+        
+        // Verifica se retornou algum dado
+        if (empty($dados['autor']))
+        {
+            $dados['cadastra'] = 'TRUE';
+            $dados['label']    = 'danger';
+            $dados['msn']      = 'Autor não encontrado.';
+        }
         
         $this->load->view('conteudo/painel/biblioteca/formCadastraAutor', $dados);
     }

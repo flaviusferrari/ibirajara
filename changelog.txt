@@ -1,8 +1,8 @@
-Versão 0.9.1 (min)
+Versão 0.9.1 (22min)
 Publicação: 
 
 ==== UPDATE ====
-- 
+- Painel/Biblioteca: Verificando se o Autor existe antes de Gravar
 
 ********************************************************************************
 

@@ -27,7 +27,9 @@
     
     <div class="row">
         <div class="col-md-12 form-group">
+            <?php if (isset($cadastra)): ?>
             <a class="btn btn-sm btn-primary" id="btnCadAutorModal">Cadastrar</a>
+            <?php endif; ?>
             <a class="btn btn-sm btn-success" id="btnLocAutorModal">Localizar</a>
         </div>
     </div>
