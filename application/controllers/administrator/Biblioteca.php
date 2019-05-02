@@ -194,6 +194,14 @@ class Biblioteca extends MY_Controller
     {
         $dados['espirito'] = $this->Model->localizaEspirito($this->input->post('nomeEspirito'));
         
+        // Verifica se retornou algum dado
+        if (empty($dados['espirito']))
+        {
+            $dados['cadastra'] = 'TRUE';
+            $dados['label']    = 'danger';
+            $dados['msn']      = 'Espírito não encontrado.';
+        }
+        
         $this->load->view('conteudo/painel/biblioteca/formCadastraEspirito', $dados);
     }
     
