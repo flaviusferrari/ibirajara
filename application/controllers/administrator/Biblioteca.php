@@ -244,6 +244,14 @@ class Biblioteca extends MY_Controller
     {
         $dados['editora'] = $this->Model->localizaEditora($this->input->post('nomeEditora'));
         
+        // Verifica se retornou algum dado
+        if (empty($dados['editora']))
+        {
+            $dados['cadastra'] = 'TRUE';
+            $dados['label']    = 'danger';
+            $dados['msn']      = 'Editora não encontrada.';
+        }
+        
         $this->load->view('conteudo/painel/biblioteca/formCadastraEditora', $dados);
     }
     
