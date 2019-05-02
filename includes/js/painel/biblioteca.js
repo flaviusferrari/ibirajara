@@ -318,5 +318,17 @@ $(document).ready(function() {
         }
     });
     
+    // -----------------------------------------------------------------
+    
+    /**
+     * BOTÃO ATUALIZAR
+     * 
+     *  Envia os dados do Formulário para serem salvos no Banco de Dados
+     */
+    $('#btnAtualizar').click(function () {
+        $('#formulario').attr('action', 'indexCode.php/administrator/biblioteca/atualizar');
+        $('#formulario').submit();
+    });
+    
     
 });

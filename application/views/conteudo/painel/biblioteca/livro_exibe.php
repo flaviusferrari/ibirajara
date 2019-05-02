@@ -10,7 +10,7 @@
             <div id="menuBotoes" class="col-md-12 form-group">
                 <a class="btn btn-primary disabled" id="btnSalvar">Salvar</a>
                 <a class="btn btn-primary" id="btnNovo">Novo</a>
-                <a class="btn btn-primary disabled" id="btnAtualizar">Atualizar</a>
+                <a class="btn btn-primary" id="btnAtualizar">Atualizar</a>
                 <a class="btn btn-primary disabled" id="btnLocalizar">Localizar</a>
                 <a class="btn btn-primary disabled" id="btnExcluir">Excluir</a>                    
             </div>     
@@ -22,6 +22,7 @@
             <div class="form-group">
                 <label>Título:</label>
                 <input name="titulo" id="titulo" class="form-control" value="<?php echo $livro['titulo']; ?>">
+                <input name="idLivro" id="idLivro" type="hidden" value="<?php echo $livro['id']; ?>">
             </div> 
             
             <div class="row">

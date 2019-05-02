@@ -92,6 +92,37 @@ class Biblioteca extends MY_Controller
     // ---------------------------------------------------------------------
     
     /**
+     * MÉTODO ATUALIZAR
+     * 
+     *  Atualiza os dados do Livro no Banco de Dados
+     */
+    public function atualizar()
+    {
+        // Efetua a validação dos dados
+//        $this->form_validation->set_rules('titulo', 'Título', 'required');
+//        $this->form_validation->set_rules('idAutor', 'Autor', 'required');
+//        $this->form_validation->set_rules('idEditora', 'Editora', 'required');
+//
+//        if ($this->form_validation->run() === FALSE)
+//        {
+//            $this->dados['conteudo'] = 'painel/biblioteca/cadastro_view';
+//            $this->load->view('layout', $this->dados);
+//        } 
+//        else 
+//        {
+            $this->Model->atualizar();
+
+            $this->dados['conteudo']    = 'sucess';
+            $this->dados['msn_content'] = "Livro <b>{$this->input->post('titulo')}</b> atualizado com sucesso!!!";
+            $this->dados['msn_link']    = 'indexCode.php/administrator/biblioteca/exibe/' . $this->input->post('idLivro');
+
+            $this->load->view('layout', $this->dados);
+//        }
+    }
+    
+    // ---------------------------------------------------------------------
+    
+    /**
      * MÉTODO EXIBE FORM CAD AUTOR
      * 
      *  Exibe o Formulário para cadastrar o Autor

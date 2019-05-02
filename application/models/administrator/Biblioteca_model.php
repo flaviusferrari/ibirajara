@@ -51,6 +51,29 @@ class Biblioteca_model extends CI_Model
     // -----------------------------------------------------------------
     
     /**
+     * MÉTODO ATUALIZAR
+     * 
+     *  Efetua a gravação do Livro no Banco de Dados
+     * @return type
+     */
+    public function atualizar()
+    {        
+        $data = array(
+            'titulo'     => $this->input->post('titulo'),
+            'idAutor'    => $this->input->post('idAutor'),
+            'idEspirito' => $this->input->post('idEspirito'),
+            'idEditora'  => $this->input->post('idEditora'),
+            'resenha'    => $this->input->post('texto')
+        );
+        
+        $this->db->where('id', $this->input->post('idLivro'));
+
+        return $this->db->update('livros', $data);
+    }
+    
+    // -----------------------------------------------------------------
+    
+    /**
      *  MÉTODO BUSCA DADOS LIVRO
      * 
      *  Busca os dados do livro
