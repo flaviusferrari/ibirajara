@@ -1,8 +1,9 @@
-Versão 0.9.1 (42min)
+Versão 0.9.1 (51min)
 Publicação: 
 
 ==== UPDATE ====
 - Painel/Biblioteca: Verificando se o Autor, o Espírito e a Editora existem antes de Gravar
+- Painel - Biblioteca: Ajustes diversos no Layout
 
 ********************************************************************************
 

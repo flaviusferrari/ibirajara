@@ -62,7 +62,7 @@ class Biblioteca extends MY_Controller
             $idLivro = $this->Model->getUltimoLivro();
 
             $this->dados['conteudo']    = 'sucess';
-            $this->dados['msn_content'] = 'Livro Cadastrado com sucesso!!!';
+            $this->dados['msn_content'] = "Livro <b>{$this->input->post('titulo')}</b> cadastrado com sucesso!!!";
             $this->dados['msn_link']    = 'indexCode.php/administrator/biblioteca/exibe/' . $idLivro;
 
             $this->load->view('layout', $this->dados);
