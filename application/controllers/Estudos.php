@@ -38,4 +38,32 @@ class Estudos extends CI_Controller
     }
     
     
+    // --------------------------------------------------------------
+    
+    /**
+     * MÉTODO MEDIUNIDADE
+     * 
+     * 
+     */
+    public function mediunidade()
+    {
+        $this->dados['conteudo'] = 'site/estudos/mediunidade';
+        
+        $this->load->view('site', $this->dados);
+    }
+    
+    // --------------------------------------------------------------
+    
+    /**
+     * MÉTODO COMPLEMENTARES
+     * 
+     * 
+     */
+    public function complementares()
+    {
+        $this->dados['conteudo'] = 'site/estudos/complementares';
+        
+        $this->load->view('site', $this->dados);
+    }
+    
 }
